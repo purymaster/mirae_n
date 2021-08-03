@@ -73,6 +73,7 @@
 2. 리셋
 =========================================================*/
 
+:before,:after {box-sizing:border-box;}
 html {letter-spacing:-.04em;}
 html.fixed,
 html.fixed body {overflow:hidden; position:fixed; width:100%; touch-action:none;}
@@ -126,6 +127,34 @@ caption,.hidden {overflow:hidden; clip:rect(0 0 0 0); position:absolute; width:1
 #content {padding-top:60px;}
 #content[data-page="main"] {padding-top:0;}
 .container {padding:0 18px;}
+
+/* 셀렉트박스 */
+
+/* 체크박스 */
+[data-checkbox] {margin:3px 0;}
+[data-checkbox] ul {margin:-3px 0; font-size:0;}
+[data-checkbox] ul > li {float:left; line-height:1; margin:3px 0;}
+[data-checkbox] input[type='checkbox'] {width:0; height:0; line-height:0; margin:0; padding:0; font-size:0; opacity:0;}
+[data-checkbox] ul:after,
+[data-checkbox] ul > li:after {content:''; display:block; clear:both;}
+[data-checkbox] input[type='checkbox'] + label {float:left; position:relative; margin-right:30px; padding-top:2px; padding-left:24px; font-size:12px; font-weight:500; cursor:pointer;}
+[data-checkbox] ul > li:last-child input[type='checkbox'] + label {margin-right:0;}
+[data-checkbox] input[type='checkbox'] + label:before {content:''; display:inline-block; position:absolute; top:50%; left:0; width:20px; height:20px; margin-top:-10px; border:1px solid #afafaf; border-radius:50%; background:#fff;}
+[data-checkbox] input[type='checkbox']:checked + label:after {content:''; display:inline-block; position:absolute; top:4px; left:7px; width:6px; height:8px; border-right:1px solid #afafaf; border-bottom:1px solid #afafaf; transform:rotate(45deg);}
+[data-checkbox] input[type='checkbox']:disabled + label:before {background:#afafaf;}
+
+/* 라디오버튼 */
+[data-radio] {margin:3px 0;}
+[data-radio] ul {margin:-3px 0; font-size:0;}
+[data-radio] ul > li {float:left; line-height:1; margin:3px 0;}
+[data-radio] input[type='radio'] {width:0; height:0; line-height:0; margin:0; padding:0; font-size:0; opacity:0;}
+[data-radio] ul:after,
+[data-radio] ul > li:after {content:''; display:block; clear:both;}
+[data-radio] input[type='radio'] + label {float:left; position:relative; margin-right:30px; padding-top:2px; padding-left:30px; font-size:12px; font-weight:500; cursor:pointer;}
+[data-radio] ul > li:last-child input[type='radio'] + label {margin-right:0;}
+[data-radio] input[type='radio'] + label:before {content:''; display:inline-block; position:absolute; top:50%; left:0; width:20px; height:20px; margin-top:-10px; border:1px solid #afafaf; border-radius:50%; background:#fff;}
+[data-radio] input[type='radio']:checked + label:after {content:''; display:inline-block; position:absolute; top:50%; left:5px; width:10px; height:10px; margin-top:-5px; border-radius:50%; background:#afafaf;}
+[data-radio] input[type='radio']:disabled + label:before {background:#afafaf;}
 
 /*=========================================================
 5. 헤더
@@ -337,16 +366,24 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 /* 미래엔 사회공헌 */
 [data-page='main'] .social:before {content:''; position:absolute; top:0; left:0; z-index:-1; width:100%; height:250px; background:#eae8e5;}
 [data-page='main'] .social_slide {margin-top:25px;}
-[data-page='main'] .social_slide .slide {}
 [data-page='main'] .social_slide .slide img {display:block; width:240px; margin:0 auto;}
-/* [data-page='main'] .social_slide [data-swiper-slide-index="0"] {}
-[data-page='main'] .social_slide [data-swiper-slide-index="1"] {}
-[data-page='main'] .social_slide [data-swiper-slide-index="2"] {}
-[data-page='main'] .social_slide [data-swiper-slide-index="3"] {}
-[data-page='main'] .social_slide [data-swiper-slide-index="4"] {} */
 [data-page='main'] .social_slide .txt_wrap {width:240px; margin:20px auto 0; text-align:center;}
 [data-page='main'] .social_slide .txt_wrap .tit {display:block; line-height:1.3em; font-size:21px; font-weight:500;}
 [data-page='main'] .social_slide .txt_wrap .txt {overflow:hidden; height:4.5em; margin-top:10px; font-size:12px; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:3;}
+
+/* 메인페이지 팝업 */
+[data-page='main'] .main_popup {visibility:hidden; position:fixed; top:0; left:0; z-index:10; width:100%; height:100%; background:rgba(0,0,0,.5); transition:.3s; opacity:0;}
+[data-page='main'] .main_popup.on {visibility:visible; opacity:1;}
+[data-page='main'] .main_popup .popup_wrap {position:absolute; bottom:0; left:0; width:100%; transition:.3s; transform:translateY(100%);}
+[data-page='main'] .main_popup.on .popup_wrap {transform:translateY(0);}
+[data-page='main'] .main_popup .popup_wrap > .close {position:absolute; width:50px; height:30px; text-indent:-9999px; left:50%; top:-30px; margin-left:-25px;}
+[data-page='main'] .main_popup .popup_wrap > .close:before {content:''; position:absolute; top:50%; left:0; width:100%; height:6px; margin-top:-3px; border-radius:4px; background:#fff;}
+[data-page='main'] .main_popup .cont {padding-top:40px; padding-bottom:40px; border-top-left-radius:15px; border-top-right-radius:15px; background-position:center; background-size:contain; font-weight:500;}
+[data-page='main'] .main_popup .cont .sub_txt {display:block; font-size:15px;}
+[data-page='main'] .main_popup .cont .tit {margin-top:3px; font-size:24px;}
+[data-page='main'] .main_popup .cont .link {display:inline-block; margin-top:15px; padding:10px 16px 6px; background:#fff; font-size:12px;}
+[data-page='main'] .main_popup .ctr {display:flex; height:50px; background:#fff; justify-content:space-between; align-items:center;}
+[data-page='main'] .main_popup .ctr button {font-size:12px; font-weight:500;}
 
 /*=========================================================
 9. 서브페이지

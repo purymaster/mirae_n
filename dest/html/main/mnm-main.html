@@ -634,7 +634,66 @@
 			</script>
 			<!-- //미래엔 사회공헌 -->
 
+			<!-- 메인페이지 팝업 -->
+			<!-- [D] .main_popup에 on 클래스 부여시 노출 -->
+			<div class="main_popup">
+				<div class="popup_wrap">
+					<div class="cont container" style="background:red;">
+						<span class="sub_txt" style="color:#fff">인공지능 기반</span>
+						<p class="tit" style="color:#fff">학원용 수학 학습<br>서비스 <span style="color:#cbdd16">‘알로M’</span></p>
+						<a href="#" class="link">자세히 보기</a>
+					</div>
+					<div class="ctr container">
+						<div data-checkbox>
+							<input type="checkbox" id="noPopup">
+							<label for="noPopup">오늘 하루 보지 않기</label>
+						</div>
+						<button type="button" class="close">닫기</button>
+					</div>
+					<button type="button" class="close">팝업 닫기</button>
+				</div>
+			</div>
+			<!-- //메인페이지 팝업 -->
 
+			<script>
+				//24시간동안 팝업 보지않기
+				function getCookie(cookie) {
+					var x, y;
+					var val = document.cookie.split(';');
+
+					for (var i = 0; i < val.length; i++) {
+						x = val[i].substr(0, val[i].indexOf('='));
+						y = val[i].substr(val[i].indexOf('=') + 1);
+						x = x.replace(/^\s+|\s+$/g, '');
+						if (x === cookie) {
+							return unescape(y);
+						};
+					}
+				}
+
+				function setCookie(name, value, day) {
+					var date = new Date();
+					date.setDate(date.getDate() + day);
+					var cookie = escape(value) + ((day === null) ? '' : ' ; expires=' + date.toUTCString());
+					document.cookie = name + '=' + cookie;
+				};
+
+				$('.main_popup .close').on('click', function() {
+					if ($("#noPopup").is(":checked")) setCookie("noPopup", "y", 1);
+					$(".main_popup").removeClass('on');
+					$('html').removeClass('fixed');
+				});
+
+				(function() {
+					if (getCookie("noPopup") === "y") {
+						$(".main_popup").removeClass('on');
+						$('html').removeClass('fixed');
+					} else {
+						$(".main_popup").addClass('on');
+						$('html').addClass('fixed');
+					}
+				})();
+			</script>
 		</div>
 		<footer>
 			<div class="container">
