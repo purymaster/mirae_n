@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<title>미래엔통합사이트</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+	<style>
+		a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-spacing:0;border-collapse:collapse}button{outline:0;cursor:pointer}*{box-sizing:border-box;max-height:1000000px;font-family:"Noto Sans",AppleSDGothicNeo,DroidSansFallback,arial,sans-serif;color:#333;letter-spacing:-.025em}body,html{height:100%}.map_wrap{padding:10px}.map_wrap .tit{font-size:16px;font-weight:700;line-height:1.5}.map_wrap .info{overflow:hidden;margin:10px 0 5px 0;font-size:12px}.map_wrap .info .process{overflow:hidden;float:left;line-height:20px}.map_wrap .info .process dd,.map_wrap .info .process dt{float:left;margin-right:5px}.map_wrap .info .process dd{color:red}.map_wrap .info .status{overflow:hidden;float:right}.map_wrap .info .status li{float:left;margin-left:3px}.map_wrap .info .status li em{margin-right:3px}table.list{width:100%;border-top:1px solid #999;border-bottom:1px solid #999;font-size:0;word-break:break-all;table-layout:fixed}table.list td,table.list th{overflow:hidden;padding:5px;border-top:1px solid #eee;border-left:1px solid #ccc;font-size:12px;line-height:20px;text-overflow:ellipsis;white-space:nowrap}table.list th{border-top:1px solid #999;border-left:1px solid #999}table.list td a{color:#666;text-decoration:none}table.list tr.hover td{background:#999;color:#fff}table.list tr.part td{border-top:1px solid #ccc}table.list tr td:first-child,table.list tr th:first-child{border-left:0}table.list tr:first-child td{border-top:1px solid #999}table.list th{background:#ccc;font-weight:700}table.list th.num{width:40px}table.list th.id{width:150px}table.list th.dev{width:50px}table.list th.date,table.list th.stat{width:50px}table.list th.memo{width:20%}table.list th.link{width:80px}table.list td{color:#666}table.list td.center{text-align:center}em.ico{display:inline-block;width:20px;border-radius:5px;font-size:12px;font-style:normal;line-height:20px;color:#fff;text-align:center;text-transform:uppercase}em.ico.standby{background:#666}em.ico.work{background:#1e90ff}em.ico.end{background:#32cd32}em.ico.modify{background:#ff1493}@media (max-width:1024px){header{text-align:center}header h1{position:static}header{height:auto;padding:10px 0;font-size:0}nav{overflow-x:auto;width:100%}nav ul{position:static;margin-top:10px;white-space:nowrap}nav ul li a{font-size:14px;line-height:19px}section{position:static;padding-top:80px;font-size:0}.guide_wrap>ul>li{padding-left:8px;font-size:12px;text-indent:-8px}.slide_wrap{position:static;height:auto;border:0;background:#fff}.map_wrap .info{padding:5px}.map_wrap .tit{text-align:center}table.list th.date,table.list th.dev,table.list th.id,table.list th.memo,table.list th.num,table.list tr td:nth-child(1),table.list tr td:nth-child(10),table.list tr td:nth-child(6),table.list tr td:nth-child(7),table.list tr td:nth-child(9){width:0;padding:0;border:0}table.list th.link{width:40px}table.list td a.mobile{display:none}table.list tbody tr td:nth-child(2),table.list thead tr th:nth-child(2){border-left:0}}@media (max-width:599px){table.list th.stat{width:40px}table.list td,table.list th{font-size:11px}}
+	</style>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script>
+		$(function(){var t,i,e;$("table.list").each(function(){$(this).find("tr:gt(0)").hover(function(){$(this).addClass("hover")},function(){$(this).removeClass("hover")}).each(function(t){$("td:eq(0)",this).text(t+1),""!=$("td:eq(1)",this).text()&&$(this).addClass("part")}).find("td").each(function(){""==$(this).text()&&$(this).addClass("nodata")}),$(this).find("tr").each(function(){t=$(this).find("td:eq(5)").text().toLowerCase(),e=$(this).parents("tbody").data("folder"),i=`<a href='dest/html/${e}/${t}.html' target='_blank' title='새창열림'>보기</a>`,$(this).find("td:last-child").html(i)})}),$(".map_wrap").each(function(){$(this).find(".process dd").text(Math.ceil(($(this).find("em.end").length-1)/$(this).find("tbody").children("tr").length*100)+"%")})});
+	</script>
+</head>
+
+<body>
+	<div class="wrap">
+
+		<!-- 미래엔통합사이트 -->
+		<div class="map_wrap">
+			<p class="tit">미래엔통합사이트</p>
+			<div class="info">
+				<!-- <dl class="process">
+					<dt>작업공정률</dt>
+					<dd></dd>
+				</dl>
+				 -->
+				<ul class="status">
+					<li><em class="ico standby">s</em>대기</li>
+					<li><em class="ico work">w</em>착수</li>
+					<li><em class="ico modify">m</em>수정</li>
+					<li><em class="ico end">e</em>완료</li>
+				</ul>
+			</div>
+			<div class="table_wrap">
+				<table class="list d4">
+					<caption>코딩 리스트</caption>
+					<thead>
+						<tr>
+							<th class="num">No</th>
+							<th class="depth">1depth</th>
+							<th class="depth">2depth</th>
+							<th class="depth">3depth</th>
+							<th class="depth">4depth</th>
+							<th class="id">ID</th>
+							<th class="dev">Dev</th>
+							<th class="stat">Status</th>
+							<th class="date">Date</th>
+							<th class="memo">Memo</th>
+							<th class="link">Link</th>
+						</tr>
+					</thead>
+					<tbody data-folder="main">
+						<tr>
+							<td class="center"></td>
+							<td>가이드</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">guide</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico work">w</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="main">
+						<tr>
+							<td class="center"></td>
+							<td>메인</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MAIN</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico work">w</em></td>
+							<td class="center"></td>
+							<td>보류(사회공헌 슬라이드)</td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td>교과서</td>
+							<td>Sub index</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>미래앤 교과서</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>초등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>중등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>고등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>특수교육</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>성인문해</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>통일초등국어교과서</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-TB-7</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="rb">
+						<tr>
+							<td class="center"></td>
+							<td>참고서</td>
+							<td>미래엔 참고서(Sub index)</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>초등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>중등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>고등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>참고서 자료실</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>선생님 자료실</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>교재큐레이션</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-7</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>동영상 강의 안내</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RB-8</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="ps">
+						<tr>
+							<td class="center"></td>
+							<td>출판</td>
+							<td>미래앤 출판(Sub index)</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PS-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>유아</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PS-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>초등</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PS-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>청소년</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PS-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>성인</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PS-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="mt">
+						<tr>
+							<td class="center"></td>
+							<td>맘티처</td>
+							<td>Sub index</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>맘티처란?</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>추천학습지</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>한글</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>수학</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>영어</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>한자</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-7</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>창의미술</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-8</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>과학탐구</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-9</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>지능개발</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-10</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>초등준비</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MT-11</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="ct">
+						<tr>
+							<td class="center"></td>
+							<td>공모전</td>
+							<td>Sub index</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>초등학생 글솜씨</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>교과서 창작 글감</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>어린이책 공모전</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>초등학생 손글씨</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>심사발표</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>역대수상작</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CT-7</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="ib">
+						<tr>
+							<td class="center"></td>
+							<td>기업소개</td>
+							<td>미래앤소개</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>CEO 인사말</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>가치체계</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>연혁</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>사업분야</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>CI</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>서체</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-7</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>계열사</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IB-8</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="pm">
+						<tr>
+							<td class="center"></td>
+							<td>홍보센터</td>
+							<td>언론보도</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PM-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>광고</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PM-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>사보</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PM-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>사회공헌</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-PM-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="rt">
+						<tr>
+							<td class="center"></td>
+							<td>인재채용</td>
+							<td>인재상</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RT-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>인사제도</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RT-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>복리후생</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RT-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>입사지원</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RT-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>지원결과</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RT-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>채용문의</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-RT-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="is">
+						<tr>
+							<td class="center"></td>
+							<td>통합검색</td>
+							<td>검색 입력 화면</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IS-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>통합검색 결과</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-IS-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="cs">
+						<tr>
+							<td class="center"></td>
+							<td>고객센터</td>
+							<td>공지사항</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CS-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>FAQ</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CS-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>1:1문의</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CS-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>지역별 판매처</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-CS-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="lg">
+						<tr>
+							<td class="center"></td>
+							<td>로그인</td>
+							<td>회원가입</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-LG-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>아이디/비밀번호 찾기</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-LG-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>회원 정보 수정</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-LG-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>회원 탈퇴</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-LG-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>로그인/아웃</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-LG-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="mp">
+						<tr>
+							<td class="center"></td>
+							<td>마이페이지</td>
+							<td>기본정보</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>주소</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>추가연락처</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>선생님인증(학교/학원)</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>찜한 교재 목록</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>찜한 자료 목록</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-6</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>다운받은 자료 목록</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-7</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>맘티처</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-8</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>문의내역</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-MP-9</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+					<tbody data-folder="ft">
+						<tr>
+							<td class="center"></td>
+							<td>footer</td>
+							<td>개인정보처리방침</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-FT-1</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>위탁 업체 리스트</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-FT-2</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>이용약관</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-FT-3</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>오시는길</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-FT-4</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+						<tr>
+							<td class="center"></td>
+							<td></td>
+							<td>무단이메일 수집거부</td>
+							<td></td>
+							<td></td>
+							<td class="center">MNM-FT-5</td>
+							<td class="center"></td>
+							<td class="center"><em class="ico standby">s</em></td>
+							<td class="center"></td>
+							<td></td>
+							<td class="center"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<!-- //미래엔통합사이트 -->
+
+	</div>
+</body>
+
+</html>
