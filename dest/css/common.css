@@ -160,7 +160,7 @@ caption,.hidden {overflow:hidden; clip:rect(0 0 0 0); position:absolute; width:1
 5. 헤더
 =========================================================*/
 header {display:-webkit-box;display:-ms-flexbox;display:flex; position:fixed; top:0; left:0; z-index:2; width:100%; height:60px; padding:15px; border-bottom:1px solid transparent; background:transparent; -ms-flex-wrap:nowrap; flex-wrap:nowrap; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
-header.on {border-color:#dcdcdc; background:#fff;;}
+header.on {border-color:#dcdcdc; background:#fff;}
 header h1 {width:74px; height:20px; background:url(../images/img/img_logo.png); background-size:contain; text-indent:-9999px;}
 header.on h1 {background-image:url(../images/img/img_logo_on.png);}
 header .util {display:-webkit-box;display:-ms-flexbox;display:flex; -ms-flex-wrap:nowrap; flex-wrap:nowrap; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
@@ -245,7 +245,7 @@ footer {background:#f8f8f8; color:#7d7d7d;}
 footer .info {padding:25px 0 40px;}
 footer .info .cs {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; -webkit-box-align:start; -ms-flex-align:start; align-items:flex-start;}
 footer .info .cs .link {position:relative; line-height:21px; padding:2px 13px 0 6px; border:1px solid #dcdcdc; font-size:10px; color:#7d7d7d;}
-footer .info .cs .link:after {content:''; position:absolute; top:7px; right:5px; width:6px; height:6px; border-top:2px solid #7d7d7d; border-right:2px solid #7d7d7d; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+footer .info .cs .link:after {content:''; position:absolute; top:8px; right:5px; width:6px; height:6px; border-top:2px solid #7d7d7d; border-right:2px solid #7d7d7d; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
 footer .info .txt {font-size:11px;}
 footer .info .txt strong {margin-right:5px; font-size:16px; font-weight:500;}
 footer .info .txt a {color:inherit;}
@@ -348,7 +348,8 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-page='main'] .banner .box p {overflow:hidden; line-height:1.3em; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:2;}
 [data-page='main'] .banner .box .tit {font-size:18px; font-weight:500;}
 [data-page='main'] .banner .box .sub_txt {margin-top:10px; font-size:12px;}
-[data-page='main'] .banner .pagination {position:absolute; bottom:15px; left:50%; z-index:1; width:auto; padding:0 5px; border-radius:10px; background:rgba(0,0,0,.5); font-size:10px; color:#fff; -webkit-transform:translateX(-50%); transform:translateX(-50%);;}
+[data-page='main'] .banner .pagination {position:absolute; bottom:15px; left:50%; z-index:1; width:auto; padding:0 5px; border-radius:10px; background:rgba(0,0,0,.5); font-size:10px; color:#fff; -webkit-transform:translateX(-50%); transform:translateX(-50%);}
+[data-page='main'] .banner .pagination span {display:inline-block; margin-top:2px;}
 [data-page='main'] .banner .pagination span:before {content:'0';}
 
 /* 미래엔 PICK */
@@ -382,6 +383,9 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-page='main'] .main_popup .cont .sub_txt {display:block; font-size:15px;}
 [data-page='main'] .main_popup .cont .tit {margin-top:3px; font-size:24px;}
 [data-page='main'] .main_popup .cont .link {display:inline-block; margin-top:15px; padding:10px 16px 6px; background:#fff; font-size:12px;}
+[data-page='main'] .main_popup .pagination {position:absolute; top:15px; right:18px; bottom:auto; left:auto; z-index:1; width:auto; padding:0 5px; border-radius:10px; background:rgba(0,0,0,.5); font-size:10px; color:#fff;}
+[data-page='main'] .main_popup .pagination span {display:inline-block; margin-top:2px;}
+[data-page='main'] .main_popup .pagination span:before {content:'0';}
 [data-page='main'] .main_popup .ctr {display:-webkit-box;display:-ms-flexbox;display:flex; height:50px; background:#fff; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
 [data-page='main'] .main_popup .ctr button {font-size:12px; font-weight:500;}
 

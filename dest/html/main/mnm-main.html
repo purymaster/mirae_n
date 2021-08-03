@@ -148,16 +148,18 @@
 			</div>
 
 			<script>
-				slideInit('.main_visual', {
-					loop: true,
-					autoplay: {
-						delay: 5000,
-					},
-					pagination: {
-						el: '.main_visual .pagination',
-						type: 'bullets',
-					}
-				});
+				if ($(".main_visual").find('.slide').length > 1) {
+					slideInit('.main_visual', {
+						loop: true,
+						autoplay: {
+							delay: 5000,
+						},
+						pagination: {
+							el: '.main_visual .pagination',
+							type: 'bullets',
+						}
+					});
+				}
 			</script>
 			<!-- //키비주얼 -->
 
@@ -638,10 +640,26 @@
 			<!-- [D] .main_popup에 on 클래스 부여시 노출 -->
 			<div class="main_popup">
 				<div class="popup_wrap">
-					<div class="cont container" style="background:red;">
-						<span class="sub_txt" style="color:#fff">인공지능 기반</span>
-						<p class="tit" style="color:#fff">학원용 수학 학습<br>서비스 <span style="color:#cbdd16">‘알로M’</span></p>
-						<a href="#" class="link">자세히 보기</a>
+					<div class="popup_slide swiper-container">
+						<div class="swiper-wrapper">
+							<div class="slide swiper-slide">
+								<div class="cont container" style="background:red;">
+									<span class="sub_txt" style="color:#fff">인공지능 기반1</span>
+									<p class="tit" style="color:#fff">학원용 수학 학습<br>서비스 <span style="color:#cbdd16">‘알로M’</span>
+									</p>
+									<a href="#" class="link">자세히 보기</a>
+								</div>
+							</div>
+							<div class="slide swiper-slide">
+								<div class="cont container" style="background:blue;">
+									<span class="sub_txt" style="color:#fff">인공지능 기반2</span>
+									<p class="tit" style="color:#fff">학원용 수학 학습<br>서비스 <span style="color:#cbdd16">‘알로M’</span>
+									</p>
+									<a href="#" class="link">자세히 보기</a>
+								</div>
+							</div>
+						</div>
+						<div class="pagination"></div>
 					</div>
 					<div class="ctr container">
 						<div data-checkbox>
@@ -653,6 +671,22 @@
 					<button type="button" class="close">팝업 닫기</button>
 				</div>
 			</div>
+
+			<script>
+				if ($(".popup_slide").find('.slide').length > 1) {
+					slideInit('.popup_slide', {
+						effect: 'fade',
+						loop: true,
+						autoplay: {
+							delay: 5000,
+						},
+						pagination: {
+							el: ".popup_slide .pagination",
+							type: "fraction",
+						},
+					});
+				}
+			</script>
 			<!-- //메인페이지 팝업 -->
 
 			<script>
