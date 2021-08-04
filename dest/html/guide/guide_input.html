@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<style>
+			section {
+				margin: 15px 0;
+			}
+
+			section>* {
+				margin: 5px 0;
+			}
+
+			#content {
+				padding: 15px;
+			}
+
+			.guide_tit {
+				line-height: 2em;
+				margin-bottom: 15px;
+				padding: 4px 15px 0;
+				background: darkslateblue;
+				font-size: 16px;
+				font-weight: 500;
+				color: #fff;
+			}
+		</style>
+		<div id="content">
+
+			<section>
+				<div class="guide_tit">체크박스</div>
+				<ul data-checkbox>
+					<li>
+						<input type="checkbox" name="item" id="input">
+						<label for="input">선택</label>
+					</li>
+					<li>
+						<input type="checkbox" name="item" id="input2" disabled>
+						<label for="input2">선택</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="guide_tit">체크박스(한줄)</div>
+				<ul data-checkbox class="inline">
+					<li>
+						<input type="checkbox" name="item1" id="input3">
+						<label for="input3">선택</label>
+					</li>
+					<li>
+						<input type="checkbox" name="item1" id="input4">
+						<label for="input4">선택</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="guide_tit">라디오버튼</div>
+				<ul data-radio>
+					<li>
+						<input type="radio" name="item2" id="input5">
+						<label for="input5">선택</label>
+					</li>
+					<li>
+						<input type="radio" name="item2" id="input6" disabled>
+						<label for="input6">선택</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="guide_tit">라디오버튼(한줄)</div>
+				<ul data-radio class="inline">
+					<li>
+						<input type="radio" name="item3" id="input7">
+						<label for="input7">선택</label>
+					</li>
+					<li>
+						<input type="radio" name="item3" id="input8">
+						<label for="input8">선택</label>
+					</li>
+				</ul>
+			</section>
+
+			<section>
+				<div class="guide_tit">버튼</div>
+				<div data-btn>
+					<a href="#">취소</a>
+					<button type="submit" class="confirm wide">확인</button>
+				</div>
+				<div data-btn>
+					<button type="submit" class="confirm">로그인</button>
+				</div>
+				<div data-btn>
+					<button type="button" class="next">
+						<span>교사 인증</span>
+					</button>
+				</div>
+				<div data-btn>
+					<button type="button" class="toggle">
+						<span>선생님이신가요?</span>
+					</button>
+				</div>
+			</section>
+
+			<section>
+				<div class="guide_tit">탭메뉴(일반)</div>
+				<div>
+					<div data-tab="tab1">
+						<ul>
+							<li class="on"><button type="button">생년월일</button></li>
+							<li><button type="button">휴대폰 번호</button></li>
+							<li><button type="button">메일 주소</button></li>
+						</ul>
+					</div>
+					<div data-tab-cont="tab1">
+						<div class="tab_cont">
+							생년월일
+						</div>
+						<div class="tab_cont" style="display:none;">
+							휴대폰 번호
+						</div>
+						<div class="tab_cont" style="display:none;">
+							메일 주소
+						</div>
+					</div>
+				</div>
+				<div>
+					<div data-tab="tab2" class="bookmark">
+						<ul>
+							<li class="on"><button type="button">학교 선생님(교사)</button></li>
+							<li><button type="button">학원 선생님</button></li>
+						</ul>
+					</div>
+					<div data-tab-cont="tab2">
+						<div class="tab_cont">
+							학교 선생님(교사)
+						</div>
+						<div class="tab_cont" style="display:none;">
+							학원 선생님
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="guide_tit">탭메뉴(슬라이드)</div>
+				<div>
+					<div data-tab="tab3" class="slide">
+						<ul>
+							<li class="on"><button type="button">전체</button></li>
+							<li><button type="button">교과서</button></li>
+							<li><button type="button">참고서/출판</button></li>
+							<li><button type="button">공모전</button></li>
+							<li><button type="button">05</button></li>
+							<li><button type="button">06</button></li>
+							<li><button type="button">07</button></li>
+						</ul>
+					</div>
+					<div data-tab-cont="tab3">
+						<div class="tab_cont">
+							전체
+						</div>
+						<div class="tab_cont" style="display:none;">
+							교과서
+						</div>
+						<div class="tab_cont" style="display:none;">
+							참고서/출판
+						</div>
+						<div class="tab_cont" style="display:none;">
+							공모전
+						</div>
+						<div class="tab_cont" style="display:none;">
+							05
+						</div>
+						<div class="tab_cont" style="display:none;">
+							06
+						</div>
+						<div class="tab_cont" style="display:none;">
+							07
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div class="guide_tit">탭메뉴(페이지 이동)</div>
+				<div data-tab>
+					<ul>
+						<li><a href="#">페이지 이동</a></li>
+						<li><a href="#">페이지 이동</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<div class="guide_tit">셀렉트박스</div>
+				<div data-select>
+					<select>
+						<option>옵션</option>
+					</select>
+				</div>
+				<div data-select class="input">
+					<select>
+						<option>옵션</option>
+					</select>
+				</div>
+			</section>
+
+			<section>
+				<!-- [D] 
+            재입력이 필요한 data-input-item에 disable 클래스 부여
+            사용가능한 값이 입력된 data-input-item에 enable 클래스 부여
+            재입력이 필요한 input 또는 data-selec에 data-error 값 부여
+        -->
+				<div class="guide_tit">입력폼</div>
+				<div data-input-item>
+					<input type="text">
+				</div>
+				<div data-input-item="pw" class="disable">
+					<input type="password" data-error>
+					<span class="status">사용불가</span>
+					<p data-alert>필수 입력 사항입니다.</p>
+				</div>
+				<div data-input-item="pw" class="enable">
+					<input type="password">
+					<span class="status">안전</span>
+				</div>
+				<div data-input-item="birth" class="disable">
+					<div class="box">
+						<input type="text" placeholder="년(4자리)" maxlength="4" data-error>
+						<div data-select class="input">
+							<select>
+								<option>1월</option>
+							</select>
+						</div>
+						<input type="text" placeholder="일" maxlength="2">
+					</div>
+					<p data-alert>태어난 년도 4자리를 정확하게 입력하세요.</p>
+				</div>
+
+			</section>
+
+		</div>
+	</div>
+</body>
+
+</html>

@@ -86,6 +86,15 @@ $(function () {
 
     });
 
+    //탭메뉴 제어
+    $('[data-tab]').find('button').on('click', function () {
+        var idx = $(this).parent().index(),
+            tabName = $(this).parents('[data-tab]').data('tab');
+
+            $(this).parent().addClass('on').siblings().removeClass('on');
+        $(`[data-tab-cont=${tabName}]`).find('.tab_cont').eq(idx).show().siblings().hide();
+    });
+
 
 })
 
