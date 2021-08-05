@@ -1,0 +1,173 @@
+@@include('head.html')
+<div id="content" data-page="input">
+    <div class="form_wrap">
+        <div class="container">
+            <div class="form_box">
+                <img src="../../images/img/input/img_input_logo.png" alt="미래엔" class="tit small">
+                <div class="join_order">
+                    <div>
+                        <p class="guide_txt">회원가입 정보를 입력해주세요.</p>
+                    </div>
+                    <ol>
+                        <li>1</li>
+                        <li>2</li>
+                        <li class="on">3</li>
+                    </ol>
+                    <a href="javascript:history.back();" class="back">뒤로가기</a>
+                </div>
+
+                <div class="input_table">
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <label for="userName">이름</label>
+                                    <i>*<span class="hidden">필수입력</span></i>
+                                </th>
+                                <td>
+                                    <div data-input-item>
+                                        <input type="text" id="userName" placeholder="이름을 입력하세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="userId">아이디 또는 이메일</label>
+                                    <i>*<span class="hidden">필수입력</span></i>
+                                </th>
+                                <td>
+                                    <div data-input-item>
+                                        <input type="text" id="userId" placeholder="아이디 또는 이메일을 입력하세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="userPw">비밀번호</label>
+                                    <i>*<span class="hidden">필수입력</span></i>
+                                </th>
+                                <td>
+                                    <div data-input-item="pw" class="disable">
+                                        <input type="password" data-error id="userPw" placeholder="현재 비밀번호를 입력하세요.">
+                                        <span class="status">사용불가</span>
+                                        <p data-alert>필수 입력 사항입니다.</p>
+                                    </div>
+                                    <div data-input-item="pw" class="re disable">
+                                        <input type="password" data-error id="userPwRe" placeholder="비밀번호를 한번 더 입력하세요.">
+                                        <span class="status">사용불가</span>
+                                        <p data-alert>필수 입력 사항입니다.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info_dialog">
+                    아래 항목은 아이디·비밀번호 찾기 또는 서비스 안내를
+                    위해 필요한 정보이므로 정확하게 입력해주세요.
+                </div>
+
+                <div class="input_table">
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <label for="birth">생년월일</label>
+                                    <i>*<span class="hidden">필수입력</span></i>
+                                </th>
+                                <td>
+                                    <div data-input-item="birth" class="disable">
+                                        <div class="box">
+                                            <input type="text" placeholder="년(4자리)" maxlength="4" id="birth" data-error>
+                                            <div data-select class="input">
+                                                <select>
+                                                    <option>1월</option>
+                                                </select>
+                                            </div>
+                                            <input type="text" placeholder="일" maxlength="2">
+                                        </div>
+                                        <p data-alert>태어난 년도 4자리를 정확하게 입력하세요.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="userPhone">휴대폰 번호</label>
+                                    <i>*<span class="hidden">필수입력</span></i>
+                                </th>
+                                <td>
+                                    <div data-input-item>
+                                        <input type="text" id="userPhone" placeholder="휴대폰 번호를 입력하세요.(-없이)">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <label for="userMail">본인 확인 이메일</label>
+                                    <i>*<span class="hidden">필수입력</span></i>
+                                </th>
+                                <td>
+                                    <div data-input-item>
+                                        <input type="text" id="userMail" placeholder="이메일을 입력하세요.">
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p style="margin:30px 0 20px;">
+                    선생님 인증을 하시면 교사용 학습 자료를<br> 
+                    다운 받으실 수 있습니다.
+                </p>
+
+                <div data-btn>
+                    <button type="button" class="show_teacher toggle">
+                        <span>선생님이신가요?</span>
+                    </button>
+                </div>
+
+                <div class="teacher_info" style="display:none;">
+                    <div data-tab="tab1" class="bookmark">
+                        <ul>
+                            <li class="on"><button type="button">학교 선생님(교사)</button></li>
+                            <li><button type="button">학원 선생님</button></li>
+                        </ul>
+                    </div>
+                    <div data-tab-cont="tab1">
+                        <div class="tab_cont input_box">
+                            학교 선생님(교사)
+                        </div>
+                        <div class="tab_cont input_box" style="display:none;">
+                            학원 선생님
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    $('button.show_teacher').on('click', function(){
+                        $(this).toggleClass('on');
+                        $('.teacher_info').toggle();
+                    });
+                </script>
+
+                <div data-btn>
+                    <a href="#">취소</a>
+                    <button type="submit" class="confirm wide">확인</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @@include('personal_footer.html')
+</div>
+@@include('bottom.html')

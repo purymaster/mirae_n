@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<div id="content" data-page="input">
+			<div class="form_wrap">
+				<div class="container">
+					<div class="form_box">
+						<img src="../../images/img/input/img_input_logo.png" alt="미래엔" class="tit">
+						<div style="text-align:center;">
+							<div class="guide_txt">비밀번호 변경</div>
+							<p class="guide_subtxt">
+								비밀번호는 언제든지 변경 가능하며, 변경하신<br>
+								이후에는 새로운 비밀번호로만 로그인 가능합니다.
+							</p>
+						</div>
+
+						<div class="input_table">
+							<table>
+								<colgroup>
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">
+											<label for="userId">아이디</label>
+										</th>
+										<td>
+											<div data-input-item>
+												<input type="text" id="userId" readonly value="miraekim@naver.com">
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="userPw">현재 비밀번호</label>
+											<i>*<span class="hidden">필수입력</span></i>
+										</th>
+										<td>
+											<div data-input-item="pw" class="disable">
+												<input type="password" data-error id="userPw" placeholder="현재 비밀번호를 입력하세요.">
+												<span class="status">사용불가</span>
+												<p data-alert>필수 입력 사항입니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="newPw">신규 비밀번호</label>
+											<i>*<span class="hidden">필수입력</span></i>
+										</th>
+										<td>
+											<div data-input-item="pw" class="disable">
+												<input type="password" data-error id="newPw" placeholder="영문/숫자/특수문자 조합 8~12자리">
+												<span class="status">사용불가</span>
+												<p data-alert>필수 입력 사항입니다.</p>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">
+											<label for="newPwRe">신규 비밀번호 확인</label>
+											<i>*<span class="hidden">필수입력</span></i>
+										</th>
+										<td>
+											<div data-input-item="pw" class="re disable">
+												<input type="password" data-error id="newPwRe" placeholder="비밀번호를 한번 더 입력하세요.">
+												<span class="status">사용불가</span>
+												<p data-alert>필수 입력 사항입니다.</p>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div data-btn>
+							<button type="submit" class="confirm">확인</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<div class="personal_footer">
+				<div class="container">
+					<ul>
+						<li><a href="#">개인정보처리방침</a></li>
+						<li><a href="#">이용약관</a></li>
+						<li><a href="#">고객센터</a></li>
+					</ul>
+					<div class="copyright">
+						© MIRAE N CO.,LTD. All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -105,6 +105,9 @@
 					<button type="submit" class="confirm">로그인</button>
 				</div>
 				<div data-btn>
+					<button type="submit" class="disable">비활성화</button>
+				</div>
+				<div data-btn>
 					<button type="button" class="next">
 						<span>교사 인증</span>
 					</button>
@@ -154,12 +157,28 @@
 						</div>
 					</div>
 				</div>
+				<div>
+					<div data-tab="tab3" class="menu">
+						<ul>
+							<li class="on"><button type="button">아이디 찾기</button></li>
+							<li><button type="button">비밀번호 찾기</button></li>
+						</ul>
+					</div>
+					<div data-tab-cont="tab3">
+						<div class="tab_cont">
+							아이디 찾기
+						</div>
+						<div class="tab_cont" style="display:none;">
+							비밀번호 찾기
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<section>
 				<div class="guide_tit">탭메뉴(슬라이드)</div>
 				<div>
-					<div data-tab="tab3" class="slide">
+					<div data-tab="tab4" class="slide">
 						<ul>
 							<li class="on"><button type="button">전체</button></li>
 							<li><button type="button">교과서</button></li>
@@ -170,7 +189,7 @@
 							<li><button type="button">07</button></li>
 						</ul>
 					</div>
-					<div data-tab-cont="tab3">
+					<div data-tab-cont="tab4">
 						<div class="tab_cont">
 							전체
 						</div>
@@ -239,6 +258,14 @@
 					<input type="password">
 					<span class="status">안전</span>
 				</div>
+				<div data-input-item="timer">
+					<input type="text">
+					<span class="time">99:99</span>
+				</div>
+				<div data-input-item="search">
+					<input type="text">
+					<button type="button" class="del">삭제</button>
+				</div>
 				<div data-input-item="birth" class="disable">
 					<div class="box">
 						<input type="text" placeholder="년(4자리)" maxlength="4" data-error>
@@ -252,6 +279,19 @@
 					<p data-alert>태어난 년도 4자리를 정확하게 입력하세요.</p>
 				</div>
 
+			</section>
+
+			<section>
+				<div class="guide_tit">목록</div>
+				<ul class="type1" data-list>
+					<li>목록</li>
+				</ul>
+				<ul class="type2" data-list>
+					<li>목록</li>
+				</ul>
+				<ul class="type3" data-list>
+					<li>1. 목록</li>
+				</ul>
 			</section>
 
 		</div>

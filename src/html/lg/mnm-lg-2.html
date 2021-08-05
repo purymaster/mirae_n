@@ -1,0 +1,98 @@
+@@include('head.html')
+<div id="content" data-page="input">
+    <div class="form_wrap">
+        <div class="container">
+            <div class="form_box">
+                <img src="../../images/img/input/img_input_logo.png" alt="미래엔" class="tit">
+                <div class="findidpw">
+                    <div>
+                        <div data-tab="tab3" class="menu">
+                            <ul>
+                                <li class="on"><button type="button">아이디 찾기</button></li>
+                                <li><button type="button">비밀번호 찾기</button></li>
+                            </ul>
+                        </div>
+                        <div data-tab-cont="tab3">
+                            <div class="tab_cont">
+
+                                <!-- 아이디 찾기 내용 -->
+                                <p class="guide_txt">
+                                    아래 등록한 회원 정보를 입력해주세요.
+                                </p>
+                                <div class="findid_tab">
+                                    <div data-tab="tab1">
+                                        <ul>
+                                            <li class="on"><button type="button">생년월일</button></li>
+                                            <li><button type="button">휴대폰 번호</button></li>
+                                            <li><button type="button">이메일 주소</button></li>
+                                        </ul>
+                                    </div>
+
+                                    <div data-input-item>
+                                        <input type="text" placeholder="이름을 입력하세요.">
+                                        <!-- <p data-alert>필수 입력 사항입니다.</p> -->
+                                    </div>
+                                    <div data-tab-cont="tab1">
+                                        <div class="tab_cont">
+                                            <div data-input-item>
+                                                <input type="text" placeholder="생년월일을 입력하세요.(ex:19900510)">
+                                                <!-- <p data-alert>필수 입력 사항입니다.</p> -->
+                                            </div>
+                                        </div>
+                                        <div class="tab_cont" style="display:none;">
+                                            <input type="text" placeholder="휴대폰 번호를 입력하세요.(ex:01012345678)">
+                                            <!-- <p data-alert>필수 입력 사항입니다.</p> -->
+                                        </div>
+                                        <div class="tab_cont" style="display:none;">
+                                            <input type="text" placeholder="이메일 주소를 입력하세요.(ex:email@email.com)">
+                                            <!-- <p data-alert>필수 입력 사항입니다.</p> -->
+                                        </div>
+                                    </div>
+                                    <p class="guide_subtxt">
+                                        SNS로 가입하신 회원님은 정확한 아이디를 확인할 수 없습니다. 가입하신 SNS 사이트에 문의 부탁 드립니다.
+                                    </p>
+                                    <div data-btn>
+                                        <button type="submit" class="disable">확인</button>
+                                    </div>
+                                </div>
+                                <!-- //아이디 찾기 내용 -->
+
+                            </div>
+                            <div class="tab_cont" style="display:none;">
+
+                                <!-- 비밀번호 찾기 내용 -->
+                                <p class="guide_txt">
+                                    아래 등록한 회원 정보를 입력해주세요.
+                                </p>
+                                <p class="guide_subtxt">
+                                    등록하신 휴대폰 번호 또는 이메일로<br>
+                                    <strong>임시비밀번호를 재발급</strong> 받을 수 있습니다.
+                                </p>
+                                <div class="findpw_box">
+                                    <div data-input-item>
+                                        <input type="text" placeholder="이름을 입력하세요.">
+                                        <!-- <p data-alert>필수 입력 사항입니다.</p> -->
+                                    </div>
+                                    <div data-input-item>
+                                        <input type="text" placeholder="아이디(이메일)를 입력하세요.">
+                                        <!-- <p data-alert>필수 입력 사항입니다.</p> -->
+                                    </div>
+                                </div>
+                                <p class="guide_subtxt">
+                                    SNS로 가입하신 회원님은 비밀번호 찾기를 진행하실 수 없습니다. 가입하신 SNS 사이트에 문의 부탁 드립니다.
+                                </p>
+                                <div data-btn>
+                                    <button type="submit" class="disable">확인</button>
+                                </div>
+                                <!-- //비밀번호 찾기 내용 -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('personal_footer.html')
+</div>
+@@include('bottom.html')
