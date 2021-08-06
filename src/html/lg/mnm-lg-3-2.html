@@ -4,17 +4,6 @@
         <div class="container">
             <div class="form_box">
                 <img src="../../images/img/input/img_input_logo.png" alt="미래엔" class="tit small">
-                <div class="join_order">
-                    <div>
-                        <p class="guide_txt">회원가입 정보를 입력해주세요.</p>
-                    </div>
-                    <ol>
-                        <li>1</li>
-                        <li>2</li>
-                        <li class="on">3</li>
-                    </ol>
-                    <a href="javascript:history.back();" class="back">뒤로가기</a>
-                </div>
 
                 <div class="input_table">
                     <table>
@@ -28,6 +17,11 @@
                                     <div>
                                         <label for="userName">이름</label>
                                         <i>*<span class="hidden">필수입력</span></i>
+                                    </div>
+                                    <div data-btn>
+                                        <a href="#" class="next">
+                                            <span>비밀번호 변경하기</span>
+                                        </a>
                                     </div>
                                 </th>
                                 <td>
@@ -49,42 +43,6 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <th scope="row">
-                                    <div>
-                                        <label for="userPw">비밀번호</label>
-                                        <i>*<span class="hidden">필수입력</span></i>
-                                    </div>
-                                </th>
-                                <td>
-                                    <div data-input-item="pw" class="disable">
-                                        <input type="password" data-error id="userPw" placeholder="현재 비밀번호를 입력하세요.">
-                                        <span class="status">사용불가</span>
-                                        <p data-alert>필수 입력 사항입니다.</p>
-                                    </div>
-                                    <div data-input-item="pw" class="re disable">
-                                        <input type="password" data-error id="userPwRe" placeholder="비밀번호를 한번 더 입력하세요.">
-                                        <span class="status">사용불가</span>
-                                        <p data-alert>필수 입력 사항입니다.</p>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="info_dialog">
-                    아래 항목은 아이디·비밀번호 찾기 또는 서비스 안내를
-                    위해 필요한 정보이므로 정확하게 입력해주세요.
-                </div>
-
-                <div class="input_table">
-                    <table>
-                        <colgroup>
-                            <col>
-                            <col>
-                        </colgroup>
-                        <tbody>
                             <tr>
                                 <th scope="row">
                                     <div>
@@ -111,7 +69,7 @@
                                 <th scope="row">
                                     <div>
                                         <label for="userPhone">휴대폰 번호</label>
-                                        <i>*<span class="hidden">필수입력</span></i>                                        
+                                        <i>*<span class="hidden">필수입력</span></i>
                                     </div>
                                 </th>
                                 <td>
@@ -133,8 +91,192 @@
                                     </div>
                                 </td>
                             </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <label for="address">주소</label>
+                                    </div>
+                                    <div data-btn>
+                                        <button type="button" class="next">
+                                            <span>주소 검색</span>
+                                        </button>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div data-input-item>
+                                        <input type="text" id="address" readonly>
+                                    </div>
+                                    <div data-input-item>
+                                        <input type="text" id="addressDetail" placeholder="상세주소를 입력하세요">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <label for="anotherPhone">추가 연락처</label>
+                                    </div>
+                                </th>
+                                <td>
+                                    <div data-input-item>
+                                        <input type="text" id="anotherPhone" placeholder="추가 연락처를 입력하세요">
+                                    </div>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
+                </div>
+
+                <div class="validity">
+                    <span class="tit">개인정보 유효기간</span>
+
+                    <ul data-radio class="inline">
+                        <li>
+                            <input type="radio" name="validity" id="year1" checked>
+                            <label for="year1">1년 (기본)</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="validity" id="year3">
+                            <label for="year3">3년</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="validity" id="year6">
+                            <label for="year6">6년</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="validity" id="year10">
+                            <label for="year10">10년</label>
+                        </li>
+                    </ul>
+
+                    <p>
+                        개인정보 유효기간 경과 이후<br>
+                        개인정보를 분리저장/관리 또는 파기합니다.
+                    </p>
+                </div>
+
+                <div class="input_table">
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div>
+                                        <label for="promotion">프로모션 알림 정보 수신</label>
+                                        <i>*<span class="hidden">필수입력</span></i>
+                                    </div>
+                                    <ul data-checkbox class="inline">
+                                        <li>
+                                            <input type="checkbox" name="promotion" id="checkAll">
+                                            <label for="checkAll">전체 동의</label>
+                                        </li>
+                                    </ul>
+                                </th>
+                                <td>
+
+                                    <table class="inner">
+                                        <colgroup>
+                                            <col style="width:160px;">
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">사이트명</th>
+                                                <th scope="col">문자</th>
+                                                <th scope="col">이메일</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">미래엔</th>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion1">
+                                                        <label for="promotion1"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion2">
+                                                        <label for="promotion2"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">vol.321</th>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion3">
+                                                        <label for="promotion3"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion4">
+                                                        <label for="promotion4"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">프린트앤</th>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion5">
+                                                        <label for="promotion5"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion6">
+                                                        <label for="promotion6"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">엠티처</th>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion7">
+                                                        <label for="promotion7"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion8">
+                                                        <label for="promotion8"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">웰리미 한글 진단 검사</th>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion9">
+                                                        <label for="promotion9"></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div data-checkbox class="single">
+                                                        <input type="checkbox" name="promotion" id="promotion10">
+                                                        <label for="promotion10"></label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="info_dialog" style="text-align:left;">
+                    최근 수정일 : 2021.05.31
                 </div>
 
                 <p style="margin:30px 0 20px;">
