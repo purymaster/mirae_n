@@ -1,0 +1,76 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="sub" class="notice">
+    <div class="container">
+
+        <!-- 서브페이지 헤더 -->
+        <div class="sub_header">
+            <div class="tit_wrap">
+                <h2 class="tit">고객센터</h2>
+            </div>
+            <div class="sub_menu">
+                <ul>
+                    <!-- [D] 해당 페이지 li에 on클래스 부여 -->
+                    <li class="on"><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                    <li><a href="#">지역별 판매처</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- //서브페이지 헤더 -->
+
+    </div>
+    <div class="container">
+        <div class="search_box">
+            <input type="text" placeholder="검색어를 입력하세요.">
+        </div>
+    </div>
+    <ul class="board list">
+        <!-- [D] li에 on클래스 부여시 상단 고정 공지 -->
+        <li class="board_header on">
+            <a href="#">
+                <span class="cate">참고서</span>
+                <p class="tit">
+                    중학교 “생활 중국어” 학생용 DVD 다운로드 서비스 중학교 “생활 중국어” 학생용 DVD 다운로드 서비스 중학교 “생활 중국어” 학생용 DVD 다운로드 서비스
+                </p>
+                <span class="time">9999-99-99</span>
+            </a>
+        </li>
+        <li class="board_header">
+            <a href="#">
+                <span class="cate">참고서</span>
+                <p class="tit">
+                    중학교 “생활 중국어” 학생용 DVD 다운로드 서비스 중학교 “생활 중국어” 학생용 DVD 다운로드 서비스 중학교 “생활 중국어” 학생용 DVD 다운로드 서비스
+                </p>
+                <span class="time">9999-99-99</span>
+            </a>
+        </li>
+        <li data-nodata>
+            <div class="container">
+                <div class="txt_wrap">
+                    <p class="txt">검색 결과가 없습니다.</p>
+                    <p class="sub_txt">죄송합니다. 검색하신 검색 결과를<br> 찾을 수 없습니다.</p>
+                </div>
+                <div data-btn class="fit">
+                    <a href="#" class="list all">
+                        <span>전체 리스트 보기</span>
+                    </a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div data-paging>
+        <ul>
+            <li class="prev btn"><a class="item" href="#">이전 페이지</a></li>
+            <li class="active"><span class="item">1</span></li>
+            <li><a class="item" href="#">2</a></li>
+            <li><a class="item" href="#">3</a></li>
+            <li><a class="item" href="#">4</a></li>
+            <li><a class="item" href="#">5</a></li>
+            <li class="next btn"><a class="item" href="#">다음 페이지</a></li>
+        </ul>
+    </div>
+</div>
+@@include('footer.html')
+@@include('bottom.html')
