@@ -4,12 +4,15 @@ $(function () {
     function navControl(move, target) {
         if (move === "show") {
             target.addClass('on')
+            $('html').addClass('fixed');
         } else {
             target.removeClass('on');
+            $('html').removeClass('fixed');
         }
     };
     var gnb = $('.gnb_wrap'),
-        gnb_sub = $('.gnb .sub_menu');
+        gnb_sub = $('.gnb .sub_menu'),
+        filter = $('.filter_wrap');
     $(document).on('click', '.nav_open', function () {
         navControl("show", gnb);
     }).on('click', '.nav_close', function () {
@@ -19,7 +22,12 @@ $(function () {
         navControl("show", gnb_sub);
     }).on('click', '.book_close', function () {
         navControl("", gnb_sub);
+    }).on('click', '[data-open-filter]', function () {
+        navControl("show", filter);
+    }).on('click', '[data-close-filter]', function () {
+        navControl("", filter);
     });
+
 
     //스크롤 헤더 제어
     var isMain = false;

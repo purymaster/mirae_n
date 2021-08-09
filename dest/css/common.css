@@ -127,7 +127,7 @@ caption,.hidden {overflow:hidden; clip:rect(0 0 0 0); position:absolute; width:1
 4. 공통 레이아웃
 =========================================================*/
 
-.wrap {-webkit-box-flex:1;-ms-flex:1;flex:1;}
+.wrap {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-flex:1; -ms-flex:1; flex:1; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
 #content {padding-top:60px;}
 #content[data-page="main"] {padding-top:0;}
 .container {padding:0 18px;}
@@ -311,6 +311,43 @@ textarea {width:100%; height:175px; padding:10px 15px; border:1px solid #c4c4c4;
 [data-table] tr td:last-child {border-right:0;}
 [data-table] .reject {color:#7d7d7d;}
 [data-table].left * {text-align:left;}
+
+/* 링크 아이콘 */
+[data-link] {display:inline-block; width:10px; height:10px; margin-left:4px; background:url(../images/ico/ico_link.png); background-size:cover; -webkit-transform:translateY(1px); transform:translateY(1px);}
+
+/* 필터 */
+.filter_wrap {visibility:hidden; position:fixed; top:0; left:0; z-index:5; width:100%; height:100%; background:rgba(0,0,0,.5); -webkit-transition:all .3s; transition:all .3s; opacity:0;}
+.filter_wrap.on {visibility:visible; opacity:1;}
+[data-filter] {display:-webkit-box;display:-ms-flexbox;display:flex; position:absolute; top:0; right:0; width:calc(100% - 75px); min-width:320px; max-width:400px; height:100%; background:#fff; -webkit-transition:all .3s; transition:all .3s; -webkit-transform:translateX(100%); transform:translateX(100%); -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column;}
+.filter_wrap.on [data-filter] {-webkit-transform:translateX(0);transform:translateX(0);}
+[data-filter] [data-close-filter] {position:absolute; top:22px; right:18px; width:16px; height:16px; text-indent:-9999px;}
+[data-filter] [data-close-filter]:before,
+[data-filter] [data-close-filter]:after {content:''; position:absolute; top:50%; left:50%; width:140%; height:2px; margin-top:-1px; margin-left:-70%; background:#000;}
+[data-filter] [data-close-filter]:before {-webkit-transform:rotate(-45deg);transform:rotate(-45deg);}
+[data-filter] [data-close-filter]:after {-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+[data-filter] .filter_box {overflow-y:auto; margin-top:40px;}
+[data-filter] .filter_item {padding:20px 0; border-bottom:1px solid #dcdcdc;}
+[data-filter] .filter_item .tit {display:block; font-size:15px; font-weight:500;}
+[data-filter] .filter_item .item_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; margin:-5px; padding-top:10px; -ms-flex-wrap:wrap; flex-wrap:wrap;}
+[data-filter] .filter_item label {display:inline-block; padding:5px;}
+[data-filter] .filter_item label span {display:block; padding:7px 24px 3px; border:1px solid #c4c4c4; border-radius:16px; background-color:#fff; font-size:13px; color:#7d7d7d;}
+[data-filter] .filter_item label :checked + span {border-color:#4d4d4d; background-color:#4d4d4d; color:#fff;}
+[data-filter] .filter_item label :disabled + span {border-color:#f8f8f8; background-color:#f8f8f8; color:#c4c4c4;}
+[data-filter] .series {border:0;}
+[data-filter] .series label {width:50%;}
+[data-filter] .series label span {height:80px; border-radius:6px; background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-filter] .series label :checked + span {background-color:#fff;}
+[data-filter] .series label :disabled + span {position:relative;}
+[data-filter] .series label :disabled + span:before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; -webkit-backdrop-filter:grayscale(1); backdrop-filter:grayscale(1);}
+[data-filter] .filter_item .more {margin-top:20px; text-align:center;}
+[data-filter] .filter_item .more button {padding:9px 20px 7px; border:1px solid #c4c4c4; border-radius:20px;}
+[data-filter] .filter_item .more button span {display:inline-block; position:relative; padding-left:15px;}
+[data-filter] .filter_item .more button.on span {padding:0;}
+[data-filter] .filter_item .more button span:before,
+[data-filter] .filter_item .more button span:after {content:''; position:absolute; top:50%; left:0; width:10px; height:2px; margin-top:-3px; background:#000;}
+[data-filter] .filter_item .more button span:after {-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+[data-filter] .filter_item .more button.on span:before,
+[data-filter] .filter_item .more button.on span:after {display:none;}
 
 /*=========================================================
 5. 헤더
@@ -576,7 +613,6 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-page='main'] .work_slide {margin:-10px 0;}
 [data-page='main'] .work_slide .slide {padding:10px 0; font-size:12px; font-weight:500; text-align:center;}
 [data-page='main'] .work_slide .slide .ico {display:block; width:72px; margin:0 auto;}
-[data-page='main'] .work_slide .slide .link {display:inline-block; width:10px; height:10px; margin-left:4px; background:url(../images/ico/ico_link.png); background-size:cover; -webkit-transform:translateY(1px); transform:translateY(1px);}
 [data-page='main'] .work_slide .scrollbar {height:2px; margin-top:15px; background:#c4c4c4;}
 
 /* 메인배너 */
@@ -777,6 +813,10 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 /* 공통 */
 [data-page='sub'] {padding-bottom:60px;}
 [data-page='sub'] .sub_header {padding:30px 0 16px;}
+[data-page='sub'] .sub_header .tit_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
+[data-page='sub'] .sub_header .filter {padding:2px 10px 0; border:1px solid #c4c4c4; border-radius:15px;}
+[data-page='sub'] .sub_header .filter span {position:relative; padding-right:16px;}
+[data-page='sub'] .sub_header .filter span:after {content:''; position:absolute; top:0; right:0; width:12px; height:10px; background:url(../images/ico/ico_filter.png); background-repeat:no-repeat; background-size:contain; background-posiiton:center;}
 [data-page='sub'] .sub_header .tit {line-height:1.5em; font-size:20px; font-weight:500;}
 [data-page='sub'] .sub_menu {overflow-x:auto; overflow-y:hidden; -ms-scroll-snap-type:x mandatory; scroll-snap-type:x mandatory;}
 [data-page='sub'] .sub_menu ul {display:-webkit-box; margin-top:15px;}

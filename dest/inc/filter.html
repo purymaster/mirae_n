@@ -1,0 +1,76 @@
+<div class="filter_wrap">
+	<div data-filter>
+		<div class="filter_box container">
+
+			<div class="filter_item">
+				<span class="tit">일반 항목</span>
+				<div class="item_wrap">
+					<label><input type="checkbox" class="hidden"><span>항목1</span></label>
+					<label><input type="checkbox" class="hidden"><span>항목2</span></label>
+					<label><input type="checkbox" class="hidden"><span>항목3</span></label>
+					<label><input type="checkbox" class="hidden" disabled><span>항목4</span></label>
+				</div>
+			</div>
+
+			<div class="filter_item series">
+				<span class="tit">시리즈</span>
+				<div class="item_wrap">
+					<label>
+						<input type="checkbox" class="hidden" disabled>
+						<span style="background-image:url(../../images/img/filter/img_series_01.png)"></span>
+					</label>
+					<label>
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_02.png)"></span>
+					</label>
+					<label>
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_03.png)"></span>
+					</label>
+					<label>
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_04.png)"></span>
+					</label>
+					<label style="display:none;">
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_01.png)"></span>
+					</label>
+					<label style="display:none;">
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_02.png)"></span>
+					</label>
+					<label style="display:none;">
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_03.png)"></span>
+					</label>
+					<label style="display:none;">
+						<input type="checkbox" class="hidden">
+						<span style="background-image:url(../../images/img/filter/img_series_04.png)"></span>
+					</label>
+				</div>
+				<div class="more">
+					<button type="button">
+						<span>더보기</span>
+					</button>
+				</div>
+			</div>
+
+			<script>
+				var moreSeries = $('.filter_item.series').find('button'),
+					seriesList = $('.filter_item.series .item_wrap');
+				moreSeries.on('click', function() {
+					if ($(this).hasClass('on')) {
+						$(this).removeClass('on').find('span').text('더보기');
+						seriesList.find('label').hide();
+						seriesList.find('label:nth-child(-n+4)').show();
+					} else {
+						$(this).addClass('on').find('span').text('접기');
+						seriesList.find('label').show();
+					}
+				});
+			</script>
+
+		</div>
+		<button type="button" data-close-filter>필터 닫기</button>
+	</div>
+</div>
