@@ -323,34 +323,36 @@
 									<button type="button" class="view_term">전문보기</button>
 								</th>
 								<td>
-									<table class="inner" style="display:none;">
-										<colgroup>
-											<col style="width:120px;">
-											<col>
-										</colgroup>
-										<tbody>
-											<tr>
-												<th scope="row">항목</th>
-												<td>
-													이메일 주소, 핸드폰 번호
-												</td>
-											</tr>
-											<tr>
-												<th scope="row">수집 이용 목적</th>
-												<td>
-													고객문의 · 요청 · 불편사항 확인
-													및 처리결과 회신
-												</td>
-											</tr>
-											<tr>
-												<th scope="row">보유기간</th>
-												<td>
-													소비자 불만 또는 분쟁처리에 관한
-													기록 보존을 위해 3년간 보관 후 파기함
-												</td>
-											</tr>
-										</tbody>
-									</table>
+									<div data-table class="left" style="display:none;">
+										<table>
+											<colgroup>
+												<col style="width:120px;">
+												<col>
+											</colgroup>
+											<tbody>
+												<tr>
+													<th scope="row">항목</th>
+													<td>
+														이메일 주소, 핸드폰 번호
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">수집 이용 목적</th>
+													<td>
+														고객문의 · 요청 · 불편사항 확인
+														및 처리결과 회신
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">보유기간</th>
+													<td>
+														소비자 불만 또는 분쟁처리에 관한
+														기록 보존을 위해 3년간 보관 후 파기함
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
 									<ul data-checkbox>
 										<li>
 											<input type="checkbox" name="term" id="term">
@@ -368,7 +370,7 @@
 
 						/* 개인정보 수집 전문보기 */
 						$('.view_term').on('click', function() {
-							$('.question_table .inner').show();
+							$('.question_table [data-table]').show();
 						});
 
 						/* 인증 수단 선택 */

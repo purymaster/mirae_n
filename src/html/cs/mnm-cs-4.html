@@ -1,0 +1,110 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="sub" class="sell">
+    <div class="container">
+
+        <!-- 서브페이지 헤더 -->
+        <div class="sub_header">
+            <div class="tit_wrap">
+                <h2 class="tit">고객센터</h2>
+            </div>
+            <div class="sub_menu">
+                <ul>
+                    <!-- [D] 해당 페이지 li에 on클래스 부여 -->
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">1:1 문의</a></li>
+                    <li class="on"><a href="#">지역별 판매처</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- //서브페이지 헤더 -->
+
+        <div class="sell_info">
+            <p class="main_txt">
+                미래엔 참고서/교과서/출판도서의 구입 및 문의 방법을 확인해보세요!
+            </p>
+            <p class="sub_txt">
+                미래엔의 참고서와 출판도서는 주요 오프라인 서점에서 모두 구입 가능하며, 구비된 상품이 없을 경우 아래의 지역별 판매처로 문의 부탁 드립니다. 미래엔 교과서 및 참고서, 출판 도서의
+                구입을 원하시는 고객님께서는 미래엔 자사몰(<a href="http://textbookmall.mirae-n.com">http://textbookmall.mirae-n.com</a>)에서
+                구입 가능합니다. 구매를 원하시는 상품 재고가 없을 경우 (02)3475-3972로 전화 연락 부탁 드립니다.
+            </p>
+            <button class="show_info" type="button">
+                <span>자세히 보기</span>
+            </button>
+        </div>
+
+        <script>
+            var sellInfo = $('.sell_info'),
+                showBtn = $('.sell_info span');
+            sellInfo.find('.show_info').on('click', function () {
+                if (sellInfo.hasClass('on')) {
+                    sellInfo.removeClass('on');
+                    showBtn.text('자세히 보기');
+                } else {
+                    sellInfo.addClass('on');
+                    showBtn.text('접기');
+                };
+            });
+        </script>
+
+        <div class="search_opt">
+            <div data-select>
+                <select>
+                    <option>시/도</option>
+                </select>
+            </div>
+            <div data-select>
+                <select>
+                    <option>시/군/구</option>
+                </select>
+            </div>
+            <div data-input-item>
+                <input type="text" placeholder="판매처명 입력하세요.">
+            </div>
+        </div>
+
+        <div class="search_list">
+            <div class="search_header">
+                <span class="cnt">검색결과 : 999999건</span>
+                <div data-select class="inline">
+                    <select>
+                        <option>최신순</option>
+                    </select>
+                </div>
+            </div>
+            <ul class="list">
+                <li>
+                    <div class="shop_name">
+                        <span class="name">강남북스</span>
+                        <span class="cate">참고서</span>
+                    </div>
+                    <div class="data location">
+                        서울시 강남구 개포로 642 지층 (일원동)
+                    </div>
+                    <div class="data tel">
+                        02)3412-0431
+                    </div>
+                </li>
+                <li data-nodata>
+                    <div class="container">
+                        <div class="txt_wrap">
+                            <p class="txt">검색 결과가 없습니다.</p>
+                            <p class="sub_txt">죄송합니다. 검색하신 검색 결과를<br> 찾을 수 없습니다.</p>
+                        </div>
+                        <div data-btn class="fit">
+                            <a href="#" class="list all">
+                                <span>전체 리스트 보기</span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')

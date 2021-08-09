@@ -1,9 +1,26 @@
 @@include('head.html')
 <style>
-    section {margin:15px 0;}
-    section > * {margin:5px 0;}
-    #content {padding:15px;}
-    .guide_tit {line-height:2em; margin-bottom:15px; padding:4px 15px 0; background:darkslateblue; font-size:16px; font-weight:500; color:#fff;}
+    section {
+        margin: 15px 0;
+    }
+
+    section>* {
+        margin: 5px 0;
+    }
+
+    #content {
+        padding: 15px;
+    }
+
+    .guide_tit {
+        line-height: 2em;
+        margin-bottom: 15px;
+        padding: 4px 15px 0;
+        background: darkslateblue;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+    }
 </style>
 <div id="content">
 
@@ -271,6 +288,11 @@
                 <option>옵션</option>
             </select>
         </div>
+        <div data-select class="inline">
+            <select>
+                <option>옵션</option>
+            </select>
+        </div>
     </section>
 
     <section>
@@ -312,7 +334,7 @@
             </div>
             <p data-alert>태어난 년도 4자리를 정확하게 입력하세요.</p>
         </div>
-        
+
     </section>
 
     <section>
@@ -326,6 +348,53 @@
         <ul class="type3" data-list>
             <li>1. 목록</li>
         </ul>
+    </section>
+
+    <section>
+        <div class="guide_tit">데이터 테이블</div>
+        <div data-table>
+            <table>
+                <colgroup>
+                    <col style="width:160px;">
+                    <col>
+                    <col>
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">사이트명</th>
+                        <th scope="col">문자</th>
+                        <th scope="col">이메일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">미래엔</th>
+                        <td>동의</td>
+                        <td><span class="reject">미동의</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">vol.321</th>
+                        <td>동의</td>
+                        <td><span class="reject">미동의</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">프린트앤</th>
+                        <td>동의</td>
+                        <td><span class="reject">미동의</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">엠티처</th>
+                        <td>동의</td>
+                        <td><span class="reject">미동의</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">웰리미 한글 진단 검사</th>
+                        <td>동의</td>
+                        <td><span class="reject">미동의</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
 </div>
