@@ -105,13 +105,22 @@
 				</div>
 			</div>
 		</header>
-		<div id="content" data-page="sub">
+		<div id="content" data-page="sub" class="book">
 			<div class="container">
 
 				<!-- 서브페이지 헤더 -->
 				<div class="sub_header">
 					<div class="tit_wrap">
 						<h2 class="tit">교과서</h2>
+						<div class="menu_select">
+							<select>
+								<option>초등</option>
+								<option>중등</option>
+								<option>고등</option>
+								<option>특수교육</option>
+								<option>성인문해</option>
+							</select>
+						</div>
 						<button class="filter" type="button" data-open-filter>
 							<span>필터</span>
 						</button>
@@ -203,9 +212,250 @@
 						<button type="button" data-close-filter>필터 닫기</button>
 					</div>
 				</div>
+
+				<script>
+					$(window).on('load scroll', function() {
+						var scroll = $(this).scrollTop();
+						if (scroll > 0) {
+							$('.sub_header').addClass('fixed')
+							$('.search_box').css('margin-top', '113px');
+						} else {
+							$('.sub_header').removeClass('fixed')
+							$('.search_box').css('margin-top', '0px');
+						}
+					});
+				</script>
 				<!-- //서브페이지 헤더 -->
 
 			</div>
+			<div class="container">
+				<div class="search_box">
+					<input type="text" placeholder="도서명을 입력해주세요.">
+				</div>
+			</div>
+			<div class="container">
+				<div class="book_list">
+					<div data-search-header>
+						<span class="cnt">검색결과 : 999999건</span>
+						<div data-select class="inline">
+							<select>
+								<option>최신순</option>
+							</select>
+						</div>
+					</div>
+					<ul class="list">
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									<ul class="cate">
+										<li class="revise">2015 개정</li>
+										<li class="teacher">선생님용</li>
+										<li class="national">국정</li>
+										<li class="best">베스트셀러</li>
+										<li class="new">신간</li>
+									</ul>
+								</div>
+								<div class="txt_wrap">
+									예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기 예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기
+								</div>
+							</a>
+							<div class="ctr">
+								<!-- [D] 찜하기 활성화시 button에 on 클래스 부여 -->
+								<button type="button" class="favorite on">찜하기</button>
+								<button type="button" class="download">다운로드</button>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="../../images/img/book/img_pick_book_02.png" alt="">
+								</div>
+								<div class="txt_wrap">
+									예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기 예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기
+								</div>
+							</a>
+							<div class="ctr">
+								<button type="button" class="favorite">찜하기</button>
+								<button type="button" class="download">다운로드</button>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="../../images/img/book/img_pick_book_03.png" alt="">
+								</div>
+								<div class="txt_wrap">
+									예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기 예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기
+								</div>
+							</a>
+							<div class="ctr">
+								<button type="button" class="favorite">찜하기</button>
+								<button type="button" class="download">다운로드</button>
+							</div>
+						</li>
+						<li>
+							<a href="#">
+								<div class="img_wrap">
+									<img src="../../images/img/book/img_pick_book_04.png" alt="">
+								</div>
+								<div class="txt_wrap">
+									예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기 예비 교사와 현장 교사를 위한 초등학생 국어 오개념 바로잡기
+								</div>
+							</a>
+							<div class="ctr">
+								<button type="button" class="favorite">찜하기</button>
+								<button type="button" class="download">다운로드</button>
+							</div>
+						</li>
+						<li data-nodata>
+							<div class="txt_wrap">
+								<p class="txt">검색 결과가 없습니다.</p>
+							</div>
+							<div class="search_tip">
+								<span class="tit">검색TIP</span>
+								<ul>
+									<li>
+										<img src="../../images/ico/book/ico_searchtip_01.png" alt="">
+										<p>검색어가 올바르게 입력되었는지 확인해주세요.</p>
+									</li>
+									<li>
+										<img src="../../images/ico/book/ico_searchtip_02.png" alt="">
+										<p>특수문자는 제외하는 것이 좋습니다.</p>
+									</li>
+									<li>
+										<img src="../../images/ico/book/ico_searchtip_03.png" alt="">
+										<p>두 단어 이상의 검색어는 띄어쓰기를 해보세요.</p>
+									</li>
+									<li>
+										<img src="../../images/ico/book/ico_searchtip_04.png" alt="">
+										<p>검색어의 단어 수를 줄이거나 보다 일반적인 단어로
+											검색해보세요.</p>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+					<div class="more">
+						<button type="button">
+							<span>더보기</span>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 최상단 이동 버튼 -->
+			<div data-top-btn>
+				<button>페이지 최상단으로 이동</button>
+			</div>
+
+			<script>
+				$(window).on('load scroll', function() {
+					var scroll = $(this).scrollTop();
+					if (scroll > 0) {
+						$('[data-top-btn]').show();
+					} else {
+						$('[data-top-btn]').hide();
+					}
+				});
+
+				$(document).on('click', '[data-top-btn] button', function() {
+					$('html,body').animate({
+						scrollTop: '0'
+					}, 300);
+				});
+			</script>
+			<!-- //최상단 이동 버튼 -->
+
+			<!-- [D] data-popup="download"에 on클래스 부여시 팝업 노출 -->
+			<div data-popup="download">
+				<div class="popup_wrap">
+					<div class="popup_cont">
+						<div>
+							<div class="txt_wrap">
+								<h1 class="tit">학습자료 다운로드</h1>
+							</div>
+							<div class="img_wrap">
+								<img src="../../images/img/book/img_pick_book_01.png" alt="">
+							</div>
+						</div>
+						<div class="file_list">
+							<ul>
+								<li class="pdf">
+									<ul data-checkbox>
+										<li>
+											<input type="checkbox" name="item" id="item1">
+											<label for="item1">정답과 해설</label>
+										</li>
+									</ul>
+									<p class="txt">하루 한장 English BITE 초등 영단어 3학년 정오표 하루 한장 English BITE 초등 영단어 3학년
+										정오표</p>
+								</li>
+								<li class="hwp">
+									<ul data-checkbox>
+										<li>
+											<input type="checkbox" name="item" id="item2">
+											<label for="item2">정답과 해설</label>
+										</li>
+									</ul>
+									<p class="txt">하루 한장 English BITE 초등 영단어 3학년 정오표 하루 한장 English BITE 초등 영단어 3학년
+										정오표</p>
+								</li>
+								<li class="zip">
+									<ul data-checkbox>
+										<li>
+											<input type="checkbox" name="item" id="item3">
+											<label for="item3">정답과 해설</label>
+										</li>
+									</ul>
+									<p class="txt">하루 한장 English BITE 초등 영단어 3학년 정오표 하루 한장 English BITE 초등 영단어 3학년
+										정오표</p>
+								</li>
+								<li class="zip">
+									<ul data-checkbox>
+										<li>
+											<input type="checkbox" name="item" id="item4">
+											<label for="item4">정답과 해설</label>
+										</li>
+									</ul>
+									<p class="txt">하루 한장 English BITE 초등 영단어 3학년 정오표 하루 한장 English BITE 초등 영단어 3학년
+										정오표</p>
+								</li>
+								<li class="zip">
+									<ul data-checkbox>
+										<li>
+											<input type="checkbox" name="item" id="item5">
+											<label for="item5">정답과 해설</label>
+										</li>
+									</ul>
+									<p class="txt">하루 한장 English BITE 초등 영단어 3학년 정오표 하루 한장 English BITE 초등 영단어 3학년
+										정오표</p>
+								</li>
+								<li class="zip">
+									<ul data-checkbox>
+										<li>
+											<input type="checkbox" name="item" id="item6">
+											<label for="item6">정답과 해설</label>
+										</li>
+									</ul>
+									<p class="txt">하루 한장 English BITE 초등 영단어 3학년 정오표 하루 한장 English BITE 초등 영단어 3학년
+										정오표</p>
+								</li>
+							</ul>
+						</div>
+						<div data-btn>
+							<button type="button" class="download select">
+								<span>선택 파일 다운로드</span>
+							</button>
+							<button type="button" class="download all confirm">
+								<span>전체 파일 다운로드</span>
+							</button>
+						</div>
+					</div>
+					<button type="button" class="close" data-close-download>팝업 닫기</button>
+				</div>
+			</div>
+
 		</div>
 		<footer>
 			<div class="container">
