@@ -256,6 +256,11 @@ textarea {width:100%; height:175px; padding:10px 15px; border:1px solid #c4c4c4;
 [data-tab].bookmark li.on a,
 [data-tab].bookmark li.on button {background:#f8f8f8; color:#000;}
 
+[data-tab].bookmark.other li {border-bottom:1px solid #000;}
+[data-tab].bookmark.other li.on {border-bottom:0;}
+[data-tab].bookmark.other li a,
+[data-tab].bookmark.other li button {background:#fff; color:#7d7d7d;}
+
 [data-tab].menu ul {border:0;}
 [data-tab].menu li {border:0; border-bottom:1px solid #dcdcdc;}
 [data-tab].menu a,
@@ -323,6 +328,15 @@ textarea {width:100%; height:175px; padding:10px 15px; border:1px solid #c4c4c4;
 [data-table] tr td:last-child {border-right:0;}
 [data-table] .reject {color:#7d7d7d;}
 [data-table].left * {text-align:left;}
+
+[data-table='curation'] table {border-top:2px solid #000;}
+[data-table='curation'] th {font-weight:500;}
+[data-table='curation'] th,
+[data-table='curation'] td {padding:8px 3px;}
+[data-table='curation'] .level {max-width:210px; margin:0 auto;}
+[data-table='curation'] .level .step {display:-webkit-box;display:-ms-flexbox;display:flex; width:100%; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
+[data-table='curation'] .level .bar {position:relative; height:8px; margin-top:7px; border-radius:4px; background:#e5e5e5;}
+[data-table='curation'] .level .point {position:absolute; top:0; bottom:0; border-radius:4px; background-image:linear-gradient(95deg, #2ad1aa, #3cf04b);}
 
 /* 링크 아이콘 */
 [data-link] {display:inline-block; width:10px; height:10px; margin-left:4px; background:url(../images/ico/ico_link.png); background-size:cover; -webkit-transform:translateY(1px); transform:translateY(1px);}
@@ -573,6 +587,16 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-popup="depth2"] {background:transparent;}
 [data-popup='depth2'] .popup_wrap {-webkit-box-shadow:6px 6px 15px 0 rgba(0, 0, 0, .16);box-shadow:6px 6px 15px 0 rgba(0, 0, 0, .16);}
 
+/* SNS공유 팝업 */
+[data-popup='sns'] .popup_wrap {top:115px; -webkit-transform:translateX(-50%); transform:translateX(-50%); padding:10px 15px; padding-right:60px; border-radius:50px;}
+[data-popup='sns'] .close {top:50%; right:25px; margin-top:-7px;}
+[data-popup='sns'] .sns {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
+[data-popup='sns'] .sns button {width:45px; height:45px; border-radius:50%; background-size:contain; text-indent:-9999px; -ms-flex-negative:0; flex-shrink:0;}
+[data-popup='sns'] .sns .link {background-image:url(../images/ico/ico_share_link.png);}
+[data-popup='sns'] .sns .kakao {background-image:url(../images/ico/ico_share_kakao.png);}
+[data-popup='sns'] .sns .facebook {background-image:url(../images/ico/ico_share_facebook.png);}
+[data-popup='sns'] .sns .blog {background-image:url(../images/ico/ico_share_blog.png);}
+
 /* 다운로드 팝업 */
 [data-popup='download'] {visibility:hidden; -webkit-transition:all .3s; transition:all .3s; opacity:0;}
 [data-popup='download'].on {visibility:visible; opacity:1;}
@@ -592,13 +616,31 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-popup='download'] .file_list .txt {overflow:hidden; margin-top:10px; text-overflow:ellipsis; white-space:nowrap;}
 [data-popup='download'] [data-btn] {position:absolute; bottom:0; left:0; width:100%; margin:0; padding:15px; border-top:1px solid #f2f2f2; background:#fff;}
 
+/* 영상 리스트 팝업 */
+[data-popup='movie'] {visibility:hidden; -webkit-transition:all .3s; transition:all .3s; opacity:0;}
+[data-popup='movie'].on {visibility:visible; opacity:1;}
+[data-popup='movie'] .popup_wrap {overflow:hidden; top:90px; bottom:0; left:0; width:100%; max-width:100%; max-height:100%; border-top-left-radius:15px; border-top-right-radius:15px; -webkit-transition:all .3s; transition:all .3s; -webkit-transform:none; transform:none; -webkit-transform:translateY(100%); transform:translateY(100%);}
+[data-popup='movie'].on .popup_wrap {-webkit-transform:translateY(0);transform:translateY(0);}
+[data-popup='movie'] .popup_cont {display:-webkit-box;display:-ms-flexbox;display:flex; height:100%; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column;}
+[data-popup='movie'] .txt_wrap .tit {font-weight:500;}
+[data-popup='movie'] .movie_list {margin-top:15px; padding:15px 0; border-top:1px solid #dcdcdc; overflow-y:auto;}
+[data-popup='movie'] .movie_list li {margin-bottom:15px;}
+[data-popup='movie'] .movie_list a {display:-webkit-box;display:-ms-flexbox;display:flex;}
+[data-popup='movie'] .movie_list .thumb {margin-right:10px; -ms-flex-negative:0; flex-shrink:0;}
+[data-popup='movie'] .movie_list .thumb img {display:block; width:145px; height:80px;}
+[data-popup='movie'] .movie_list .tit {display:-webkit-box; overflow:hidden; height:4.5em; font-size:14px; font-weight:500; text-overflow:ellipsis; -webkit-box-orient:vertical; -webkit-line-clamp:3;}
+
 /*=========================================================
-8. 메인페이지
+8. 인덱스페이지
 =========================================================*/
 
 /* 공통 */
 [data-page='main'] section {position:relative; padding:45px 0 60px;}
 [data-page='main'] section h2 {margin-bottom:20px; font-size:22px; font-weight:500; text-align:center;}
+
+/*===================
+메인
+=====================*/
 
 /* 키비주얼 */
 [data-page="main"] .main_visual .slide {height:615px; background-size:cover; background-position:center; text-align:center; color:#fff;}
@@ -704,9 +746,181 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-page='main'] .main_popup [data-checkbox] input[type='checkbox'] + label {font-size:12px; white-space:nowrap;}
 [data-page='main'] .main_popup [data-checkbox] input[type='checkbox'] + label:before {border-radius:50%;}
 
+/*===================
+교과서/출판도서
+=====================*/
+
+/*===================
+참고서
+=====================*/
+
+/*===================
+교재큐레이션
+=====================*/
+
+[data-page='curation'] {}
+
+/*===================
+맘티처
+=====================*/
+
 /*=========================================================
-9. 입력페이지
+9. 서브페이지
 =========================================================*/
+
+/* 공통 */
+[data-page='sub'] {padding-bottom:60px;}
+[data-page='sub'] .sub_header {padding:30px 0 16px;}
+[data-page='sub'] .sub_header.fixed {position:fixed; top:0; left:0; z-index:10; width:100%; padding:15px 18px; border-bottom:1px solid #dcdcdc; background:#fff;}
+[data-page='sub'] .sub_header.fixed .sub_menu {display:none;}
+[data-page='sub'] .sub_header .tit_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
+[data-page='sub'] .sub_header .menu_select {display:none; position:relative; padding-right:10px; font-size:15px; font-weight:500;}
+[data-page='sub'] .sub_header .menu_select select {display:inline-block; height:30px; line-height:32px; direction:rtl;}
+[data-page='sub'] .sub_header .menu_select select option {direction:ltr;}
+[data-page='sub'] .sub_header.fixed .menu_select {display:block;}
+[data-page='sub'] .sub_header .menu_select:after {content:''; position:absolute; top:11px; right:0; width:0; height:0; border-width:4px; border-style:solid; border-color:#000 transparent transparent transparent; background:none;}
+[data-page='sub'] .sub_header .filter {padding:2px 10px 0; border:1px solid #c4c4c4; border-radius:15px;}
+[data-page='sub'] .sub_header .filter span {position:relative; padding-right:16px;}
+[data-page='sub'] .sub_header .filter span:after {content:''; position:absolute; top:0; right:0; width:12px; height:10px; background:url(../images/ico/ico_filter.png); background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='sub'] .sub_header .tit {line-height:1.5em; font-size:20px; font-weight:500;}
+[data-page='sub'] .sub_menu {overflow-x:auto; overflow-y:hidden; -ms-scroll-snap-type:x mandatory; scroll-snap-type:x mandatory;}
+[data-page='sub'] .sub_menu ul {display:-webkit-box; margin-top:15px;}
+[data-page='sub'] .sub_menu li {position:relative; margin-right:20px; -webkit-box-flex:0; -ms-flex-positive:0; flex-grow:0; scroll-snap-align:start;}
+[data-page='sub'] .sub_menu li.on {border-bottom:1px solid #000;}
+[data-page='sub'] .sub_menu li:last-child {margin:0;}
+[data-page='sub'] .sub_menu a {display:block; color:#7d7d7d;}
+[data-page='sub'] .sub_menu li.on a {color:#000;}
+[data-page='sub'] .search_box {position:relative; border-radius:20px; background:#f8f8f8;}
+[data-page='sub'] .search_box:before {content:''; position:absolute; top:13px; left:20px; width:14px; height:14px; background:url(../images/ico/input/ico_search.png); background-repeat:no-repeat; background-size:contain;}
+[data-page='sub'] .search_box input {height:40px; line-height:44px; padding:0 15px 0 40px; border:0; background:none;}
+[data-page='sub'] .help {margin-top:50px;}
+[data-page='sub'] .help li {position:relative; padding:18px 12px; padding-left:64px; background:#f8f8f8; margin-bottom:8px;}
+[data-page='sub'] .help li:last-child {margin-bottom:0;}
+[data-page='sub'] .help li:before,
+[data-page='sub'] .help li:after {content:""; position:absolute; top:50%; left:12px; width:40px; height:40px; margin-top:-20px;}
+[data-page='sub'] .help li:before {border:1px solid #d1d1d1; border-radius:50%; background:#fff;}
+[data-page='sub'] .help li:after {background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='sub'] .help li.question:after {background-image:url(../images/ico/cs/ico_help_question.png);}
+[data-page='sub'] .help li.cs:after {background-image:url(../images/ico/cs/ico_help_cs.png);}
+[data-page='sub'] .help li .main_txt {font-size:13px; font-weight:500;}
+[data-page='sub'] .help li .sub_txt {margin-top:5px; font-size:11px; color:#7d7d7d;}
+[data-page='sub'] .help li a {position:relative; text-decoration:underline; padding-right:10px;}
+[data-page='sub'] .help li a:after {content:''; position:absolute; top:1px; right:0; width:6px; height:6px; border-top:1px solid #7d7d7d; border-right:1px solid #7d7d7d; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+
+/*===================
+교과서/출판도서
+=====================*/
+
+/* 교과서 - 목록 */
+[data-page='sub'].book_list .book_list {margin-top:20px;}
+[data-page='sub'].book_list .book_list .list {display:-webkit-box;display:-ms-flexbox;display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; margin:-20px -8px;}
+[data-page='sub'].book_list .book_list .list > li {width:50%; padding:20px 8px;}
+[data-page='sub'].book_list .book_list .img_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; position:relative; height:180px; background:#f8f8f8; -ms-flex-wrap:nowrap; flex-wrap:nowrap; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
+[data-page='sub'].book_list .book_list .img_wrap .cate {display:-webkit-box;display:-ms-flexbox;display:flex; position:absolute; top:5px; left:5px; margin:-3px; -ms-flex-wrap:wrap; flex-wrap:wrap;}
+[data-page='sub'].book_list .book_list .img_wrap .cate li {margin:3px; padding:2px 5px 0; font-size:10px; color:#fff;}
+[data-page='sub'].book_list .book_list .img_wrap .cate .revise {background:#1d50a2;}
+[data-page='sub'].book_list .book_list .img_wrap .cate .teacher {background:#00cbb4;}
+[data-page='sub'].book_list .book_list .img_wrap .cate .national {background:#86d629;}
+[data-page='sub'].book_list .book_list .img_wrap .cate .best {background:#fc6666;}
+[data-page='sub'].book_list .book_list .img_wrap .cate .new {background:#fdd600;}
+[data-page='sub'].book_list .book_list .img_wrap img {width:80px; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
+[data-page='sub'].book_list .book_list a .txt_wrap {display:-webkit-box; overflow:hidden; height:3em; margin-top:10px; font-size:12px; text-align:center; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+[data-page='sub'].book_list .book_list .ctr {display:-webkit-box;display:-ms-flexbox;display:flex; margin-top:6px; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
+[data-page='sub'].book_list .book_list .ctr button {width:30px; height:30px; margin:0 6px; border:1px solid #c4c4c4; border-radius:50%; text-indent:-9999px; position:relative;}
+[data-page='sub'].book_list .book_list .ctr button:before {content:''; position:absolute; top:50%; left:50%; width:15px; height:15px; background-repeat:no-repeat; background-size:contain; -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%);}
+[data-page='sub'].book_list .book_list .ctr .favorite:before {background-image:url(../images/ico/book/ico_favorite.png);}
+[data-page='sub'].book_list .book_list .ctr .favorite.on:before {background-image:url(../images/ico/book/ico_favorite_on.png);}
+[data-page='sub'].book_list .book_list .ctr .download:before {background-image:url(../images/ico/book/ico_download.png);}
+[data-page='sub'].book_list .book_list .more {margin-top:40px; text-align:center;}
+[data-page='sub'].book_list .book_list .more button {padding:9px 20px 7px; border:1px solid #c4c4c4; border-radius:20px;}
+[data-page='sub'].book_list .book_list .more button span {display:inline-block; position:relative; padding-left:15px;}
+[data-page='sub'].book_list .book_list .more button span:before,
+[data-page='sub'].book_list .book_list .more button span:after {content:''; position:absolute; top:50%; left:0; width:10px; height:2px; margin-top:-3px; background:#000;}
+[data-page='sub'].book_list .book_list .more button span:after {-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+[data-page='sub'].book_list .book_list [data-nodata] {width:100% !important; margin-top:40px;}
+[data-page='sub'].book_list .search_tip {margin-top:25px;}
+[data-page='sub'].book_list .search_tip .tit {display:block; font-size:13px; font-weight:500; color:#4d4d4d; text-align:center;}
+[data-page='sub'].book_list .search_tip li {display:-webkit-box;display:-ms-flexbox;display:flex; min-height:50px; margin-top:13px; padding:0 18px; background:#f8f8f8; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
+[data-page='sub'].book_list .search_tip li img {height:50px; -ms-flex-negative:0; flex-shrink:0; -ms-flex-item-align:center; align-self:center;}
+[data-page='sub'].book_list .search_tip li p {padding-left:10px; font-size:11px; color:#4d4d4d; -webkit-box-flex:1; -ms-flex-positive:1; flex-grow:1; -ms-flex-item-align:center; align-self:center;}
+
+/* 교과서 - 상세 */
+[data-page='sub'].book_view + footer {padding-bottom:70px;}
+[data-page='sub'].book_view .list_back {padding-top:15px; padding-bottom:15px;}
+[data-page='sub'].book_view .list_back a {display:inline-block; position:relative; padding-left:15px; padding-left:15px; font-size:13px; font-weight:500;}
+[data-page='sub'].book_view .list_back a:before {content:''; position:absolute; top:50%; left:2px; width:8px; height:8px; margin-top:-6px; border-top:2px solid #4d4d4d; border-left:2px solid #4d4d4d; -webkit-transform:rotate(-45deg); transform:rotate(-45deg);}
+[data-page='sub'].book_view section {position:relative; padding:20px 0;}
+[data-page='sub'].book_view section .section_tit {margin-bottom:20px; font-size:16px; font-weight:500;}
+[data-page='sub'].book_view section.img {display:-webkit-box;display:-ms-flexbox;display:flex; height:420px; background:#f8f8f8; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
+[data-page='sub'].book_view section.img img {width:210px; height:280px; -ms-flex-item-align:center; align-self:center; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
+[data-page='sub'].book_view section.img .ctr {display:-webkit-box;display:-ms-flexbox;display:flex; position:absolute; top:15px; right:18px; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column;}
+[data-page='sub'].book_view section.img .ctr button {position:relative; width:36px; height:36px; margin-bottom:10px; border:1px solid #c4c4c4; border-radius:50%; background:#fff; text-indent:-9999px;}
+[data-page='sub'].book_view section.img .ctr button:last-child {margin-bottom:0;}
+[data-page='sub'].book_view section.img .ctr button:after {content:''; position:absolute; top:50%; left:50%; width:16px; height:16px; margin:-8px 0 0 -8px; background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='sub'].book_view section.img .ctr .share:after {background-image:url(../images/ico/book/ico_share.png);}
+[data-page='sub'].book_view section.img .ctr .favorite:after {background-image:url(../images/ico/book/ico_favorite.png);}
+[data-page='sub'].book_view section.img .ctr .favorite.on:after {background-image:url(../images/ico/book/ico_favorite_on.png);}
+[data-page='sub'].book_view section.summary {padding:20px 0 30px;}
+[data-page='sub'].book_view section.summary .book_name {padding-bottom:15px; border-bottom:1px solid #f5f5f5;}
+[data-page='sub'].book_view section.summary .cate {display:-webkit-box;display:-ms-flexbox;display:flex; margin:-3px; margin-bottom:10px; -ms-flex-wrap:wrap; flex-wrap:wrap;}
+[data-page='sub'].book_view section.summary .cate li {margin:3px; padding:2px 5px 0; font-size:10px; color:#fff;}
+[data-page='sub'].book_view section.summary .cate .revise {background:#1d50a2;}
+[data-page='sub'].book_view section.summary .cate .teacher {background:#00cbb4;}
+[data-page='sub'].book_view section.summary .cate .national {background:#86d629;}
+[data-page='sub'].book_view section.summary .cate .best {background:#fc6666;}
+[data-page='sub'].book_view section.summary .cate .new {background:#fdd600;}
+[data-page='sub'].book_view section.summary .book_tit {font-size:20px; font-weight:500;}
+[data-page='sub'].book_view section.summary .info {margin-top:20px; font-size:13px;}
+[data-page='sub'].book_view section.summary .info > div {display:-webkit-box;display:-ms-flexbox;display:flex; margin-bottom:18px;}
+[data-page='sub'].book_view section.summary .info > div:last-child {margin-bottom:0;}
+[data-page='sub'].book_view section.summary .info dt {width:70px; color:#7d7d7d;}
+[data-page='sub'].book_view section.study_data {background:#f8f8f8;}
+[data-page='sub'].book_view section.study_data .data li {display:-webkit-box;display:-ms-flexbox;display:flex; height:50px; margin-bottom:10px; padding:9px; padding-left:20px; border:1px solid #c4c4c4; border-radius:25px; background:#fff; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
+[data-page='sub'].book_view section.study_data .data li span {display:inline-block; position:relative; height:30px; line-height:34px; padding-left:34px; -ms-flex-item-align:center; align-self:center;}
+[data-page='sub'].book_view section.study_data .data li span:before {content:''; position:absolute; top:50%; left:0; width:24px; height:24px; margin-top:-12px; background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='sub'].book_view section.study_data .data li.hearing span:before {background-image:url(../images/ico/book/ico_data_hearing.png);}
+[data-page='sub'].book_view section.study_data .data li.cd span:before {background-image:url(../images/ico/book/ico_data_cd.png);}
+[data-page='sub'].book_view section.study_data .data li.video span:before {background-image:url(../images/ico/book/ico_data_video.png);}
+[data-page='sub'].book_view section.study_data .data li.answer span:before {background-image:url(../images/ico/book/ico_data_answer.png);}
+[data-page='sub'].book_view section.study_data .data li.correct span:before {background-image:url(../images/ico/book/ico_data_correct.png);}
+[data-page='sub'].book_view section.study_data .data li.etc span:before {background-image:url(../images/ico/book/ico_data_etc.png);}
+[data-page='sub'].book_view section.study_data .data li button {position:relative; width:30px; height:30px; border-radius:50%; background:#4d4d4d; text-indent:-9999px;}
+[data-page='sub'].book_view section.study_data .data li button:before {content:''; position:absolute; top:50%; left:50%; width:14px; height:14px; margin:-7px 0 0 -7px; background-repeat:no-repeat; background-position:right center; background-size:contain; text-indent:-9999px;}
+[data-page='sub'].book_view section.study_data .data li .view:before {background-image:url(../images/ico/book/ico_data_play.png);}
+[data-page='sub'].book_view section.study_data .data li .download:before {background-image:url(../images/ico/book/ico_data_download.png);}
+[data-page='sub'].book_view section.study_data [data-btn] {margin-top:10px;}
+[data-page='sub'].book_view section.study_data [data-btn] button {padding:0 20px; border-color:#c4c4c4;}
+[data-page='sub'].book_view section.study_data [data-btn] span {font-size:13px;}
+[data-page='sub'].book_view section.study_data [data-btn] span:after {border-color:#4d4d4d; margin-top:-2px;}
+[data-page='sub'].book_view section.book_info {padding:0; padding-bottom:60px; border-bottom:1px solid #dcdcdc;}
+[data-page='sub'].book_view section.book_info .tab_cont {overflow:hidden; position:relative; height:400px; padding-top:22px; font-size:13px;}
+[data-page='sub'].book_view section.book_info .tab_cont.on {overflow:visible; height:auto;}
+[data-page='sub'].book_view section.book_info .tab_cont .cover {position:absolute; bottom:0; left:0; width:100%; height:100px; background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(37%, rgba(255, 255, 255, .8)), color-stop(70%, #fff)); background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8) 37%, #fff 70%);}
+[data-page='sub'].book_view section.book_info .tab_cont [data-btn] {margin-top:60px;}
+[data-page='sub'].book_view section.book_info .tab_cont [data-btn] button {border-color:#c4c4c4; font-size:13px;}
+[data-page='sub'].book_view section.book_info .tab_cont [data-btn] span:after {margin-top:-2px;}
+[data-page='sub'].book_view section.book_info .author_info .name {display:-webkit-box;display:-ms-flexbox;display:flex; margin-bottom:12px; font-weight:500; -ms-flex-wrap:wrap; flex-wrap:wrap;}
+[data-page='sub'].book_view section.book_info .author_info .name dt {position:relative; margin-right:10px; padding-right:10px;}
+[data-page='sub'].book_view section.book_info .author_info .name dt:after {content:''; position:absolute; top:50%; right:0; width:1px; height:10px; margin-top:-8px; background:#dcdcdc;}
+[data-page='sub'].book_view section.book_info .author_info .img_wrap {overflow:hidden; float:right; margin-bottom:10px; margin-left:10px; border-radius:50%;}
+[data-page='sub'].book_view section.book_info .author_info .img_wrap img {display:block; width:80px; height:80px;}
+[data-page='sub'].book_view section.book_info .author_info p + p {margin-top:6px;}
+[data-page='sub'].book_view section.list .book_list {display:-webkit-box;display:-ms-flexbox;display:flex; overflow-x:auto; margin-top:20px; -ms-scroll-snap-type:x mandatory; scroll-snap-type:x mandatory;}
+[data-page='sub'].book_view section.list .book_list li {margin-right:12px; -ms-flex-negative:0; flex-shrink:0; scroll-snap-align:start;}
+[data-page='sub'].book_view section.list .book_list li:last-child {margin-right:0;}
+[data-page='sub'].book_view section.list .book_list .img_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; width:150px; height:170px; background:#f8f8f8; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
+[data-page='sub'].book_view section.list .book_list .img_wrap img {width:85px; height:110px; -ms-flex-item-align:center; align-self:center; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
+[data-page='sub'].book_view section.list .book_list .tit {display:-webkit-box; overflow:hidden; width:150px; height:3em; margin-top:10px; font-size:12px; text-align:center; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+[data-page='sub'].book_view .opt_menu {position:fixed; bottom:0; left:0; width:100%; padding:15px 18px; border-top:1px solid #f2f2f2; background:#fff; background:#fff; z-index:1;}
+[data-page='sub'].book_view .opt_menu [data-btn] {margin-top:0;}
+
+/*=========================================================
+9. 회원관련 페이지
+=========================================================*/
+
+/*===================
+로그인
+=====================*/
 
 [data-page='input'] {min-height:100%; padding-top:40px !important; background:#f8f8f8; display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;}
 [data-page='input'] .form_box {border:1px solid #dcdcdc; background:#fff; padding:15px 18px 40px;}
@@ -845,48 +1059,13 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-page='input'] .validity [data-radio] :checked + label {color:#000;}
 [data-page='input'] .validity p {margin-top:20px; font-size:12px; color:#7d7d7d;}
 
-/*=========================================================
-10. 서브페이지
-=========================================================*/
+/*===================
+마이페이지
+=====================*/
 
-/* 공통 */
-[data-page='sub'] {padding-bottom:60px;}
-[data-page='sub'] .sub_header {padding:30px 0 16px;}
-[data-page='sub'] .sub_header.fixed {position:fixed; top:0; left:0; z-index:10; width:100%; padding:15px 18px; border-bottom:1px solid #dcdcdc; background:#fff;}
-[data-page='sub'] .sub_header.fixed .sub_menu {display:none;}
-[data-page='sub'] .sub_header .tit_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
-[data-page='sub'] .sub_header .menu_select {display:none; position:relative; padding-right:10px; font-size:15px; font-weight:500;}
-[data-page='sub'] .sub_header .menu_select select {display:inline-block; height:30px; line-height:32px; direction:rtl;}
-[data-page='sub'] .sub_header .menu_select select option {direction:ltr;}
-[data-page='sub'] .sub_header.fixed .menu_select {display:block;}
-[data-page='sub'] .sub_header .menu_select:after {content:''; position:absolute; top:11px; right:0; width:0; height:0; border-width:4px; border-style:solid; border-color:#000 transparent transparent transparent; background:none;}
-[data-page='sub'] .sub_header .filter {padding:2px 10px 0; border:1px solid #c4c4c4; border-radius:15px;}
-[data-page='sub'] .sub_header .filter span {position:relative; padding-right:16px;}
-[data-page='sub'] .sub_header .filter span:after {content:''; position:absolute; top:0; right:0; width:12px; height:10px; background:url(../images/ico/ico_filter.png); background-repeat:no-repeat; background-size:contain; background-posiiton:center;}
-[data-page='sub'] .sub_header .tit {line-height:1.5em; font-size:20px; font-weight:500;}
-[data-page='sub'] .sub_menu {overflow-x:auto; overflow-y:hidden; -ms-scroll-snap-type:x mandatory; scroll-snap-type:x mandatory;}
-[data-page='sub'] .sub_menu ul {display:-webkit-box; margin-top:15px;}
-[data-page='sub'] .sub_menu li {position:relative; margin-right:20px; -webkit-box-flex:0; -ms-flex-positive:0; flex-grow:0; scroll-snap-align:start;}
-[data-page='sub'] .sub_menu li.on {border-bottom:1px solid #000;}
-[data-page='sub'] .sub_menu li:last-child {margin:0;}
-[data-page='sub'] .sub_menu a {display:block; color:#7d7d7d;}
-[data-page='sub'] .sub_menu li.on a {color:#000;}
-[data-page='sub'] .search_box {position:relative; border-radius:20px; background:#f8f8f8;}
-[data-page='sub'] .search_box:before {content:''; position:absolute; top:13px; left:20px; width:14px; height:14px; background:url(../images/ico/input/ico_search.png); background-repeat:no-repeat; background-size:contain;}
-[data-page='sub'] .search_box input {height:40px; line-height:44px; padding:0 15px 0 40px; border:0; background:none;}
-[data-page='sub'] .help {margin-top:50px;}
-[data-page='sub'] .help li {position:relative; padding:18px 12px; padding-left:64px; background:#f8f8f8; margin-bottom:8px;}
-[data-page='sub'] .help li:last-child {margin-bottom:0;}
-[data-page='sub'] .help li:before,
-[data-page='sub'] .help li:after {content:""; position:absolute; top:50%; left:12px; width:40px; height:40px; margin-top:-20px;}
-[data-page='sub'] .help li:before {border:1px solid #d1d1d1; border-radius:50%; background:#fff;}
-[data-page='sub'] .help li:after {background-repeat:no-repeat; background-position:center; background-size:contain;}
-[data-page='sub'] .help li.question:after {background-image:url(../images/ico/cs/ico_help_question.png);}
-[data-page='sub'] .help li.cs:after {background-image:url(../images/ico/cs/ico_help_cs.png);}
-[data-page='sub'] .help li .main_txt {font-size:13px; font-weight:500;}
-[data-page='sub'] .help li .sub_txt {margin-top:5px; font-size:11px; color:#7d7d7d;}
-[data-page='sub'] .help li a {position:relative; text-decoration:underline; padding-right:10px;}
-[data-page='sub'] .help li a:after {content:''; position:absolute; top:1px; right:0; width:6px; height:6px; border-top:1px solid #7d7d7d; border-right:1px solid #7d7d7d; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+/*===================
+고객센터
+=====================*/
 
 /* 공지사항 */
 [data-page='sub'].notice .board.list {margin-top:25px;}
@@ -1001,113 +1180,6 @@ footer .footer_bottom .award {position:absolute; bottom:15px; right:0; height:70
 [data-page='sub'].sell .search_list .data:before {content:''; position:absolute; top:50%; left:0; width:18px; height:18px; margin-top:-11px; background-repeat:no-repeat; background-position:left center; background-size:contain;}
 [data-page='sub'].sell .search_list .location:before {background-image:url(../images/ico/cs/ico_map.png);}
 [data-page='sub'].sell .search_list .tel:before {background-image:url(../images/ico/cs/ico_tel.png);}
-
-/* 교과서 - 목록 */
-[data-page='sub'].book_list .book_list {margin-top:20px;}
-[data-page='sub'].book_list .book_list .list {display:-webkit-box;display:-ms-flexbox;display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; margin:-20px -8px;}
-[data-page='sub'].book_list .book_list .list > li {width:50%; padding:20px 8px;}
-[data-page='sub'].book_list .book_list .img_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; position:relative; height:180px; background:#f8f8f8; -ms-flex-wrap:nowrap; flex-wrap:nowrap; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center; -webkit-box-align:center; -ms-flex-align:center; align-items:center;}
-[data-page='sub'].book_list .book_list .img_wrap .cate {display:-webkit-box;display:-ms-flexbox;display:flex; position:absolute; top:5px; left:5px; margin:-3px; -ms-flex-wrap:wrap; flex-wrap:wrap;}
-[data-page='sub'].book_list .book_list .img_wrap .cate li {margin:3px; padding:2px 5px 0; font-size:10px; color:#fff;}
-[data-page='sub'].book_list .book_list .img_wrap .cate .revise {background:#1d50a2;}
-[data-page='sub'].book_list .book_list .img_wrap .cate .teacher {background:#00cbb4;}
-[data-page='sub'].book_list .book_list .img_wrap .cate .national {background:#86d629;}
-[data-page='sub'].book_list .book_list .img_wrap .cate .best {background:#fc6666;}
-[data-page='sub'].book_list .book_list .img_wrap .cate .new {background:#fdd600;}
-[data-page='sub'].book_list .book_list .img_wrap img {width:80px; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
-[data-page='sub'].book_list .book_list a .txt_wrap {display:-webkit-box; overflow:hidden; height:3em; margin-top:10px; font-size:12px; text-align:center; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
-[data-page='sub'].book_list .book_list .ctr {display:-webkit-box;display:-ms-flexbox;display:flex; margin-top:6px; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
-[data-page='sub'].book_list .book_list .ctr button {width:30px; height:30px; margin:0 6px; border:1px solid #c4c4c4; border-radius:50%; text-indent:-9999px; position:relative;}
-[data-page='sub'].book_list .book_list .ctr button:before {content:''; position:absolute; top:50%; left:50%; width:15px; height:15px; background-repeat:no-repeat; background-size:contain; -webkit-transform:translate(-50%, -50%); transform:translate(-50%, -50%);}
-[data-page='sub'].book_list .book_list .ctr .favorite:before {background-image:url(../images/ico/book/ico_favorite.png);}
-[data-page='sub'].book_list .book_list .ctr .favorite.on:before {background-image:url(../images/ico/book/ico_favorite_on.png);}
-[data-page='sub'].book_list .book_list .ctr .download:before {background-image:url(../images/ico/book/ico_download.png);}
-[data-page='sub'].book_list .book_list .more {margin-top:40px; text-align:center;}
-[data-page='sub'].book_list .book_list .more button {padding:9px 20px 7px; border:1px solid #c4c4c4; border-radius:20px;}
-[data-page='sub'].book_list .book_list .more button span {display:inline-block; position:relative; padding-left:15px;}
-[data-page='sub'].book_list .book_list .more button span:before,
-[data-page='sub'].book_list .book_list .more button span:after {content:''; position:absolute; top:50%; left:0; width:10px; height:2px; margin-top:-3px; background:#000;}
-[data-page='sub'].book_list .book_list .more button span:after {-webkit-transform:rotate(90deg);transform:rotate(90deg);}
-[data-page='sub'].book_list .book_list [data-nodata] {width:100% !important; margin-top:40px;}
-[data-page='sub'].book_list .search_tip {margin-top:25px;}
-[data-page='sub'].book_list .search_tip .tit {display:block; font-size:13px; font-weight:500; color:#4d4d4d; text-align:center;}
-[data-page='sub'].book_list .search_tip li {display:-webkit-box;display:-ms-flexbox;display:flex; min-height:50px; margin-top:13px; padding:0 18px; background:#f8f8f8; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
-[data-page='sub'].book_list .search_tip li img {height:50px; -ms-flex-negative:0; flex-shrink:0; -ms-flex-item-align:center; align-self:center;}
-[data-page='sub'].book_list .search_tip li p {padding-left:10px; font-size:11px; color:#4d4d4d; -webkit-box-flex:1; -ms-flex-positive:1; flex-grow:1; -ms-flex-item-align:center; align-self:center;}
-
-/* 교과서 - 상세 */
-[data-page='sub'].book_view + footer {padding-bottom:70px;}
-[data-page='sub'].book_view .list_back {padding-top:15px; padding-bottom:15px;}
-[data-page='sub'].book_view .list_back a {display:inline-block; position:relative; padding-left:15px; padding-left:15px; font-size:13px; font-weight:500;}
-[data-page='sub'].book_view .list_back a:before {content:''; position:absolute; top:50%; left:2px; width:8px; height:8px; margin-top:-6px; border-top:2px solid #4d4d4d; border-left:2px solid #4d4d4d; -webkit-transform:rotate(-45deg); transform:rotate(-45deg);}
-[data-page='sub'].book_view section {position:relative; padding:20px 0;}
-[data-page='sub'].book_view section .section_tit {margin-bottom:20px; font-size:16px; font-weight:500;}
-[data-page='sub'].book_view section.img {display:-webkit-box;display:-ms-flexbox;display:flex; height:420px; background:#f8f8f8; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
-[data-page='sub'].book_view section.img img {width:210px; height:280px; -ms-flex-item-align:center; align-self:center; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
-[data-page='sub'].book_view section.img .ctr {display:-webkit-box;display:-ms-flexbox;display:flex; position:absolute; top:15px; right:18px; -webkit-box-orient:vertical; -webkit-box-direction:normal; -ms-flex-direction:column; flex-direction:column;}
-[data-page='sub'].book_view section.img .ctr button {position:relative; width:36px; height:36px; margin-bottom:10px; border:1px solid #c4c4c4; border-radius:50%; background:#fff; text-indent:-9999px;}
-[data-page='sub'].book_view section.img .ctr button:last-child {margin-bottom:0;}
-[data-page='sub'].book_view section.img .ctr button:after {content:''; position:absolute; top:50%; left:50%; width:16px; height:16px; margin:-8px 0 0 -8px; background-repeat:no-repeat; background-position:center; background-size:contain;}
-[data-page='sub'].book_view section.img .ctr .share:after {background-image:url(../images/ico/book/ico_share.png);}
-[data-page='sub'].book_view section.img .ctr .favorite:after {background-image:url(../images/ico/book/ico_favorite.png);}
-[data-page='sub'].book_view section.img .ctr .favorite.on:after {background-image:url(../images/ico/book/ico_favorite_on.png);}
-[data-page='sub'].book_view section.summary {padding:20px 0 30px;}
-[data-page='sub'].book_view section.summary .book_name {padding-bottom:15px; border-bottom:1px solid #f5f5f5;}
-[data-page='sub'].book_view section.summary .cate {display:-webkit-box;display:-ms-flexbox;display:flex; margin:-3px; margin-bottom:10px; -ms-flex-wrap:wrap; flex-wrap:wrap;}
-[data-page='sub'].book_view section.summary .cate li {margin:3px; padding:2px 5px 0; font-size:10px; color:#fff;}
-[data-page='sub'].book_view section.summary .cate .revise {background:#1d50a2;}
-[data-page='sub'].book_view section.summary .cate .teacher {background:#00cbb4;}
-[data-page='sub'].book_view section.summary .cate .national {background:#86d629;}
-[data-page='sub'].book_view section.summary .cate .best {background:#fc6666;}
-[data-page='sub'].book_view section.summary .cate .new {background:#fdd600;}
-[data-page='sub'].book_view section.summary .book_tit {font-size:20px; font-weight:500;}
-[data-page='sub'].book_view section.summary .info {margin-top:20px; font-size:13px;}
-[data-page='sub'].book_view section.summary .info > div {display:-webkit-box;display:-ms-flexbox;display:flex; margin-bottom:18px;}
-[data-page='sub'].book_view section.summary .info > div:last-child {margin-bottom:0;}
-[data-page='sub'].book_view section.summary .info dt {width:70px; color:#7d7d7d;}
-[data-page='sub'].book_view section.study_data {background:#f8f8f8;}
-[data-page='sub'].book_view section.study_data .data li {display:-webkit-box;display:-ms-flexbox;display:flex; height:50px; margin-bottom:10px; padding:9px; padding-left:20px; border:1px solid #c4c4c4; border-radius:25px; background:#fff; -webkit-box-pack:justify; -ms-flex-pack:justify; justify-content:space-between;}
-[data-page='sub'].book_view section.study_data .data li span {display:inline-block; position:relative; height:30px; line-height:34px; padding-left:34px; -ms-flex-item-align:center; align-self:center;}
-[data-page='sub'].book_view section.study_data .data li span:before {content:''; position:absolute; top:50%; left:0; width:24px; height:24px; margin-top:-12px; background-repeat:no-repeat; background-position:center; background-size:contain;}
-[data-page='sub'].book_view section.study_data .data li.hearing span:before {background-image:url(../images/ico/book/ico_data_hearing.png);}
-[data-page='sub'].book_view section.study_data .data li.cd span:before {background-image:url(../images/ico/book/ico_data_cd.png);}
-[data-page='sub'].book_view section.study_data .data li.video span:before {background-image:url(../images/ico/book/ico_data_video.png);}
-[data-page='sub'].book_view section.study_data .data li.answer span:before {background-image:url(../images/ico/book/ico_data_answer.png);}
-[data-page='sub'].book_view section.study_data .data li.correct span:before {background-image:url(../images/ico/book/ico_data_correct.png);}
-[data-page='sub'].book_view section.study_data .data li.etc span:before {background-image:url(../images/ico/book/ico_data_etc.png);}
-[data-page='sub'].book_view section.study_data .data li button {position:relative; width:30px; height:30px; border-radius:50%; background:#4d4d4d; text-indent:-9999px;}
-[data-page='sub'].book_view section.study_data .data li button:before {content:''; position:absolute; top:50%; left:50%; width:14px; height:14px; margin:-7px 0 0 -7px; background-repeat:no-repeat; background-position:right center; background-size:contain; text-indent:-9999px;}
-[data-page='sub'].book_view section.study_data .data li .view:before {background-image:url(../images/ico/book/ico_data_play.png);}
-[data-page='sub'].book_view section.study_data .data li .download:before {background-image:url(../images/ico/book/ico_data_download.png);}
-[data-page='sub'].book_view section.study_data [data-btn] {margin-top:10px;}
-[data-page='sub'].book_view section.study_data [data-btn] button {padding:0 20px; border-color:#c4c4c4;}
-[data-page='sub'].book_view section.study_data [data-btn] span {font-size:13px;}
-[data-page='sub'].book_view section.study_data [data-btn] span:after {border-color:#4d4d4d; margin-top:-2px;}
-[data-page='sub'].book_view section.book_info {padding:0; padding-bottom:60px; border-bottom:1px solid #dcdcdc;}
-[data-page='sub'].book_view section.book_info .tab_cont {overflow:hidden; position:relative; height:400px; padding-top:22px; font-size:13px;}
-[data-page='sub'].book_view section.book_info .tab_cont.on {overflow:visible; height:auto;}
-[data-page='sub'].book_view section.book_info .tab_cont .cover {position:absolute; bottom:0; left:0; width:100%; height:100px; background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(37%, rgba(255, 255, 255, .8)), color-stop(70%, #fff)); background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .8) 37%, #fff 70%);}
-[data-page='sub'].book_view section.book_info .tab_cont [data-btn] {margin-top:60px;}
-[data-page='sub'].book_view section.book_info .tab_cont [data-btn] button {border-color:#c4c4c4; font-size:13px;}
-[data-page='sub'].book_view section.book_info .tab_cont [data-btn] span:after {margin-top:-2px;}
-[data-page='sub'].book_view section.book_info .author_info .name {display:-webkit-box;display:-ms-flexbox;display:flex; margin-bottom:12px; font-weight:500; -ms-flex-wrap:wrap; flex-wrap:wrap;}
-[data-page='sub'].book_view section.book_info .author_info .name dt {position:relative; margin-right:10px; padding-right:10px;}
-[data-page='sub'].book_view section.book_info .author_info .name dt:after {content:''; position:absolute; top:50%; right:0; width:1px; height:10px; margin-top:-8px; background:#dcdcdc;}
-[data-page='sub'].book_view section.book_info .author_info .img_wrap {overflow:hidden; float:right; margin-bottom:10px; margin-left:10px; border-radius:50%;}
-[data-page='sub'].book_view section.book_info .author_info .img_wrap img {display:block; width:80px; height:80px;}
-[data-page='sub'].book_view section.book_info .author_info p + p {margin-top:6px;}
-[data-page='sub'].book_view section.list .book_list {display:-webkit-box;display:-ms-flexbox;display:flex; overflow-x:auto; margin-top:20px; -ms-scroll-snap-type:x mandatory; scroll-snap-type:x mandatory;}
-[data-page='sub'].book_view section.list .book_list li {margin-right:12px; -ms-flex-negative:0; flex-shrink:0; scroll-snap-align:start;}
-[data-page='sub'].book_view section.list .book_list li:last-child {margin-right:0;}
-[data-page='sub'].book_view section.list .book_list .img_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; width:150px; height:170px; background:#f8f8f8; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
-[data-page='sub'].book_view section.list .book_list .img_wrap img {width:85px; height:110px; -ms-flex-item-align:center; align-self:center; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
-[data-page='sub'].book_view section.list .book_list .tit {display:-webkit-box; overflow:hidden; width:150px; height:3em; margin-top:10px; font-size:12px; text-align:center; text-overflow:ellipsis; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
-[data-page='sub'].book_view .opt_menu {position:fixed; bottom:0; left:0; width:100%; padding:15px 18px; border-top:1px solid #f2f2f2; background:#fff; background:#fff; z-index:1;}
-[data-page='sub'].book_view .opt_menu [data-btn] {margin-top:0;}
-
-/*=========================================================
-??. 컨텐츠페이지
-=========================================================*/
 
 /*=========================================================
 00. animate

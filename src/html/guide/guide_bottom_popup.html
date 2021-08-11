@@ -9,7 +9,7 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/swiper.min.js"></script>
     <script src="../../js/common.js"></script>
-    <title>미래엔 다운로드 팝업 가이드</title>
+    <title>미래엔 하단 슬라이드 팝업 가이드</title>
 
     <style>
         section {
@@ -45,11 +45,25 @@
             <div class="guide_tit">다운로드 팝업</div>
             <div class="guide_view">
 
-                <button data-open-download>팝업 호출</button>
+                <button data-slideup-popup="download">팝업 호출</button>
 
                 <!-- 팝업 영역 -->
-                <!-- [D] data-popup="download"에 on클래스 부여시 팝업 노출 -->
+                <!-- [D] data-popup에 on클래스 부여시 팝업 노출 -->
                 @@include('download_popup.html')
+                <!-- //팝업 영역 -->
+
+            </div>
+        </section>
+
+        <section>
+            <div class="guide_tit">영상 리스트 팝업</div>
+            <div class="guide_view">
+
+                <button data-slideup-popup="movie">팝업 호출</button>
+
+                <!-- 팝업 영역 -->
+                <!-- [D] data-popup에 on클래스 부여시 팝업 노출 -->
+                @@include('movielist_popup.html')
                 <!-- //팝업 영역 -->
 
             </div>

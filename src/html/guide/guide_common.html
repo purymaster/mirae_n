@@ -169,13 +169,29 @@
             </div>
         </div>
         <div>
-            <div data-tab="tab3" class="menu">
+            <div data-tab="tab3" class="bookmark other">
+                <ul>
+                    <li class="on"><button type="button">요점정리</button></li>
+                    <li><button type="button">문제유형</button></li>
+                </ul>
+            </div>
+            <div data-tab-cont="tab3">
+                <div class="tab_cont">
+                    요점정리
+                </div>
+                <div class="tab_cont" style="display:none;">
+                    문제유형
+                </div>
+            </div>
+        </div>
+        <div>
+            <div data-tab="tab4" class="menu">
                 <ul>
                     <li class="on"><button type="button">아이디 찾기</button></li>
                     <li><button type="button">비밀번호 찾기</button></li>
                 </ul>
             </div>
-            <div data-tab-cont="tab3">
+            <div data-tab-cont="tab4">
                 <div class="tab_cont">
                     아이디 찾기
                 </div>
@@ -189,7 +205,7 @@
     <section>
         <div class="guide_tit">탭메뉴(슬라이드)</div>
         <div>
-            <div data-tab="tab4" class="slide">
+            <div data-tab="tab5" class="slide">
                 <ul>
                     <li class="on"><button type="button">전체</button></li>
                     <li><button type="button">교과서</button></li>
@@ -200,7 +216,7 @@
                     <li><button type="button">07</button></li>
                 </ul>
             </div>
-            <div data-tab-cont="tab4">
+            <div data-tab-cont="tab5">
                 <div class="tab_cont">
                     전체
                 </div>
@@ -229,7 +245,7 @@
     <section>
         <div class="guide_tit">탭메뉴(슬라이드 2depth)</div>
         <div>
-            <div data-tab="tab5" class="slide inner">
+            <div data-tab="tab6" class="slide inner">
                 <ul>
                     <li class="on"><button type="button">전체</button></li>
                     <li><button type="button">교과서</button></li>
@@ -240,7 +256,7 @@
                     <li><button type="button">07</button></li>
                 </ul>
             </div>
-            <div data-tab-cont="tab5">
+            <div data-tab-cont="tab6">
                 <div class="tab_cont">
                     전체
                 </div>
@@ -377,25 +393,41 @@
                         <td>동의</td>
                         <td><span class="reject">미동의</span></td>
                     </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div data-table="curation">
+            <table>
+                <colgroup>
+                    <col style="width:80px;">
+                    <col>
+                </colgroup>
+                <thead>
                     <tr>
-                        <th scope="row">vol.321</th>
-                        <td>동의</td>
-                        <td><span class="reject">미동의</span></td>
+                        <th scope="col">과목</th>
+                        <th scope="col">교재별 쪽수 안내</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">중1</th>
+                        <td><u>과학</u><br>[264p]</td>
                     </tr>
                     <tr>
-                        <th scope="row">프린트앤</th>
-                        <td>동의</td>
-                        <td><span class="reject">미동의</span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">엠티처</th>
-                        <td>동의</td>
-                        <td><span class="reject">미동의</span></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">웰리미 한글 진단 검사</th>
-                        <td>동의</td>
-                        <td><span class="reject">미동의</span></td>
+                        <th scope="row">문제 수준</th>
+                        <td>
+                            <div class="level">
+                                <div class="step">
+                                    <span>기본</span>
+                                    <span>심화</span>
+                                </div>
+                                <div class="bar">
+                                    <!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+                                    <span class="point" style="left:50px; right:10px;"></span>
+                                </div>
+                            </div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
