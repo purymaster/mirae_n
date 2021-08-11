@@ -105,8 +105,370 @@
 				</div>
 			</div>
 		</header>
-		<div id="content" data-page="sub" class="book">
+		<div id="content" data-page="sub" class="book_view">
+			<div class="list_back container">
+				<a href="#">교과서 목록보기</a>
+			</div>
+			<article>
 
+				<!-- 교과서 썸네일 -->
+				<section class="img">
+					<img src="../../images/img/book/img_pick_book_01.png" alt="">
+					<div class="ctr">
+						<button type="button" class="share">공유하기</button>
+						<!-- [D] 찜하기 상태일때 on 클래스 부여 -->
+						<button type="button" class="favorite on">찜하기</button>
+					</div>
+				</section>
+				<!-- //교과서 썸네일 -->
+
+				<!-- 교과서 요약 -->
+				<section class="summary">
+					<div class="container">
+						<div class="book_name">
+							<ul class="cate">
+								<li class="revise">2015 개정</li>
+								<li class="teacher">선생님용</li>
+								<li class="national">국정</li>
+								<li class="best">베스트셀러</li>
+								<li class="new">신간</li>
+							</ul>
+							<h1 class="book_tit">초등학교 국어 1-1가</h1>
+						</div>
+						<dl class="info">
+							<div>
+								<dt>저작권자</dt>
+								<dd>교육부</dd>
+							</div>
+							<div>
+								<dt>편찬기관</dt>
+								<dd>서울대학교 · 한국교원대학교 국정도서 국어편찬위원회</dd>
+							</div>
+							<div>
+								<dt>교육과정</dt>
+								<dd>2015년</dd>
+							</div>
+							<div>
+								<dt>판형</dt>
+								<dd>국배변형판</dd>
+							</div>
+							<div>
+								<dt>쪽수</dt>
+								<dd>236쪽</dd>
+							</div>
+						</dl>
+					</div>
+				</section>
+				<!-- //교과서 요약 -->
+
+				<!-- 학습자료 -->
+				<section class="study_data">
+					<div class="container">
+						<h2 class="section_tit">학습자료</h2>
+						<ul class="data">
+							<li class="hearing">
+								<span>듣기 자료</span>
+								<button type="button" class="view">보기</button>
+							</li>
+							<li class="cd">
+								<span>학생용CD</span>
+								<button type="button" class="download">다운로드</button>
+							</li>
+							<li class="video">
+								<span>영상강의</span>
+								<button type="button" class="view">보기</button>
+							</li>
+							<li class="answer">
+								<span>정답과 해설</span>
+								<button type="button" class="download">다운로드</button>
+							</li>
+							<li class="correct">
+								<span>정오표</span>
+								<button type="button" class="download">다운로드</button>
+							</li>
+							<li class="etc">
+								<span>그 외 자료</span>
+								<button type="button" class="download">다운로드</button>
+							</li>
+						</ul>
+						<div data-btn class="fit">
+							<button type="button" class="toggle">
+								<span>더보기</span>
+							</button>
+						</div>
+					</div>
+				</section>
+
+				<script>
+					$('.study_data li:nth-child(n+5)').hide();
+					$('.study_data').on('click', '.toggle', function() {
+						if ($(this).hasClass('on')) {
+							$(this).removeClass('on');
+							$('.study_data li:nth-child(n+5)').hide();
+						} else {
+							$(this).addClass('on');
+							$('.study_data li').show();
+						};
+					})
+				</script>
+				<!-- //학습자료 -->
+
+				<!-- 상세정보 -->
+				<section class="book_info">
+					<div>
+						<div data-tab="detail">
+							<ul>
+								<li class="on"><button type="button">상세정보</button></li>
+								<li><button type="button">목차정보</button></li>
+								<li><button type="button">저자정보</button></li>
+							</ul>
+						</div>
+						<div data-tab-cont="detail">
+							<div class="tab_cont txt">
+								<div class="container">
+									이 책의 주제는 ‘문학적 마음’이다. 공부를 시작하면서 인간의 의식, 정신, 영혼 등에 대한 관심이 생겼다. 자연스럽게 인간의 마음을 탐구한 연구 성과들을 탐독하게
+									되었다. 그러던 중, 인지 언어학 및 인지 과학의 논의를 접하게 되었다. 특히 마크 터너, 질 포코니에, 마크 존슨, 조지 레이코프의 논의는 마음의 작용에 대해
+									새로운 관점을 보여 주었다. 그들에 따르면, 인간의 마음은 산술적으로 누적되는 논리적인 방식이 아니라, 이질적인 대상이 서로 대응되고 포개지는 시적인 방식으로
+									작동한다. 이를 뒷받침하는 마음의 작용이 은유적 혼성이다. 은유적 혼성은 둘 이상의 이질적인 대상을 대응시킨 다음, 선택적으로 결합하는 사고 기제이다. 문학적 마음의
+									바탕을 이루는 은유적 혼성은 서사 교육에 효과적으로 활용될 여지를 지닌다.
+									인간은 두 겹의 서사 세계 속에서 살아간다. 인간은 현실의 이야기 속에 살아가면서 동시에 마음속에 이야기를 생각할 수 있다. 이는 행위자와 시공간, 그리고 사건을
+									갖춘 한 편의 현실 속 이야기와 또 다른 한 편의 마음속 이야기가 인간의 삶에 공존하고 있음을 의미한다. 이 두 이야기는 평소에 서로 다른 영화를 보는 것처럼
+									구분된다. 예를 들어 직장인이 현실 속에서는 상사를 존중하는 모습을 보이지만, 마음속으로는 그 상사에 대해서 험담을 할 수 있다. 이처럼 현실과 마음속 이야기는
+									상반되지만, 인간은 두 이야기를 동시에 견지하면서 삶을 영위한다. 흥미로운 것은 인간이 현실과 마음속 이야기를 각각 유지하면서도, 한편으로는 그것을 창조적으로 뒤섞어
+									새로운 이야기를 만들고, 이를 다시 현실에 역투사한다는 점이다. 이러한 현상은 문제 경험에서 잘 나타난다. 인간은 마음속으로 문제 경험과 이전의 경험을 은유적으로
+									대응시킨 후, 새로운 관점에서 문제 경험을 이해한다. 이러한 이해를 바탕으로 하여 이전의 경험들에서 적절한 요소를 적절하게 혼성하여 상상의 시나리오로 도출한다. 그
+									시나리오는 현실의 이야기에 적용된다. 이러한 과정을 통해 인간은 현실을 더 나은 방향으로 개선한다. 이를 가능하게 하는 사고 기제가 경험의 은유적 혼성이다.
+									<br><br>
+									은유적 혼성은 일상생활뿐만 아니라 인간의 삶 전반으로 확장되어 적용될 수 있다. 인간은 현실의 이야기 속에 살아가면서도 현실을 새롭게 변화시킬 상상의 이야기를
+									꿈꾼다. 인간은 마음속 상상의 이야기를 공상 수준에 그치지 않고, 현실의 이야기로 만들어 왔다. 이 과정이 반복되면서, 인간은 지구상의 어느 생명체로 이룩하지 못한
+									문명을 창조했다. 이 같은 창조적 역량의 근원이 은유적 혼성이다. 인간은 은유적 혼성을 통해 현실을 재해석하고, 현실과 상상의 이야기를 뒤섞어 이전과는 다른 이야기를
+									만들어 낸다. 이를 통해 인간은 실제 세계(real world)를 넘어서 가능 세계(possible world)를 모색할 수 있다. 따라서 주체는 경험의 은유적
+									혼성을 통해 이전과는 다른 삶을 서사적으로 구체화할 수 있다. 자신이 쓴 텍스트를 메타적으로 반성하면서 조작하는 인지 활동을 ‘메타언어적 인지’라고 할 수 있다. 이
+									책에서는 쓰기 과정에서 메타언어적 인지의 작용 방식을 규명하고 메타언어적 인지의 원리 및 전략을 논의한 다음, 그에 기반하여 메타언어적 인지 교육의 내용과 방법을
+									제안하였다. 쓰기에서 메타언어적 인지는 ‘생산 중인 텍스트를 대상으로 하는 반성과 조작의 인지 작용’을 말한다. 필자가 쓸 내용을 구성하거나 그것을 언어화하는 데
+									집중하는 것이 아니라 언어화하여 눈앞에 가시화된 텍스트에 주목할 때 메타언어적 인지가 작용하는 것이다.
+									<br><br>
+									이 책은 크게 4부로 나누어져 있다. ‘1부 메타언어적 인지의 본질’에서는 메타언어학, 기호학, 인지 심리학 등을 바탕으로 메타언어적 의미와 특성을 설명한다. ‘2부
+									메타언어적 인지의 원리와 전략’에서는 쓰기 과정에서 메타언어적 인지가 작용하는 원리를 밝히고, 전문 필자 또는 능숙한 필자의 인지 작용을 예로 들어 구체적인 전략을
+									제시한다. ‘3부 메타언어적 인지 교육의 내용과 방법’에서는메타언어적 인지 전략을 쓰기 교육의 내용 요소로 상세화하고, 그것을 가르치기 위한 교수·학습 모형을
+									설명한다.
+									<br><br>
+									이 책의 주제는 ‘문학적 마음’이다. 공부를 시작하면서 인간의 의식, 정신, 영혼 등에 대한 관심이 생겼다. 자연스럽게 인간의 마음을 탐구한 연구 성과들을 탐독하게
+									되었다. 그러던 중, 인지 언어학 및 인지 과학의 논의를 접하게 되었다. 특히 마크 터너, 질 포코니에, 마크 존슨, 조지 레이코프의 논의는 마음의 작용에 대해
+									새로운 관점을 보여 주었다. 그들에 따르면, 인간의 마음은 산술적으로 누적되는 논리적인 방식이 아니라, 이질적인 대상이 서로 대응되고 포개지는 시적인 방식으로
+									작동한다. 이를 뒷받침하는 마음의 작용이 은유적 혼성이다. 은유적 혼성은 둘 이상의 이질적인 대상을 대응시킨 다음, 선택적으로 결합하는 사고 기제이다. 문학적 마음의
+									바탕을 이루는 은유적 혼성은 서사 교육에 효과적으로 활용될 여지를 지닌다.
+									인간은 두 겹의 서사 세계 속에서 살아간다. 인간은 현실의 이야기 속에 살아가면서 동시에 마음속에 이야기를 생각할 수 있다. 이는 행위자와 시공간, 그리고 사건을
+									갖춘 한 편의 현실 속 이야기와 또 다른 한 편의 마음속 이야기가 인간의 삶에 공존하고 있음을 의미한다. 이 두 이야기는 평소에 서로 다른 영화를 보는 것처럼
+									구분된다. 예를 들어 직장인이 현실 속에서는 상사를 존중하는 모습을 보이지만, 마음속으로는 그 상사에 대해서 험담을 할 수 있다. 이처럼 현실과 마음속 이야기는
+									상반되지만, 인간은 두 이야기를 동시에 견지하면서 삶을 영위한다. 흥미로운 것은 인간이 현실과 마음속 이야기를 각각 유지하면서도, 한편으로는 그것을 창조적으로 뒤섞어
+									새로운 이야기를 만들고, 이를 다시 현실에 역투사한다는 점이다. 이러한 현상은 문제 경험에서 잘 나타난다. 인간은 마음속으로 문제 경험과 이전의 경험을 은유적으로
+									대응시킨 후, 새로운 관점에서 문제 경험을 이해한다. 이러한 이해를 바탕으로 하여 이전의 경험들에서 적절한 요소를 적절하게 혼성하여 상상의 시나리오로 도출한다. 그
+									시나리오는 현실의 이야기에 적용된다. 이러한 과정을 통해 인간은 현실을 더 나은 방향으로 개선한다. 이를 가능하게 하는 사고 기제가 경험의 은유적 혼성이다.
+									<br><br>
+									은유적 혼성은 일상생활뿐만 아니라 인간의 삶 전반으로 확장되어 적용될 수 있다. 인간은 현실의 이야기 속에 살아가면서도 현실을 새롭게 변화시킬 상상의 이야기를
+									꿈꾼다. 인간은 마음속 상상의 이야기를 공상 수준에 그치지 않고, 현실의 이야기로 만들어 왔다. 이 과정이 반복되면서, 인간은 지구상의 어느 생명체로 이룩하지 못한
+									문명을 창조했다. 이 같은 창조적 역량의 근원이 은유적 혼성이다. 인간은 은유적 혼성을 통해 현실을 재해석하고, 현실과 상상의 이야기를 뒤섞어 이전과는 다른 이야기를
+									만들어 낸다. 이를 통해 인간은 실제 세계(real world)를 넘어서 가능 세계(possible world)를 모색할 수 있다. 따라서 주체는 경험의 은유적
+									혼성을 통해 이전과는 다른 삶을 서사적으로 구체화할 수 있다. 자신이 쓴 텍스트를 메타적으로 반성하면서 조작하는 인지 활동을 ‘메타언어적 인지’라고 할 수 있다. 이
+									책에서는 쓰기 과정에서 메타언어적 인지의 작용 방식을 규명하고 메타언어적 인지의 원리 및 전략을 논의한 다음, 그에 기반하여 메타언어적 인지 교육의 내용과 방법을
+									제안하였다. 쓰기에서 메타언어적 인지는 ‘생산 중인 텍스트를 대상으로 하는 반성과 조작의 인지 작용’을 말한다. 필자가 쓸 내용을 구성하거나 그것을 언어화하는 데
+									집중하는 것이 아니라 언어화하여 눈앞에 가시화된 텍스트에 주목할 때 메타언어적 인지가 작용하는 것이다.
+								</div>
+								<div class="cover">
+									<div data-btn class="fit">
+										<button type="button" class="toggle">
+											<span>상세정보 더보기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="tab_cont list" style="display:none;">
+								<div class="container">
+									<ul>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+										<li>■ 1주 ㅣ 1~4일 단어 학습, 5일 Review Test</li>
+									</ul>
+								</div>
+								<div class="cover">
+									<div data-btn class="fit">
+										<button type="button" class="toggle">
+											<span>목차정보 더보기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="tab_cont author" style="display:none;">
+								<div class="container">
+									<div class="author_info">
+										<dl class="name">
+											<dt>저자</dt>
+											<dd>수잔 콜린스</dd>
+										</dl>
+										<div class="txt_wrap">
+											<div class="img_wrap">
+												<img src="https://picsum.photos/id/237/300/300" alt="">
+											</div>
+											<p>
+												‘언더랜드 연대기’ 시리즈 등의 베스트셀러를 펴낸 수잔 콜린스는 스릴 넘치는 모험과 서스펜스에 결코 가볍지 않은 철학을 녹여내는 데 탁월한
+												솜씨를
+												발휘하는 작가다.
+											</p>
+											<p>
+												특히 ‘헝거 게임 3부작’의 첫 작품인 이 책 『헝거 게임』은 스티븐 킹을 비롯한 수많은 동료 작가와 미디어의 찬사를 한 몸에 받았다. 빼어난
+												문장
+												또한 돋보이는 수잔 콜린스는 현재 미국 코네티컷에서 가족과 함께 살고 있다.
+												<br><br>
+												공식홈페이지 www.suzannecollinsbooks.com
+											</p>
+										</div>
+									</div>
+								</div>
+								<div class="cover">
+									<div data-btn class="fit">
+										<button type="button" class="toggle">
+											<span>저자정보 더보기</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<script>
+					var contents = $('.book_info .tab_cont');
+					contents.find('.toggle').on('click', function() {
+						contents.removeClass('on').find('.cover').show();
+						$(this).parents('.tab_cont').addClass('on').find('.cover').hide();
+					})
+				</script>
+				<!-- //상세정보 -->
+
+				<!-- 추천 -->
+				<section class="list recommend">
+					<div class="container">
+						<h2 class="section_tit">함께 공부하면 좋은 추천 교재</h2>
+						<ul class="book_list">
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //추천 -->
+
+				<!-- 많이 구매한 교재 -->
+				<section class="list best">
+					<div class="container">
+						<h2 class="section_tit">초등 3학년들이 가장 많이 구매한 교재</h2>
+						<ul class="book_list">
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //많이 구매한 교재 -->
+
+				<!-- 구매/미리보기 -->
+				<div class="opt_menu">
+					<div data-btn>
+						<button type="button" class="opt preview">
+							<span>미리보기</span>
+						</button>
+						<a href="#" class="confirm opt buy">
+							<span>구매하러 가기</span>
+						</a>
+					</div>
+				</div>
+				<!-- //구매/미리보기 -->
+
+
+			</article>
 		</div>
 		<footer>
 			<div class="container">
