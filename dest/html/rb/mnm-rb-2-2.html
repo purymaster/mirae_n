@@ -114,8 +114,8 @@
 						<h2 class="tit">참고서 자료실</h2>
 						<div class="menu_select">
 							<select>
-								<option selected>교과학습자료</option>
-								<option>정답과 해설</option>
+								<option>교과학습자료</option>
+								<option selected>정답과 해설</option>
 								<option>정오표</option>
 								<option>듣기MP3</option>
 								<option>도서별 학습자료</option>
@@ -129,8 +129,8 @@
 					<div class="sub_menu">
 						<ul>
 							<!-- [D] 해당 페이지 li에 on클래스 부여 -->
-							<li class="on"><a href="#">교과학습자료</a></li>
-							<li><a href="#">정답과 해설</a></li>
+							<li><a href="#">교과학습자료</a></li>
+							<li class="on"><a href="#">정답과 해설</a></li>
 							<li><a href="#">정오표</a></li>
 							<li><a href="#">듣기MP3</a></li>
 							<li><a href="#">도서별 학습자료</a></li>
@@ -233,8 +233,9 @@
 
 			<div data-tab="tab" class="bookmark other">
 				<ul>
-					<li class="on"><button type="button">요점정리</button></li>
-					<li><button type="button">문제유형</button></li>
+					<li class="on"><button type="button">초등</button></li>
+					<li><button type="button">중등</button></li>
+					<li><button type="button">고등</button></li>
 				</ul>
 			</div>
 
@@ -260,10 +261,13 @@
 							<li>
 								<div class="info">
 									<div>
-										<span class="cate">요점정리</span>
+										<span class="cate">정답과 해설</span>
+										<span class="sub_cate">초등</span>
+										<span class="sub_cate">전학년</span>
 										<span class="sub_cate">수학</span>
 									</div>
 									<div class="book">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
 										<div class="tit">
 											큰별쌤 최태성의 하루한장 한국사_2권 큰별쌤 최태성의 하루한장 한국사_2권
 										</div>
@@ -282,6 +286,32 @@
 								</button>
 							</div>
 						</div>
+					</div>
+				</div>
+				<div class="tab_cont" style="display:none;">
+					<div class="container" style="margin:20px 0 30px;">
+						<div class="search_box">
+							<input type="text" placeholder="자료명을 입력해주세요.">
+						</div>
+					</div>
+					<div class="data_list">
+						<div class="container">
+							<div data-search-header>
+								<span class="cnt">검색결과 : 999999건</span>
+								<!-- <div data-select class="inline">
+                            <select>
+                                <option>최신순</option>
+                            </select>
+                        </div> -->
+							</div>
+						</div>
+						<ul class="list">
+							<li data-nodata>
+								<div class="txt_wrap">
+									<p class="txt">검색 결과가 없습니다.</p>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
 				<div class="tab_cont" style="display:none;">

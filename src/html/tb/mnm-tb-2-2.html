@@ -98,10 +98,10 @@
             $('.study_data li:nth-child(n+5)').hide();
             $('.study_data').on('click', '.toggle', function () {
                 if ($(this).hasClass('on')) {
-                    $(this).removeClass('on');
+                    $(this).removeClass('on').find('span').text("더보기");
                     $('.study_data li:nth-child(n+5)').hide();
                 } else {
-                    $(this).addClass('on');
+                    $(this).addClass('on').find('span').text("접기");
                     $('.study_data li').show();
                 };
             })
@@ -250,7 +250,7 @@
         <!-- //상세정보 -->
 
         <!-- 추천 -->
-        <section class="list recommend">
+        <section class="list recommend" style="border-top:1px solid #dcdcdc;">
             <div class="container">
                 <h2 class="section_tit">함께 공부하면 좋은 추천 교재</h2>
                 <ul class="book_list">

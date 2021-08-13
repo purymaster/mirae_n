@@ -109,109 +109,12 @@
 			<div class="container">
 
 				<!-- 서브페이지 헤더 -->
-				<div class="sub_header">
+				<div class="sub_header no_tit">
 					<div class="tit_wrap">
-						<h2 class="tit">참고서 자료실</h2>
-						<div class="menu_select">
-							<select>
-								<option selected>교과학습자료</option>
-								<option>정답과 해설</option>
-								<option>정오표</option>
-								<option>듣기MP3</option>
-								<option>도서별 학습자료</option>
-								<option>동영상 강의 안내</option>
-							</select>
-						</div>
-						<button class="filter" type="button" data-open-filter>
-							<span>필터</span>
-						</button>
-					</div>
-					<div class="sub_menu">
-						<ul>
-							<!-- [D] 해당 페이지 li에 on클래스 부여 -->
-							<li class="on"><a href="#">교과학습자료</a></li>
-							<li><a href="#">정답과 해설</a></li>
-							<li><a href="#">정오표</a></li>
-							<li><a href="#">듣기MP3</a></li>
-							<li><a href="#">도서별 학습자료</a></li>
-							<li><a href="#">동영상 강의 안내</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="filter_wrap">
-					<div data-filter>
-						<div class="filter_box container">
-
-							<div class="filter_item">
-								<span class="tit">일반 항목</span>
-								<div class="item_wrap">
-									<label><input type="checkbox" class="hidden"><span>항목1</span></label>
-									<label><input type="checkbox" class="hidden"><span>항목2</span></label>
-									<label><input type="checkbox" class="hidden"><span>항목3</span></label>
-									<label><input type="checkbox" class="hidden" disabled><span>항목4</span></label>
-								</div>
-							</div>
-
-							<div class="filter_item series">
-								<span class="tit">시리즈</span>
-								<div class="item_wrap">
-									<label>
-										<input type="checkbox" class="hidden" disabled>
-										<span style="background-image:url(../../images/img/filter/img_series_01.png)"></span>
-									</label>
-									<label>
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_02.png)"></span>
-									</label>
-									<label>
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_03.png)"></span>
-									</label>
-									<label>
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_04.png)"></span>
-									</label>
-									<label style="display:none;">
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_01.png)"></span>
-									</label>
-									<label style="display:none;">
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_02.png)"></span>
-									</label>
-									<label style="display:none;">
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_03.png)"></span>
-									</label>
-									<label style="display:none;">
-										<input type="checkbox" class="hidden">
-										<span style="background-image:url(../../images/img/filter/img_series_04.png)"></span>
-									</label>
-								</div>
-								<div class="more">
-									<button type="button">
-										<span>더보기</span>
-									</button>
-								</div>
-							</div>
-
-							<script>
-								var moreSeries = $('.filter_item.series').find('button'),
-									seriesList = $('.filter_item.series .item_wrap');
-								moreSeries.on('click', function() {
-									if ($(this).hasClass('on')) {
-										$(this).removeClass('on').find('span').text('더보기');
-										seriesList.find('label').hide();
-										seriesList.find('label:nth-child(-n+4)').show();
-									} else {
-										$(this).addClass('on').find('span').text('접기');
-										seriesList.find('label').show();
-									}
-								});
-							</script>
-
-						</div>
-						<button type="button" data-close-filter>필터 닫기</button>
+						<h2 class="tit">선생님 자료실</h2>
+						<a href="#" class="link series">
+							<span>시리즈별 보기</span>
+						</a>
 					</div>
 				</div>
 
@@ -220,10 +123,10 @@
 						var scroll = $(this).scrollTop();
 						if (scroll > 0) {
 							$('.sub_header').addClass('fixed')
-							$('.search_box').css('margin-top', '113px');
+							$('.textbook_search').css('margin-top', '76px');
 						} else {
 							$('.sub_header').removeClass('fixed')
-							$('.search_box').css('margin-top', '0px');
+							$('.textbook_search').css('margin-top', '20px');
 						}
 					});
 				</script>
@@ -231,83 +134,53 @@
 
 			</div>
 
-			<div data-tab="tab" class="bookmark other">
-				<ul>
-					<li class="on"><button type="button">요점정리</button></li>
-					<li><button type="button">문제유형</button></li>
-				</ul>
-			</div>
-
-			<div data-tab-cont="tab">
-				<div class="tab_cont">
-					<div class="container" style="margin:20px 0 30px;">
-						<div class="search_box">
-							<input type="text" placeholder="자료명을 입력해주세요.">
+			<div class="textbook_search">
+				<div class="container">
+					<div class="search_box">
+						<input type="text" placeholder="교재명을 입력해주세요.">
+					</div>
+					<div class="search_result">
+						<div class="autocomplete">
+							<ul>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+								<li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+							</ul>
 						</div>
 					</div>
-					<div class="data_list">
-						<div class="container">
-							<div data-search-header>
-								<span class="cnt">검색결과 : 999999건</span>
-								<!-- <div data-select class="inline">
-                            <select>
-                                <option>최신순</option>
-                            </select>
-                        </div> -->
-							</div>
+					<div class="data">
+						<div class="img_wrap">
+							<img src="../../images/img/book/img_pick_book_01.png" alt="">
 						</div>
-						<ul class="list">
-							<li>
-								<div class="info">
-									<div>
-										<span class="cate">요점정리</span>
-										<span class="sub_cate">수학</span>
-									</div>
-									<div class="book">
-										<div class="tit">
-											큰별쌤 최태성의 하루한장 한국사_2권 큰별쌤 최태성의 하루한장 한국사_2권
-										</div>
-									</div>
-								</div>
-								<div class="ctr">
-									<button type="button" class="favorite on">찜하기</button>
-									<button type="button" class="download">다운로드</button>
-								</div>
-							</li>
-						</ul>
-						<div class="container">
-							<div data-more>
-								<button type="button">
-									<span>더보기</span>
+						<div class="info_wrap">
+							<div class="info">
+								<ul>
+									<li>초등</li>
+									<li>국어</li>
+								</ul>
+								<span class="tit">초등학교 국어 1-1 가</span>
+							</div>
+							<div class="btn_wrap">
+								<button type="button" class="next">
+									<span>자세히 보기</span>
+								</button>
+								<button class="favorite on">
+									찜하기
 								</button>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="tab_cont" style="display:none;">
-					<div class="container" style="margin:20px 0 30px;">
-						<div class="search_box">
-							<input type="text" placeholder="자료명을 입력해주세요.">
+					<div data-nodata>
+						<div class="txt_wrap">
+							<p class="txt">교재를 선택해주세요.</p>
 						</div>
-					</div>
-					<div class="data_list">
-						<div class="container">
-							<div data-search-header>
-								<span class="cnt">검색결과 : 999999건</span>
-								<!-- <div data-select class="inline">
-                            <select>
-                                <option>최신순</option>
-                            </select>
-                        </div> -->
-							</div>
-						</div>
-						<ul class="list">
-							<li data-nodata>
-								<div class="txt_wrap">
-									<p class="txt">검색 결과가 없습니다.</p>
-								</div>
-							</li>
-						</ul>
 					</div>
 				</div>
 			</div>

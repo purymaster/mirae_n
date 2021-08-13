@@ -1,0 +1,98 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="sub" class="book_list">
+    <div class="container">
+
+        <!-- 서브페이지 헤더 -->
+        <div class="sub_header no_tit">
+            <div class="tit_wrap">
+                <h2 class="tit">선생님 자료실</h2>
+                <div class="menu_select">
+                    <select>
+                        <option selected>초등</option>
+                        <option>중등</option>
+                        <option>고등</option>
+                    </select>
+                </div>
+                <a href="#" class="link search">
+                    <span>교재 직접 검색</span>
+                </a>
+            </div>
+            <div class="sub_menu">
+                <ul>
+                    <!-- [D] 해당 페이지 li에 on클래스 부여 -->
+                    <li class="on"><a href="#">초등</a></li>
+                    <li><a href="#">중등</a></li>
+                    <li><a href="#">고등</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <script>
+            $(window).on('load scroll', function () {
+                var scroll = $(this).scrollTop();
+                if (scroll > 0) {
+                    $('.sub_header').addClass('fixed')
+                    $('.textbook').css('margin-top', '113px');
+                } else {
+                    $('.sub_header').removeClass('fixed')
+                    $('.textbook').css('margin-top', '0px');
+                }
+            });
+        </script>
+        <!-- //서브페이지 헤더 -->
+
+    </div>
+
+    <div class="container textbook">
+        <div class="opt">
+            <label><input type="checkbox" class="hidden"><span>국어</span></label>
+            <label><input type="checkbox" class="hidden"><span>영어</span></label>
+            <label><input type="checkbox" class="hidden"><span>수학</span></label>
+            <label><input type="checkbox" class="hidden"><span>사회</span></label>
+            <label><input type="checkbox" class="hidden"><span>과학</span></label>
+            <label><input type="checkbox" class="hidden"><span>기타</span></label>
+        </div>
+        <div class="textbook_list">
+            <ul class="list">
+                <li>
+                    <div class="img_wrap">
+                        <img src="https://picsum.photos/680/360" alt="">
+                        <div class="cate">
+                            <span>국어</span>
+                        </div>
+                    </div>
+                    <div class="txt_wrap">
+                        <span class="tit">비주얼 개념서</span>
+                        <span class="txt">비주얼 자료로 공부가 즐거운</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="img_wrap">
+                        <img src="https://picsum.photos/680/360" alt="">
+                        <div class="cate">
+                            <span>국어</span>
+                        </div>
+                    </div>
+                    <div class="txt_wrap">
+                        <span class="tit">비주얼 개념서</span>
+                        <span class="txt">비주얼 자료로 공부가 즐거운</span>
+                    </div>
+                </li>
+            </ul>
+            <div data-more>
+                <button type="button">
+                    <span>더보기</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 최상단 이동 버튼 -->
+    <div data-top-btn>
+        <button>페이지 최상단으로 이동</button>
+    </div>
+    <!-- //최상단 이동 버튼 -->
+</div>
+@@include('footer.html')
+@@include('bottom.html')

@@ -114,7 +114,7 @@
 						<h2 class="tit">교과서</h2>
 						<div class="menu_select">
 							<select>
-								<option>초등</option>
+								<option selected>초등</option>
 								<option>중등</option>
 								<option>고등</option>
 								<option>특수교육</option>
@@ -336,7 +336,7 @@
 							</div>
 						</li>
 					</ul>
-					<div class="more">
+					<div data-more>
 						<button type="button">
 							<span>더보기</span>
 						</button>
@@ -348,23 +348,6 @@
 			<div data-top-btn>
 				<button>페이지 최상단으로 이동</button>
 			</div>
-
-			<script>
-				$(window).on('load scroll', function() {
-					var scroll = $(this).scrollTop();
-					if (scroll > 0) {
-						$('[data-top-btn]').show();
-					} else {
-						$('[data-top-btn]').hide();
-					}
-				});
-
-				$(document).on('click', '[data-top-btn] button', function() {
-					$('html,body').animate({
-						scrollTop: '0'
-					}, 300);
-				});
-			</script>
 			<!-- //최상단 이동 버튼 -->
 
 			<!-- [D] data-popup="download"에 on클래스 부여시 팝업 노출 -->

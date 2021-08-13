@@ -1,0 +1,155 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="sub" class="book_view no_shop">
+    <div class="list_back container">
+        <a href="#">교과서 목록보기</a>
+    </div>
+    <div data-tab="tab" class="slide" style="margin-bottom:30px;">
+        <ul>
+            <li class="on"><a href="#">화법과 작문</a></li>
+            <li><a href="#">기본 완성</a></li>
+            <li><a href="#">문학</a></li>
+            <li><a href="#">화법</a></li>
+        </ul>
+    </div>
+    <article>
+
+        <!-- 교과서 썸네일 -->
+        <section class="img">
+            <img src="../../images/img/book/img_pick_book_01.png" alt="">
+            <div class="ctr">
+                <button type="button" class="share">공유하기</button>
+                <!-- [D] 찜하기 상태일때 on 클래스 부여 -->
+                <button type="button" class="favorite on">찜하기</button>
+            </div>
+        </section>
+        <!-- //교과서 썸네일 -->
+
+        <!-- 교과서 요약 -->
+        <section class="summary">
+            <div class="container">
+                <div class="book_name">
+                    <div class="sub_tit">
+                        <span>핵심 단기 특강서</span>
+                        <a href="#" class="link">교재 상세 보기</a>
+                    </div>
+                    <h1 class="book_tit">초등학교 국어 1-1가</h1>
+                </div>
+                <dl class="info">
+                    <div>
+                        <dt>저작권자</dt>
+                        <dd>교육부</dd>
+                    </div>
+                    <div>
+                        <dt>편찬기관</dt>
+                        <dd>서울대학교 · 한국교원대학교 국정도서 국어편찬위원회</dd>
+                    </div>
+                    <div>
+                        <dt>교육과정</dt>
+                        <dd>2015년</dd>
+                    </div>
+                    <div>
+                        <dt>판형</dt>
+                        <dd>국배변형판</dd>
+                    </div>
+                    <div>
+                        <dt>쪽수</dt>
+                        <dd>236쪽</dd>
+                    </div>
+                </dl>
+                <div class="ctr">
+                    <button type="button">교재 미리보기</button>
+                    <button type="button">교재 전체보기</button>
+                    <button type="button">교사용 교재보기</button>
+                </div>
+            </div>
+        </section>
+        <!-- //교과서 요약 -->
+
+        <!-- 학습자료 -->
+        <section class="study_data">
+            <div class="container">
+                <h2 class="section_tit">학습자료</h2>
+                <ul class="data">
+                    <li class="ppt">
+                        <span>수업용 PPT</span>
+                        <button type="button" class="download">다운로드</button>
+                    </li>
+                    <li class="file">
+                        <span>교재파일</span>
+                        <button type="button" class="download">다운로드</button>
+                    </li>
+                    <li class="ppt">
+                        <span>수업용 PPT</span>
+                        <button type="button" class="download">다운로드</button>
+                    </li>
+                    <li class="file">
+                        <span>교재파일</span>
+                        <button type="button" class="download">다운로드</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- [D] 학습자료 없을 때 -->
+        <section class="study_data" style="background:#fff;">
+            <div class="container">
+                <h2 class="section_tit">학습자료</h2>
+                <p style="text-align:center; margin:30px 0 55px;">해당 교재의 자료가 없습니다.</p>
+            </div>
+        </section>
+
+        <!-- 추천 -->
+        <section class="list recommend" style="border-top:1px solid #dcdcdc;">
+            <div class="container">
+                <h2 class="section_tit">추천교재</h2>
+                <ul class="book_list">
+                    <li>
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                            </div>
+                            <div class="tit">
+                                하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                            </div>
+                            <div class="tit">
+                                하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                            </div>
+                            <div class="tit">
+                                하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="img_wrap">
+                                <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                            </div>
+                            <div class="tit">
+                                하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- //추천 -->
+
+    </article>
+</div>
+@@include('footer.html')
+@@include('bottom.html')

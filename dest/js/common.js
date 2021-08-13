@@ -89,6 +89,20 @@ $(function() {
         enableScroll();
     });
 
+    //최상단 이동 버튼
+    $(window).on('load scroll', function() {
+        var scroll = $(this).scrollTop();
+        if (scroll > 0) {
+            $('[data-top-btn]').show();
+        } else {
+            $('[data-top-btn]').hide();
+        }
+    });
+    $(document).on('click', '[data-top-btn] button', function() {
+        $('html,body').animate({
+            scrollTop: '0'
+        }, 300);
+    });
 })
 
 //스와이퍼 제어

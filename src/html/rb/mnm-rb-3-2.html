@@ -1,0 +1,90 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="sub" class="book_list">
+    <div class="container">
+
+        <!-- 서브페이지 헤더 -->
+        <div class="sub_header no_tit">
+            <div class="tit_wrap">
+                <h2 class="tit">선생님 자료실</h2>
+                <a href="#" class="link series">
+                    <span>시리즈별 보기</span>
+                </a>
+            </div>
+        </div>
+
+        <script>
+            $(window).on('load scroll', function () {
+                var scroll = $(this).scrollTop();
+                if (scroll > 0) {
+                    $('.sub_header').addClass('fixed')
+                    $('.textbook_search').css('margin-top', '76px');
+                } else {
+                    $('.sub_header').removeClass('fixed')
+                    $('.textbook_search').css('margin-top', '20px');
+                }
+            });
+        </script>
+        <!-- //서브페이지 헤더 -->
+
+    </div>
+
+    <div class="textbook_search">
+        <div class="container">
+            <div class="search_box">
+                <input type="text" placeholder="교재명을 입력해주세요.">
+            </div>
+            <div class="search_result">
+                <div class="autocomplete">
+                    <ul>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                        <li>[참고서>초등>수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="data">
+                <div class="img_wrap">
+                    <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                </div>
+                <div class="info_wrap">
+                    <div class="info">
+                        <ul>
+                            <li>초등</li>
+                            <li>국어</li>
+                        </ul>
+                        <span class="tit">초등학교 국어 1-1 가</span>
+                    </div>
+                    <div class="btn_wrap">
+                        <button type="button" class="next">
+                            <span>자세히 보기</span>
+                        </button>
+                        <button class="favorite on">
+                            찜하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div data-nodata>
+                <div class="txt_wrap">
+                    <p class="txt">교재를 선택해주세요.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 최상단 이동 버튼 -->
+    <div data-top-btn>
+        <button>페이지 최상단으로 이동</button>
+    </div>
+    <!-- //최상단 이동 버튼 -->
+</div>
+@@include('footer.html')
+@@include('bottom.html')
