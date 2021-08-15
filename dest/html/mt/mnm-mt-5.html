@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<h1>
+				<a href="#">미래엔</a>
+			</h1>
+			<div class="util">
+				<a href="#" class="menu search">검색페이지로 이동</a>
+				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb">
+					<div class="container">
+						<div class="user">
+							<p class="txt login">로그인을 해주세요</p>
+							<!-- <p class="txt">김미래김미래김미래김미래김미래김미래김미래님 안녕하세요</p> -->
+							<div class="user_menu">
+								<a href="#" class="mypage">
+									<span>마이페이지</span>
+								</a>
+								<a href="#" class="logout">
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="main_menu">
+							<li>
+								<!-- <a href="#none" class="book_open">교과서</a> -->
+								<button type="button" class="book_open">교과서</button>
+								<div class="sub_menu">
+									<div class="sub_header">
+										<span class="tit">교과서</span>
+										<a href="#" class="link">
+											<span>교과서 홈</span>
+										</a>
+									</div>
+									<ul>
+										<li><a href="#">미래엔 교과서</a></li>
+										<li><a href="#">초등</a></li>
+										<li><a href="#">중등</a></li>
+										<li><a href="#">고등</a></li>
+									</ul>
+									<button type="button" class="book_close">교과서 메뉴 닫기</button>
+									<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+								</div>
+							</li>
+							<li><a href="#">참고서</a></li>
+							<li><a href="#">출판</a></li>
+						</ul>
+						<ul class="main_menu">
+							<li><a href="#">맘티처</a></li>
+							<li><a href="#">공모전</a></li>
+						</ul>
+						<ul class="main_menu group">
+							<li><a href="#">기업소개</a></li>
+							<li><a href="#">홍보센터</a></li>
+							<li><a href="#">계열사</a></li>
+						</ul>
+					</nav>
+					<div class="footer">
+						<div class="footer_wrap">
+							<div class="container">
+								<ul class="menu">
+									<li><a href="#">인재채용</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">오시는길</a></li>
+									<li><a href="#">관련사이트</a></li>
+								</ul>
+								<ul class="sns">
+									<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+									<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+									<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+								</ul>
+								<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+								<div class="business">
+									㈜미래엔 | 대표 신광수<br>
+									주소 06532 서울특별시 서초구 신반포로 321<br>
+									사업자등록번호 214-81-04977<br>
+									개인정보책임자 한범석<br>
+									이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+									채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+				</div>
+			</div>
+		</header>
+		<div id="content" data-page="sub" class="book_view">
+			<div class="list_back container">
+				<a href="#">학습지 목록보기</a>
+			</div>
+			<div class="no_print">
+				<div class="container">
+					<p><i>!</i>학습지를 담은 후 PC환경에서 인쇄하세요.</p>
+				</div>
+			</div>
+			<article>
+
+				<!-- 학습지 썸네일 -->
+				<section class="img">
+					<img src="../../images/img/book/img_pick_book_01.png" alt="">
+					<div class="ctr">
+						<button type="button" class="share">공유하기</button>
+						<!-- [D] 찜하기 상태일때 on 클래스 부여 -->
+						<button type="button" class="good">좋아요</button>
+						<button type="button" class="recommend">추천</button>
+					</div>
+					<div class="color">
+						<label>
+							<input type="radio" name="color" class="hidden" checked>
+							<span>컬러</span>
+						</label>
+						<label>
+							<input type="radio" name="color" class="hidden">
+							<span>흑백</span>
+						</label>
+					</div>
+				</section>
+				<!-- //학습지 썸네일 -->
+
+				<!-- 교과서 요약 -->
+				<section class="summary">
+					<div class="container">
+						<div class="book_name">
+							<h1 class="book_tit">어떤 재료일까?</h1>
+							<p class="sub_txt">
+								아이와 함께 아기돼지 삼형제가 각각 집 짓는 장면을
+								본후, 어떤 재료로 집을 지었는지 찾을 수 있도록
+								도와주세요.
+							</p>
+						</div>
+						<dl class="info">
+							<div>
+								<dt>추천연령</dt>
+								<dd>3~4세</dd>
+							</div>
+							<div>
+								<dt>학습방법</dt>
+								<dd>동화 애니메이션 보고 학습하기</dd>
+							</div>
+						</dl>
+					</div>
+				</section>
+				<!-- //교과서 요약 -->
+
+				<!-- 학습지 통계 -->
+				<section class="stat">
+					<div class="container">
+						<h2 class="section_tit">학습지 통계</h2>
+						<div class="stat_box">
+							<dl>
+								<div>
+									<dt>인쇄</dt>
+									<dd>9,999</dd>
+								</div>
+								<div>
+									<dt>담기</dt>
+									<dd>9,999</dd>
+								</div>
+								<div>
+									<dt>좋아요</dt>
+									<dd>9,999</dd>
+								</div>
+								<div>
+									<dt>추천</dt>
+									<dd>9,999</dd>
+								</div>
+							</dl>
+						</div>
+					</div>
+				</section>
+				<!-- //학습지 통계 -->
+
+				<!-- 관련미디어(영상) -->
+				<section class="video">
+					<div class="container">
+						<h2 class="section_tit">관련 미디어</h2>
+						<video controls poster="https://picsum.photos/560/320">
+							<source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4">
+							이 브라우저는 MP4 영상을 지원하지 않습니다.
+						</video>
+					</div>
+				</section>
+				<!-- //관련미디어(영상) -->
+
+				<!-- 관련미디어(음원) -->
+				<section class="audio">
+					<div class="container">
+						<h2 class="section_tit">관련 미디어</h2>
+						<audio controls>
+							<source src="https://ccrma.stanford.edu/~jos/mp3/harpsi-cs.mp3" type="audio/mpeg">
+							이 브라우저는 MP3 음성을 지원하지 않습니다.
+						</audio>
+						<p><span class="cate">VOD</span>맘티처의 관련된 MP3가 재생됩니다.</p>
+					</div>
+				</section>
+				<!-- //관련미디어(음원) -->
+
+				<!-- 관련학습지 -->
+				<section class="list best">
+					<div class="container">
+						<h2 class="section_tit">관련학습지</h2>
+						<ul class="book_list">
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<div class="img_wrap">
+										<img src="../../images/img/book/img_pick_book_01.png" alt="">
+									</div>
+									<div class="tit">
+										하루 한장 English BITE 초등 영문법 Starter 1 하루 한장 English BITE 초등 영문법 Starter 1
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- //관련학습지 -->
+
+				<!-- 구매/미리보기 -->
+				<div class="opt_menu">
+					<div data-btn>
+						<button type="button" class="opt preview">
+							<span>미리보기</span>
+						</button>
+						<a href="#" class="confirm opt cart">
+							<span>담기</span>
+						</a>
+					</div>
+				</div>
+				<!-- //구매/미리보기 -->
+
+			</article>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="info">
+					<div class="cs">
+						<div class="txt">
+							<strong>고객센터 : <a href="tel:+1800-8890">1800-8890</a></strong>(발신자 부담)<br>
+							고객센터 운영시간<br>
+							평일 09:00~18:00 (점심시간: 12:00~13:00)
+						</div>
+						<a href="#" class="link">1:1문의</a>
+					</div>
+					<div class="sns">
+						<p>미래엔을 만나보세요.</p>
+						<ul>
+							<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+							<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+							<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+							<li class="youtube"><a href="#" target="_blank" title="새창열림">미래엔 유튜브 채널</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<ul class="footer_menu">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">무단이메일 수집 거부</a></li>
+				<li><a href="#">오시는길</a></li>
+			</ul>
+			<div class="container">
+				<div class="footer_bottom">
+					<img src="../../images/img/img_footer_logo.png" alt="" class="logo">
+					<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+					<div class="business">
+						㈜미래엔 | 대표 신광수<br>
+						주소 06532 서울특별시 서초구 신반포로 321<br>
+						사업자등록번호 214-81-04977<br>
+						개인정보책임자 한범석<br>
+						이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+						채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+					</div>
+					<div class="copyright">
+						© MIRAE N CO.,LTD. All Rights Reserved
+					</div>
+					<img src="../../images/img/img_footer_award.png" alt="명문장수기업" class="award">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

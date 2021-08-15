@@ -1,0 +1,192 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="mom">
+
+    <!-- 키비주얼 -->
+    <div class="main_visual">
+        <div class="txt_wrap container">
+            <h1 class="main_tit">맘티처</h1>
+            <p class="sub_txt">
+                영유아부터 예비 초등학생을 위해<br>
+                미래엔엥서 준비한 NO.1 학습지
+            </p>
+        </div>
+    </div>
+    <!-- //키비주얼 -->
+
+    <!-- 맘티처 과목 -->
+    <section class="subject">
+        <div class="container">
+            <h2>맘티처 과목</h2>
+            <div>
+                <div data-tab="tab" class="slide sub">
+                    <ul>
+                        <li class="on"><button type="button">한글</button></li>
+                        <li><button type="button">수학</button></li>
+                        <li><button type="button">영어</button></li>
+                        <li><button type="button">한자</button></li>
+                        <li><button type="button">창의미술</button></li>
+                        <li><button type="button">과학탐구</button></li>
+                        <li><button type="button">지능개발</button></li>
+                        <li><button type="button">초등준비</button></li>
+                    </ul>
+                </div>
+                <div data-tab-cont="tab">
+                    <div class="tab_cont">
+                        <div class="book_slide book_slide_01 swiper-container">
+                            <ul class="book_list swiper-wrapper">
+                                <li class="slide swiper-slide">
+                                    <div class="img_wrap">
+                                        <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">툇마루에서 모든게 달라졌다 1</p>
+                                    </div>
+                                </li>
+                                <li class="slide swiper-slide">
+                                    <div class="img_wrap">
+                                        <img src="../../images/img/book/img_pick_book_02.png" alt="">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">툇마루에서 모든게 달라졌다 1</p>
+                                    </div>
+                                </li>
+                                <li class="slide swiper-slide">
+                                    <div class="img_wrap">
+                                        <img src="../../images/img/book/img_pick_book_03.png" alt="">
+                                    </div>
+                                    <div class="txt_wrap">
+                                        <p class="tit">툇마루에서 모든게 달라졌다 1</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="scrollbar"></div>
+                            <div data-btn class="fit angle">
+                                <button type="button" class="next">
+                                    <span>한글 학습지 보기</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        수학
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        영어
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        한자
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        창의미술
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        과학탐구
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        지능개발
+                    </div>
+                    <div class="tab_cont" style="display:none;">
+                        초등준비
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        slideInit('.book_slide_01', {
+            spaceBetween: 16,
+            slidesPerView: 2,
+            scrollbar: {
+                el: ".book_slide .scrollbar",
+            },
+        });
+    </script>
+    <!-- //맘티처 과목 -->
+
+    <!-- 맘티처란? -->
+    <section class="mom_teacher">
+        <div class="container">
+            <div class="box">
+                <h2>맘티처란?</h2>
+                <ul>
+                    <li><span>창의력<br>향상</span></li>
+                    <li><span>언어발달</span></li>
+                    <li><span>학습흥미<br>유발</span></li>
+                </ul>
+                <p class="txt">
+                    미래엔에서 학부모와 아이를 위해 준비한 신개념 프린트
+                    학습지입니다. 영유아의 발달 진단과 학습 수준을
+                    진단하여 아이들의 창의력 향상과 지능개발에 도움이
+                    되는 학습 프로그램 입니다.
+                </p>
+                <div data-btn class="fit angle">
+                    <button type="button" class="next">
+                        <span>자세히 보기</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- //맘티처란? -->
+
+    <!-- 맘티처를 이렇게 활용해보세요! -->
+    <section class="use">
+        <div class="container">
+            <h2>맘티처를<br>이렇게 활용해보세요!</h2>
+            <ul>
+                <li>
+                    <span class="tit">MomTube</span>
+                    <p class="txt">재미있는 동화로<br>학습의 흥미를 키워주세요.</p>
+                </li>
+                <li>
+                    <span class="tit">Kids Learning</span>
+                    <p class="txt">우리 아이 연령에 맞게<br>언어발달, 사고력을 키워주세요.</p>
+                </li>
+                <li>
+                    <span class="tit">Super Brain</span>
+                    <p class="txt">과학적 지식과 창의력을 동시에 키워보세요.</p>
+                </li>
+                <li>
+                    <span class="tit">Mom's Pick</span>
+                    <p class="txt">맘티처들에게 인기있는<br>학습지를 확인해보세요.</p>
+                </li>
+            </ul>
+            <div data-btn class="fit angle">
+                <button type="button" class="next">
+                    <span>추천 학습지 보기</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- ///맘티처를 이렇게 활용해보세요! -->
+
+    <!-- 웰리미 한글 진단검사 -->
+    <section class="test">
+        <a href="https://hg.mirae-n.com/index.mrn" target="_blank">
+            <h2>웰리미 한글 진단검사</h2>
+            <p>
+                한국초등국어교육연구소와 초등 국어 교과서 발행사<br>
+                미래엔이 함께 만든 한글 해득 진단 검사입니다.
+            </p>
+        </a>
+    </section>
+    <!-- //웰리미 한글 진단검사 -->
+
+    <!-- FAQ 바로가기 -->
+    <div class="container">
+        <div class="faq">
+            <p class="txt">궁금한 사항이 있나요? 자주 묻는 질문에서 확인하세요.</p>
+            <div data-btn class="fit angle">
+                <a href="#" class="next">
+                    <span>FAQ 바로가기</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- //FAQ 바로가기 -->
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')

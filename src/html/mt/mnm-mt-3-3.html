@@ -1,0 +1,32 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="sub" class="textbook_list">
+    <div class="textbook_header">
+        <ul>
+            <!-- [D] 활성화 메뉴 li에 on 클래스 부여 -->
+            <li><a href="#" class="on">추천 학습지</a></li>
+            <li><button type="button"><span class="select">수와 셈</span></button></li>
+            <li class="on"><button type="button"><span>학습지 검색</span></button></li>
+        </ul>
+        <div class="search_wrap">
+            <div class="container">
+                <div class="search_box">
+                    <input type="text" placeholder="학습지의 제목 또는 단어를 입력하세요">
+                </div>
+                <div class="keyword">
+                    <span class="tit">추천 검색어</span>
+                    <div class="word_wrap">
+                        <a href="#">종이접기</a>
+                        <a href="#">구구단</a>
+                        <a href="#">수쓰기</a>
+                        <a href="#">숫자쓰기</a>
+                        <a href="#">미로찾기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')
