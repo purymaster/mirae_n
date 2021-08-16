@@ -28,7 +28,8 @@ $(function () {
     };
     var gnb = $('.gnb_wrap'),
         gnb_sub = $('.gnb .sub_menu'),
-        filter = $('.filter_wrap');
+        filter = $('.filter_wrap'),
+        bookmenu = $('.bookmenu_wrap');
     $(document).on('click', '.nav_open', function () {
         navControl("show", gnb);
     }).on('click', '.nav_close', function () {
@@ -42,11 +43,16 @@ $(function () {
         navControl("show", filter);
     }).on('click', '[data-close-filter]', function () {
         navControl("", filter);
+    }).on('click', '[data-open-bookmenu]', function () {
+        navControl("show", bookmenu);
+    }).on('click', '[data-close-bookmenu]', function () {
+        navControl("", bookmenu);
+        $('[data-bookmenu]').find('li').removeClass('on');
     });
 
     //스크롤 헤더 제어
     var isMain = false,
-        onPage = ['main', 'curation', 'mom', 'mom_sub'];
+        onPage = ['main', 'curation', 'mom', 'mom_sub', 'book'];
     if ($.inArray($('#content').data('page'), onPage) !== -1) isMain = true;
     $(window).on('load scroll', function () {
         if (!isMain) {
@@ -103,6 +109,23 @@ $(function () {
             scrollTop: '0'
         }, 300);
     });
+
+    //학습지 목록 제어
+    var bookMenu = $('[data-bookmenu]');
+    bookMenu.on('click', '.depth1 > li', function () {
+        $(this).addClass('on').siblings('li').removeClass('on');
+        bookMenu.find('.depth2 > li').removeClass('on');
+    }).on('click', '.depth2 > li', function (e) {
+        e.stopPropagation();
+        if ($(this).hasClass('on')) {
+            bookMenu.find('.depth2 > li').removeClass('on');
+        } else {
+            $(this).addClass('on').siblings('li').removeClass('on');
+        }
+    }).on('click', '.depth3 > li', function (e) {
+        e.stopPropagation();
+    });
+
 })
 
 //스와이퍼 제어

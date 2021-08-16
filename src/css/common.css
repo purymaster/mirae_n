@@ -79,6 +79,25 @@
 	url("../font/MARUBuriBetaR.woff") format("woff");
 }
 
+/* Lato */
+@font-face {
+	font-family:"Lato";
+	font-weight:normal;
+	src: url("../font/Lato-Regular.eot");
+	src: local("※"), 
+	url("../font/Lato-Regular.woff2") format("woff2"), 
+	url("../font/Lato-Regular.woff") format("woff");
+}
+
+@font-face {
+	font-family:"Lato";
+	font-weight:700;
+	src: url("../font/Lato-Bold.eot");
+	src: local("※"), 
+	url("../font/Lato-Bold.woff2") format("woff2"), 
+	url("../font/Lato-Bold.woff") format("woff");
+}
+
 /*=========================================================
 2. 리셋
 =========================================================*/
@@ -145,7 +164,8 @@ caption,.hidden {overflow:hidden; clip:rect(0 0 0 0); position:absolute; width:1
 #content[data-page='main'],
 #content[data-page='curation'],
 #content[data-page='mom'],
-#content[data-page='mom_sub'] {padding-top:0;}
+#content[data-page='mom_sub'],
+#content[data-page='book'] {padding-top:0;}
 .container {padding:0 18px;}
 
 /* 입력폼 */
@@ -408,6 +428,34 @@ textarea {width:100%; height:175px; padding:10px 15px; border:1px solid #c4c4c4;
 [data-filter] .filter_item .more button.on span:before,
 [data-filter] .filter_item .more button.on span:after {display:none;}
 
+/* 학습지 메뉴 */
+.bookmenu_wrap {visibility:hidden; position:fixed; top:0; left:0; z-index:11; width:100%; height:100%; background:rgba(0,0,0,.5); transition:all .3s; opacity:0;}
+.bookmenu_wrap.on {visibility:visible; opacity:1;}
+[data-bookmenu] {display:flex; position:absolute; top:0; right:0; width:100%; max-width:600px; height:100%; background:#fff; transition:all .3s; transform:translateX(100%); flex-direction:column;}
+[data-bookmenu]:before {content:''; position:absolute; top:0; left:0; width:120px; height:100%; background:#f4f4f4;}
+.bookmenu_wrap.on [data-bookmenu] {transform:translateX(0);}
+[data-bookmenu] .book_list {overflow-y:auto; position:relative; height:100%; margin-top:65px;}
+[data-bookmenu] .depth1 {width:120px;}
+[data-bookmenu] .depth1 > li {padding:13px 0 9px 30px; font-size:19px; color:#7d7d7d;}
+[data-bookmenu] .depth1 > li.on {background:#fff; font-weight:500; color:#4d4d4d;}
+[data-bookmenu] .sub {display:none; position:absolute; top:0; left:120px; width:calc(100% - 120px); padding:0 18px;}
+[data-bookmenu] .depth1 > li.on .sub {display:block;}
+[data-bookmenu] .sub > .tit {display:inline-block; font-size:22px; font-weight:500; text-indent:8px;}
+[data-bookmenu] .depth2 {margin-top:14px; border-top:1px solid #dcdcdc;}
+[data-bookmenu] .depth2 > li {position:relative; padding:13px 0 9px; border-bottom:1px solid #dcdcdc; font-size:15px; font-weight:500; text-indent:8px;}
+[data-bookmenu] .depth2 > li:after {content:''; position:absolute; top:16px; right:12px; width:8px; height:8px; border-bottom:2px solid #7d7d7d; border-right:2px solid #7d7d7d; transform:rotate(45deg);}
+[data-bookmenu] .depth2 > li.on:after {transform:rotate(225deg); top:18px;}
+[data-bookmenu] .depth3 {display:none; margin-top:7px; padding:15px 0 8px; border-top:1px solid #dcdcdc;}
+[data-bookmenu] .depth2 > li.on .depth3 {display:block;}
+[data-bookmenu] .depth3 li a {display:block; line-height:2em; font-size:14px; color:#7d7d7d; position:relative;}
+[data-bookmenu] .depth3 li i {position:relative; width:15px; height:15px; border:1px solid #d9d9d9; border-radius:50%; display:inline-block; margin-left:5px; top:2px;}
+[data-bookmenu] .depth3 li i:before {content:''; position:absolute; top:4px; left:50%; width:0; height:0; margin-left:-2px; border-width:3px 5px; border-style:solid; border-color:transparent transparent transparent #7d7d7d; background:none;}
+[data-bookmenu] [data-close-bookmenu] {position:absolute; top:22px; right:18px; width:16px; height:16px; text-indent:-9999px;}
+[data-bookmenu] [data-close-bookmenu]:before,
+[data-bookmenu] [data-close-bookmenu]:after {content:''; position:absolute; top:50%; left:50%; width:140%; height:2px; margin-top:-1px; margin-left:-70%; background:#000;}
+[data-bookmenu] [data-close-bookmenu]:before {transform:rotate(-45deg);}
+[data-bookmenu] [data-close-bookmenu]:after {transform:rotate(45deg);}
+
 /*=========================================================
 5. 헤더
 =========================================================*/
@@ -624,6 +672,22 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 [data-popup='viewer'] .viewer_wrap {height:100%; background:#eee;}
 [data-popup='viewer'] .close {top:23px;}
 
+/* 토스트 팝업 */
+[data-popup='toast'] .popup_wrap {padding:27px 20px 23px; text-align:center;}
+
+/* 인쇄 미리보기 팝업 */
+[data-popup='print'] .popup_wrap {display:flex; overflow-y:visible; max-height:calc(100% - 120px); padding:0; flex-direction:column; flex-wrap:wrap;}
+[data-popup='print'] .img_view {overflow-y:auto; height:100%;}
+[data-popup='print'] .color {position:absolute; top:-42px; left:0; padding:5px; border-radius:20px; background:#fff; font-size:0; box-shadow:0 1.5px 5px 0 rgba(0, 0, 0, .16);}
+[data-popup='print'] .color span {display:inline-block; padding:4px 15px 0; border-radius:12px; font-size:12px; color:#7d7d7d;}
+[data-popup='print'] .color :checked + span {background:#4d4d4d; color:#fff;}
+[data-popup='print'] [data-btn] {position:absolute; bottom:-57px; left:50%; width:160px; margin-top:0; transform:translateX(-50%);}
+[data-popup='print'] .close {top:-30px; right:0;}
+[data-popup='print'] .close:before,
+[data-popup='print'] .close:after {background:#fff;}
+[data-popup='print'] [data-btn] button span:after {background-image:url(../images/ico/book/ico_favorite.png); background-size:20px;}
+
+
 /*===================
 하단출력 팝업
 =====================*/
@@ -795,12 +859,161 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 [data-page='main'] .main_popup [data-checkbox] input[type='checkbox'] + label:before {border-radius:50%;}
 
 /*===================
-교과서/출판도서
+교과서/출판도서 + 참고서
 =====================*/
 
-/*===================
-참고서
-=====================*/
+/* 공통 */
+[data-page='book'] section {padding:45px 0 60px;}
+[data-page='book'] section h2 {line-height:1.5em; margin-bottom:20px; font-family:'Maruburi'; font-size:22px; font-weight:400; text-align:center;}
+
+/* 키비주얼 */
+[data-page='book'] .main_visual {height:500px;}
+[data-page='book'] .main_visual .e1 {background:red;}
+[data-page='book'] .main_visual .e2 {background:blue;}
+[data-page='book'] .main_visual .m1 {background:green;}
+[data-page='book'] .main_visual .m2 {background:purple;}
+[data-page='book'] .main_visual .h1 {background:darkblue;}
+[data-page='book'] .main_visual .h2 {background:darkgreen;}
+[data-page='book'] .main_visual .txt_wrap {margin-top:100px; color:#fff; text-align:center;}
+[data-page='book'] .main_visual .txt_wrap .tit {display:block; font-family:'Maruburi'; font-size:35px;}
+
+/* 업적 */
+[data-page='book'] .award ul {display:flex; margin-top:35px; text-align:center; flex-wrap:wrap;}
+[data-page='book'] .award li {position:relative; width:50%; padding:85px 0 25px; flex-shrink:0;}
+[data-page='book'] .award li:before {content:''; position:absolute; top:0; left:50%; width:76px; height:76px; background-repeat:no-repeat; background-position:center; background-size:contain; transform:translateX(-50%);}
+[data-page='book'] .award li:nth-child(1):before {margin-left:4px; background-image:url(../images/ico/book/ico_award_01.png);}
+[data-page='book'] .award li:nth-child(2):before {background-image:url(../images/ico/book/ico_award_02.png);}
+[data-page='book'] .award li:nth-child(3):before {background-image:url(../images/ico/book/ico_award_03.png);;}
+[data-page='book'] .award li:nth-child(4):before {background-image:url(../images/ico/book/ico_award_04.png);;}
+[data-page='book'] .award li .tit {display:block; line-height:19px; font-size:14px;}
+[data-page='book'] .award li .txt {display:block; margin-top:10px; margin-top:7px; font-size:12px; color:#7d7d7d;}
+
+/* 역사 */
+[data-page='book'] .history {background:#f8f8f8;}
+[data-page='book'] .history [data-tab] li {flex-grow:1;}
+[data-page='book'] .history [data-tab] button {background:none;}
+[data-page='book'] .history .txt_wrap {margin-top:30px; padding:0 15px;}
+[data-page='book'] .history .txt_wrap .tit {font-family:'Lato', 'Noto Sans KR'; font-size:21px; font-weight:700;}
+[data-page='book'] .history .txt_wrap .tit small {position:Relative; top:3px; margin-left:5px; font-family:inherit; font-size:11px; font-weight:400; color:#7d7d7d; vertical-align:top;}
+[data-page='book'] .history .txt_wrap .txt {margin-top:13px; font-size:12px;}
+
+/* 스토리 */
+[data-page='book'] .story {padding:35px 0; background:url(../images/bg/book/bg_book_story.png); background-position:center; background-size:cover; color:#fff; text-align:center;}
+[data-page='book'] .story h2 {margin-bottom:15px;}
+[data-page='book'] .story .link {display:inline-block; padding:9px 20px 7px; border:1px solid #fff; font-size:12px; font-weight:500; color:inherit;}
+
+/* 교과서 찾기 */
+[data-page='book'] .mybook .book_slide .slide {position:relative; text-align:center;}
+[data-page='book'] .mybook .book_slide a {display:block;}
+[data-page='book'] .mybook .book_slide .cate {display:block; position:absolute; top:20px; left:0; width:100%; font-size:14px; font-weight:500; text-align:center;}
+[data-page='book'] .mybook .book_slide .img_wrap {display:flex; height:230px; background:#f8f8f8; flex-wrap:nowrap; justify-content:center; align-items:center;}
+[data-page='book'] .mybook .book_slide .img_wrap img {width:95px; height:130px; box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
+[data-page='book'] .mybook .book_slide .all {position:absolute; bottom:20px; left:50%; padding-right:10px; font-size:12px; color:#7d7d7d; transform:translateX(-50%);}
+[data-page='book'] .mybook .book_slide .all:after {content:''; position:absolute; top:3px; right:2px; width:6px; height:6px; border-top:1px solid #7d7d7d; border-right:1px solid #7d7d7d; transform:rotate(45deg);}
+[data-page='book'] .mybook .book_slide .scrollbar {height:2px; margin-top:25px; background:#c4c4c4;}
+
+/* 통일 초등 국어 교과서 */
+[data-page='book'] .banner {display:block; margin-bottom:60px; padding:20px; padding-bottom:25px; background:url(../images/bg/book/bg_korean_banner.png); background-position:center; background-size:cover;}
+[data-page='book'] .banner .tit {font-size:15px; font-weight:500;}
+[data-page='book'] .banner .tit span {position:relative; padding-right:20px;}
+[data-page='book'] .banner .tit span:before {content:''; position:absolute; top:50%; right:0; width:14px; height:14px; margin-top:-10px; border-radius:50%; background:#fff;}
+[data-page='book'] .banner .tit span:after {content:''; position:absolute; top:1px; right:5px; width:6px; height:6px; border-top:1px solid #4d4d4d; border-right:1px solid #4d4d4d; transform:rotate(45deg);}
+[data-page='book'] .banner p {margin-top:10px; padding-right:110px; padding-left:5px; font-size:12px; color:#4d4d4d;}
+
+/* 브랜드 */
+[data-page='book'] .brand {position:relative; text-align:center;}
+[data-page='book'] .brand:before {content:''; position:absolute; bottom:0; left:0; z-index:-1; width:100%; height:230px; background:#5bbebc;}
+[data-page='book'] .brand.pub:before {height:265px; background:#ebe8e5;}
+[data-page='book'] .brand .brand_slide {margin-top:30px;}
+[data-page='book'] .brand .slide .img_wrap {background:#f4f4f4;}
+[data-page='book'] .brand .slide .txt_wrap {margin-top:20px; padding:0 70px; background:#5bbebc; color:#fff;}
+[data-page='book'] .brand.pub .slide .txt_wrap {background:#ebe8e5; color:#000;}
+[data-page='book'] .brand .slide .txt_wrap .tit {display:block; font-size:20px; font-weight:500;}
+[data-page='book'] .brand .slide .txt_wrap .txt {margin-top:10px; font-size:12px;}
+[data-page='book'] .brand [class*='swiper-button'] {position:absolute; top:auto; bottom:30px; width:30px; height:30px; margin:0; border:1px solid #fff; border-radius:50%; background:none;}
+[data-page='book'] .brand.pub [class*='swiper-button'] {border-color:#000;}
+[data-page='book'] .brand [class*='swiper-button']:before {content:''; position:absolute; top:9px; left:9px; width:10px; height:10px; border:1px solid #fff; transform:rotate(45deg);}
+[data-page='book'] .brand.pub [class*='swiper-button']:before {border-color:#000;}
+[data-page='book'] .brand [class*='swiper-button']:after {display:none;}
+[data-page='book'] .brand .swiper-button-prev {left:0;}
+[data-page='book'] .brand .swiper-button-next {right:0;}
+[data-page='book'] .brand .swiper-button-prev:before {margin-left:2px; border-top:0; border-right:0;}
+[data-page='book'] .brand .swiper-button-next:before {margin-left:-2px; border-bottom:0; border-left:0;}
+
+/* 큐레이션 */
+[data-page='book'] .curation {position:relative; text-align:center;}
+[data-page='book'] .curation:before {content:''; position:absolute; bottom:0; left:0; z-index:-1; width:100%; height:200px; background:#ebe6e5;}
+[data-page='book'] .curation ul {display:flex; margin-top:30px; flex-wrap:wrap; justify-content:space-between;}
+[data-page='book'] .curation li {width:100px; height:130px; background-position:center; background-size:contain;}
+[data-page='book'] .curation li:nth-child(1) {background-image:url(../images/img/book/img_curation_e.png);}
+[data-page='book'] .curation li:nth-child(2) {background-image:url(../images/img/book/img_curation_m.png);}
+[data-page='book'] .curation li:nth-child(3) {background-image:url(../images/img/book/img_curation_h.png);}
+[data-page='book'] .curation li a {display:block; height:100%;}
+[data-page='book'] .curation li span {display:inline-block; position:relative; margin-top:100px; padding-right:20px; font-size:15px; font-weight:500; color:#fff;}
+[data-page='book'] .curation li span:before {content:''; position:absolute; top:50%; right:0; width:14px; height:14px; margin-top:-10px; border:1px solid #fff; border-radius:50%;}
+[data-page='book'] .curation li span:after {content:''; position:absolute; top:6px; right:6px; width:4px; height:4px; border-top:1px solid #fff; border-right:1px solid #fff; transform:rotate(45deg);}
+[data-page='book'] .curation .txt {margin-top:30px; padding:0 70px; font-size:12px;}
+
+/* 추천 브랜드, 인기 시리즈 */
+[data-page='book'] .recommend {text-align:center;}
+[data-page='book'] .recommend [data-tab] {margin-top:30px;}
+[data-page='book'] .recommend [data-tab] ul {display:inline-flex;}
+[data-page='book'] .recommend .rebook_slide {margin-top:20px;}
+[data-page='book'] .recommend .rebook_slide .slide {transition:all .3s;}
+[data-page='book'] .recommend .rebook_slide [class*="prev"] {transform:translateX(30vw) scale(.8);}
+[data-page='book'] .recommend .rebook_slide [class*="next"] {transform:translateX(-30vw) scale(.8);}
+[data-page='book'] .recommend .rebook_slide .slide .box {display:inline-flex; width:230px; flex-direction:column;}
+[data-page='book'] .recommend .rebook_slide .img_wrap {display:flex; width:100%; height:260px; background:#f8f8f8; justify-content:center; box-shadow:7px 7px 15px 0 rgba(0, 0, 0, .08);}
+[data-page='book'] .recommend.series .rebook_slide .img_wrap {height:230px;}
+[data-page='book'] .recommend .rebook_slide .img_wrap img {width:150px; align-self:center;}
+[data-page='book'] .recommend.series .rebook_slide .img_wrap img {width:230px; height:230px;}
+[data-page='book'] .recommend .rebook_slide .txt_wrap {margin-top:20px;}
+[data-page='book'] .recommend .rebook_slide .tit {display:block; font-size:18px; font-weight:500;}
+[data-page='book'] .recommend .rebook_slide .txt {max-width:230px; margin-top:12px; font-size:12px; color:#4d4d4d;}
+[data-page='book'] .recommend.series .rebook_slide .txt {color:#000;}
+[data-page='book'] .recommend .rebook_slide .scrollbar {height:2px; margin-top:15px; background:#c4c4c4;}
+
+/* 스마트 */
+[data-page='book'] .smart {background-color:rgba(34, 34, 34, .85); text-align:center;}
+[data-page='book'] .smart h2 {color:#fff;}
+[data-page='book'] .smart .box {padding:20px 18px 25px; background:#fff;}
+[data-page='book'] .smart .box + .box {margin-top:20px;}
+[data-page='book'] .smart .box h3 {margin-bottom:20px; font-size:18px; font-weight:500;}
+[data-page='book'] .smart .box ul {display:flex; margin:0 -18px; margin-bottom:20px; border-top:1px solid #dcdcdc; border-left:1px solid #dcdcdc; flex-wrap:wrap;}
+[data-page='book'] .smart .box li {position:relative; width:33.33%; height:110px; border-right:1px solid #dcdcdc; border-bottom:1px solid #dcdcdc; font-size:13px; font-weight:500; flex-shrink:0;}
+[data-page='book'] .smart .box li:after {content:''; position:absolute; top:25px; left:50%; width:36px; height:36px; margin-left:-18px; background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='book'] .smart .box li:nth-child(1):after {background-image:url(../images/ico/book/ico_smart_01.png);}
+[data-page='book'] .smart .box li:nth-child(2):after {background-image:url(../images/ico/book/ico_smart_02.png);}
+[data-page='book'] .smart .box li:nth-child(3):after {background-image:url(../images/ico/book/ico_smart_03.png);}
+[data-page='book'] .smart .box li:nth-child(4):after {background-image:url(../images/ico/book/ico_smart_04.png);}
+[data-page='book'] .smart .box li:nth-child(5):after {background-image:url(../images/ico/book/ico_smart_05.png);}
+[data-page='book'] .smart .box li:nth-child(6):after {background-image:url(../images/ico/book/ico_smart_06.png);}
+[data-page='book'] .smart .box li a {display:block; height:100%; padding-top:70px;}
+[data-page='book'] .smart .box .data {display:inline-block; position:relative; margin-bottom:10px; padding-left:25px; font-size:15px; font-weight:500;}
+[data-page='book'] .smart .box .data:after {content:''; position:absolute; top:50%; left:0; width:20px; height:20px; margin-top:-12px; background:url(../images/ico/book/ico_teacher_data.png); background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='book'] .smart .box p {font-size:13px; font-weight:500; color:#4d4d4d;}
+[data-page='book'] .smart .box [data-btn] {margin-top:20px;}
+[data-page='book'] .smart .box [data-btn] span {font-size:13px; font-weight:500;}
+[data-page='book'] .smart .box [data-btn] span:after {top:-1px;}
+
+/* 신간 도서, 베스트 셀러 */
+[data-page='book'] .book_list {text-align:center;}
+[data-page='book'] .book_list [data-tab] {margin:25px 0;}
+[data-page='book'] .book_list [data-tab] ul {display:inline-flex;}
+[data-page='book'] .book_list .slide .img_wrap {display:-webkit-box;display:-ms-flexbox;display:flex; height:180px; background:#f8f8f8; -webkit-box-pack:center; -ms-flex-pack:center; justify-content:center;}
+[data-page='book'] .book_list .slide .img_wrap img {width:95px; height:135px; -ms-flex-item-align:center; align-self:center; -webkit-box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16); box-shadow:3px 3px 9px 0 rgba(0, 0, 0, .16);}
+[data-page='book'] .book_list .slide .txt_wrap {margin-top:13px;}
+[data-page='book'] .book_list .slide .tit {font-size:12px; font-weight:500; text-align:center;}
+[data-page='book'] .book_list .scrollbar {height:2px; margin-top:30px; background:#c4c4c4;}
+[data-page='book'] .book_list [data-btn] {margin-top:25px;}
+
+/* FAQ */
+[data-page='book'] .faq {margin-top:50px; margin-bottom:60px; padding:30px 20px; background:#f8f8f8; text-align:center;}
+[data-page='book'] .faq .txt {position:relative; padding-top:30px; font-weight:500;}
+[data-page='book'] .faq .txt:before {content:''; position:absolute; top:0; left:50%; width:26px; height:20px; margin-left:-13px; background:url(../images/ico/mom/ico_faq.png); background-repeat:no-repeat; background-position:center; background-size:contain;}
+[data-page='book'] .faq [data-btn] {margin-top:20px;}
+[data-page='book'] .faq [data-btn] a {background:none; font-size:13px; font-weight:500;}
+[data-page='book'] .faq [data-btn] a span:after {top:-1px;}
 
 /*===================
 교재큐레이션
@@ -895,8 +1108,8 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 
 /* 과목 선택 */
 [data-page='mom_sub'] .selector {border-bottom:1px solid #dcdcdc;}
-[data-page='mom_sub'] .selector .subject {text-align:center; padding:12px 0 8px; border-bottom:1px solid #dcdcdc;}
-[data-page='mom_sub'] .selector .subject select {font-size:17px; font-weight:500; color:#000; line-height:20px;}
+[data-page='mom_sub'] .selector .subject {padding:12px 0 8px; border-bottom:1px solid #dcdcdc; text-align:center;}
+[data-page='mom_sub'] .selector .subject select {display:inline-block; height:22px; line-height:24px; font-size:17px; font-weight:500; color:#000;}
 [data-page='mom_sub'] .selector [data-tab] {margin:11px 0 9px;}
 
 /* 상세 내용 */
@@ -1261,7 +1474,7 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 [data-page='sub'].book_view .no_print p {position:relative; padding-left:28px;}
 [data-page='sub'].book_view .no_print p i {position:absolute; top:50%; left:0; width:20px; height:20px; line-height:24px; margin-top:-12px; border:1px solid #fff; border-radius:50%; text-align:center;}
 [data-page='sub'].book_view section.img .color {position:absolute; top:15px; left:18px; padding:5px; border-radius:20px; background:#fff; font-size:0; box-shadow:0 1.5px 5px 0 rgba(0, 0, 0, .16);}
-[data-page='sub'].book_view section.img .color span {display:inline-block; padding:4px 15px 0; border-radius:10px; font-size:12px; color:#7d7d7d;}
+[data-page='sub'].book_view section.img .color span {display:inline-block; padding:4px 15px 0; border-radius:12px; font-size:12px; color:#7d7d7d;}
 [data-page='sub'].book_view section.img .color :checked + span {background:#4d4d4d; color:#fff;}
 [data-page='sub'].book_view section.img .ctr .good:after {background-image:url(../images/ico/book/ico_good.png);}
 [data-page='sub'].book_view section.img .ctr .recommend:after {background-image:url(../images/ico/book/ico_recommend.png);}

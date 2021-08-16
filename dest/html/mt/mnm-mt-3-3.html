@@ -110,7 +110,7 @@
 				<ul>
 					<!-- [D] 활성화 메뉴 li에 on 클래스 부여 -->
 					<li><a href="#" class="on">추천 학습지</a></li>
-					<li><button type="button"><span class="select">수와 셈</span></button></li>
+					<li><button type="button" data-open-bookmenu><span class="select">수와 셈</span></button></li>
 					<li class="on"><button type="button"><span>학습지 검색</span></button></li>
 				</ul>
 				<div class="search_wrap">
@@ -129,6 +129,56 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+			<div class="bookmenu_wrap">
+				<div data-bookmenu>
+
+					<div class="book_list">
+						<ul class="depth1">
+							<li>
+								한글
+							</li>
+							<li>
+								수학
+							</li>
+							<li>
+								영어
+							</li>
+							<li>
+								한자
+								<div class="sub">
+									<span class="tit">한자</span>
+									<ul class="depth2">
+										<li>
+											동요한자
+											<ul class="depth3">
+												<li><a href="#">8급 한자</a></li>
+												<li><a href="#">7급 한자<i></i></a></li>
+											</ul>
+										</li>
+										<li>급수한자</li>
+										<li>급수 모의고사</li>
+										<li>카드 놀이</li>
+										<li>기타</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								창의미술
+							</li>
+							<li>
+								과학탐구
+							</li>
+							<li>
+								지능개발
+							</li>
+							<li>
+								초등준비
+							</li>
+						</ul>
+					</div>
+					<button type="button" data-close-bookmenu>학습지 메뉴 닫기</button>
 				</div>
 			</div>
 

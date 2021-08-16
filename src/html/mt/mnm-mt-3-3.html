@@ -5,7 +5,7 @@
         <ul>
             <!-- [D] 활성화 메뉴 li에 on 클래스 부여 -->
             <li><a href="#" class="on">추천 학습지</a></li>
-            <li><button type="button"><span class="select">수와 셈</span></button></li>
+            <li><button type="button" data-open-bookmenu><span class="select">수와 셈</span></button></li>
             <li class="on"><button type="button"><span>학습지 검색</span></button></li>
         </ul>
         <div class="search_wrap">
@@ -26,6 +26,7 @@
             </div>
         </div>
     </div>
+    @@include('textbook_menu.html')
 
 </div>
 @@include('footer.html')

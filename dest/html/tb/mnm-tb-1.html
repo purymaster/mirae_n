@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<h1>
+				<a href="#">미래엔</a>
+			</h1>
+			<div class="util">
+				<a href="#" class="menu search">검색페이지로 이동</a>
+				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb">
+					<div class="container">
+						<div class="user">
+							<p class="txt login">로그인을 해주세요</p>
+							<!-- <p class="txt">김미래김미래김미래김미래김미래김미래김미래님 안녕하세요</p> -->
+							<div class="user_menu">
+								<a href="#" class="mypage">
+									<span>마이페이지</span>
+								</a>
+								<a href="#" class="logout">
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="main_menu">
+							<li>
+								<!-- <a href="#none" class="book_open">교과서</a> -->
+								<button type="button" class="book_open">교과서</button>
+								<div class="sub_menu">
+									<div class="sub_header">
+										<span class="tit">교과서</span>
+										<a href="#" class="link">
+											<span>교과서 홈</span>
+										</a>
+									</div>
+									<ul>
+										<li><a href="#">미래엔 교과서</a></li>
+										<li><a href="#">초등</a></li>
+										<li><a href="#">중등</a></li>
+										<li><a href="#">고등</a></li>
+									</ul>
+									<button type="button" class="book_close">교과서 메뉴 닫기</button>
+									<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+								</div>
+							</li>
+							<li><a href="#">참고서</a></li>
+							<li><a href="#">출판</a></li>
+						</ul>
+						<ul class="main_menu">
+							<li><a href="#">맘티처</a></li>
+							<li><a href="#">공모전</a></li>
+						</ul>
+						<ul class="main_menu group">
+							<li><a href="#">기업소개</a></li>
+							<li><a href="#">홍보센터</a></li>
+							<li><a href="#">계열사</a></li>
+						</ul>
+					</nav>
+					<div class="footer">
+						<div class="footer_wrap">
+							<div class="container">
+								<ul class="menu">
+									<li><a href="#">인재채용</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">오시는길</a></li>
+									<li><a href="#">관련사이트</a></li>
+								</ul>
+								<ul class="sns">
+									<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+									<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+									<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+								</ul>
+								<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+								<div class="business">
+									㈜미래엔 | 대표 신광수<br>
+									주소 06532 서울특별시 서초구 신반포로 321<br>
+									사업자등록번호 214-81-04977<br>
+									개인정보책임자 한범석<br>
+									이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+									채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+				</div>
+			</div>
+		</header>
+		<div id="content" data-page="book">
+
+			<!-- 키비주얼 -->
+			<div class="main_visual swiper-container">
+				<div class="swiper-wrapper">
+					<div class="slide swiper-slide container e1">
+						<div class="txt_wrap">
+							<span class="tit">초등 교과서</span>
+						</div>
+					</div>
+					<div class="slide swiper-slide container e2">
+						<div class="txt_wrap">
+							<span class="tit">초등 교과서</span>
+						</div>
+					</div>
+					<div class="slide swiper-slide container m1">
+						<div class="txt_wrap">
+							<span class="tit">중등 교과서</span>
+						</div>
+					</div>
+					<div class="slide swiper-slide container m2">
+						<div class="txt_wrap">
+							<span class="tit">중등 교과서</span>
+						</div>
+					</div>
+					<div class="slide swiper-slide container h1">
+						<div class="txt_wrap">
+							<span class="tit">고등 교과서</span>
+						</div>
+					</div>
+					<div class="slide swiper-slide container h2">
+						<div class="txt_wrap">
+							<span class="tit">고등 교과서</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script>
+				if ($(".main_visual").find('.slide').length > 1) {
+					slideInit('.main_visual', {
+						effect: 'fade',
+						loop: true,
+						autoplay: {
+							delay: 5000,
+						},
+					});
+				}
+			</script>
+			<!-- //키비주얼 -->
+
+			<!-- 업적 -->
+			<section class="award">
+				<div class="container">
+					<h2>대한민국을 대표하는<br>출판교육의 자존심</h2>
+					<ul>
+						<li>
+							<span class="tit">국정도서 발행권<br>제안 심사 (초등 국어) 1위</span>
+							<span class="txt">2017~2019 / 2020~2022</span>
+						</li>
+						<li>
+							<span class="tit">개정 검·인정 교과서<br>1위</span>
+							<span class="txt">2015</span>
+						</li>
+						<li>
+							<span class="tit">개정 검·인정 교과서<br>합격률 1위</span>
+							<span class="txt">2007</span>
+						</li>
+						<li>
+							<span class="tit">제 7차 국·검정<br>교과서 발행율 1위</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- //업적 -->
+
+			<!-- 역사 -->
+			<section class="history">
+				<div class="container">
+					<h2>SINCE 1948,<br>미래엔 교과서의 역사</h2>
+					<div>
+						<div data-tab="history" class="slide sub">
+							<ul>
+								<li class="on"><button type="button">20억 부</button></li>
+								<li><button type="button">17,520시간</button></li>
+								<li><button type="button">26,400명</button></li>
+								<li><button type="button">2008년</button></li>
+								<li><button type="button">195km</button></li>
+							</ul>
+						</div>
+						<div data-tab-cont="history">
+							<div class="tab_cont">
+								<div class="visual">
+
+								</div>
+								<div class="txt_wrap">
+									<span class="tit">
+										20억 부<small>2020년 기준</small>
+									</span>
+									<p class="txt">
+										1949년 초등용 [우리나라의 발달], 중등 실업계용 [누에치기]를 시작으로 지금까지 발행한 국정 교과서 부수입니다. 한 권당 세로 길이는 평균 25cm이며,
+										한 줄로 세우면 51만km로 지구를 13바퀴 돌 수 있는 길이입니다.
+									</p>
+								</div>
+							</div>
+							<div class="tab_cont" style="display:none;">
+								17,520시간
+							</div>
+							<div class="tab_cont" style="display:none;">
+								26,400명
+							</div>
+							<div class="tab_cont" style="display:none;">
+								2008년
+							</div>
+							<div class="tab_cont" style="display:none;">
+								195km
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- //역사 -->
+
+			<!-- 스토리 -->
+			<section class="story">
+				<div class="container">
+					<h2>교육과정과 미래엔 STORY</h2>
+					<a href="#" class="link">둘러보기</a>
+				</div>
+			</section>
+			<!-- //스토리 -->
+
+			<!-- 교과서 찾기 -->
+			<section class="mybook">
+				<div class="container">
+					<h2>나의 교과서 찾기</h2>
+					<div class="book_info">
+						<div class="book_slide book_slide_01 swiper-container">
+							<ul class="book_list swiper-wrapper">
+								<li class="slide swiper-slide">
+									<a href="#">
+										<span class="cate">초등학교</span>
+										<div class="img_wrap">
+											<img src="../../images/img/book/img_pick_book_01.png" alt="">
+										</div>
+										<span class="all">전체보기</span>
+									</a>
+								</li>
+								<li class="slide swiper-slide">
+									<a href="#">
+										<span class="cate">중학교</span>
+										<div class="img_wrap">
+											<img src="../../images/img/book/img_pick_book_01.png" alt="">
+										</div>
+										<span class="all">전체보기</span>
+									</a>
+								</li>
+								<li class="slide swiper-slide">
+									<a href="#">
+										<span class="cate">고등학교</span>
+										<div class="img_wrap">
+											<img src="../../images/img/book/img_pick_book_01.png" alt="">
+										</div>
+										<span class="all">전체보기</span>
+									</a>
+								</li>
+								<li class="slide swiper-slide">
+									<a href="#">
+										<span class="cate">특수교육</span>
+										<div class="img_wrap">
+											<img src="../../images/img/book/img_pick_book_01.png" alt="">
+										</div>
+										<span class="all">전체보기</span>
+									</a>
+								</li>
+								<li class="slide swiper-slide">
+									<a href="#">
+										<span class="cate">성인문해</span>
+										<div class="img_wrap">
+											<img src="../../images/img/book/img_pick_book_01.png" alt="">
+										</div>
+										<span class="all">전체보기</span>
+									</a>
+								</li>
+							</ul>
+							<div class="scrollbar"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<script>
+				slideInit('.book_slide_01', {
+					spaceBetween: 20,
+					slidesPerView: 2,
+					scrollbar: {
+						el: ".book_slide .scrollbar",
+					},
+				});
+			</script>
+			<!-- //교과서 찾기 -->
+
+			<!-- 통일 초등 국어 교과서 -->
+			<div class="container">
+				<a href="#" class="banner">
+					<div class="txt_wrap">
+						<div class="tit"><span>통일 초등 국어 교과서</span></div>
+						<p>통일시대를 대비해 초등 국어 교육의 발전을 위해 연구/개발한 초등 국어 교과서를 만나보세요</p>
+					</div>
+				</a>
+			</div>
+			<!-- //통일 초등 국어 교과서 -->
+
+		</div>
+		<footer>
+			<div class="container">
+				<div class="info">
+					<div class="cs">
+						<div class="txt">
+							<strong>고객센터 : <a href="tel:+1800-8890">1800-8890</a></strong>(발신자 부담)<br>
+							고객센터 운영시간<br>
+							평일 09:00~18:00 (점심시간: 12:00~13:00)
+						</div>
+						<a href="#" class="link">1:1문의</a>
+					</div>
+					<div class="sns">
+						<p>미래엔을 만나보세요.</p>
+						<ul>
+							<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+							<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+							<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+							<li class="youtube"><a href="#" target="_blank" title="새창열림">미래엔 유튜브 채널</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<ul class="footer_menu">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">무단이메일 수집 거부</a></li>
+				<li><a href="#">오시는길</a></li>
+			</ul>
+			<div class="container">
+				<div class="footer_bottom">
+					<img src="../../images/img/img_footer_logo.png" alt="" class="logo">
+					<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+					<div class="business">
+						㈜미래엔 | 대표 신광수<br>
+						주소 06532 서울특별시 서초구 신반포로 321<br>
+						사업자등록번호 214-81-04977<br>
+						개인정보책임자 한범석<br>
+						이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+						채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+					</div>
+					<div class="copyright">
+						© MIRAE N CO.,LTD. All Rights Reserved
+					</div>
+					<img src="../../images/img/img_footer_award.png" alt="명문장수기업" class="award">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
