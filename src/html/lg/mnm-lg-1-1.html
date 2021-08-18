@@ -17,7 +17,7 @@
                     <div class="term_header">
                         <ul data-checkbox>
                             <li>
-                                <input type="checkbox" name="check" id="checkAll">
+                                <input type="checkbox" name="checkall" id="checkAll">
                                 <label for="checkAll">모두 동의합니다.</label>
                             </li>
                         </ul>
@@ -37,10 +37,7 @@
                             </dt>
                             <dd>
                                 <div class="term_wrap">
-                                    제1조 [목적]<br>
-                                    어쩌고<br>
-                                    저쩌고<br>
-                                    어쩌라고<br>
+                                    @@include('term.html')
                                 </div>
                             </dd>
                         </div>
@@ -58,10 +55,7 @@
                             </dt>
                             <dd>
                                 <div class="term_wrap">
-                                    제1조 [목적]<br>
-                                    어쩌고<br>
-                                    저쩌고<br>
-                                    어쩌라고<br>
+                                    @@include('privacy.html')
                                 </div>
                             </dd>
                         </div>
@@ -78,10 +72,7 @@
                             </dt>
                             <dd>
                                 <div class="term_wrap">
-                                    제1조 [목적]<br>
-                                    어쩌고<br>
-                                    저쩌고<br>
-                                    어쩌라고<br>
+                                    @@include('select_privacy.html')
                                 </div>
                             </dd>
                         </div>
@@ -124,8 +115,24 @@
                     </dl>
                 </div>
                 <script>
-                    $('[data-page="input"] .term').find('dt').on('click', function(){
+                    $('[data-page="input"] .term').find('dt').on('click', function () {
                         $(this).toggleClass('on');
+                    });
+                    $('input[name="checkall"').on('change', function () {
+                        if ($(this).is(':checked')) {
+                            $('input[name="check"').prop('checked', true);
+                        } else {
+                            $('input[name="check"').prop('checked', false);
+                        };
+                    });
+                    $('input[name="check"').on('change', function () {
+                        var len = $('input[name="check"]').length,
+                            cnt = $('input[name="check"]:checked').length;
+                        if (len === cnt) {
+                            $('input[name="checkall"').prop('checked', true);
+                        } else {
+                            $('input[name="checkall"').prop('checked', false);
+                        };
                     });
                 </script>
                 <div data-btn>

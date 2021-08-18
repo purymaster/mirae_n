@@ -170,7 +170,7 @@
                                     </div>
                                     <ul data-checkbox class="inline">
                                         <li>
-                                            <input type="checkbox" name="promotion" id="checkAll">
+                                            <input type="checkbox" name="promotionall" id="checkAll">
                                             <label for="checkAll">전체 동의</label>
                                         </li>
                                     </ul>
@@ -276,6 +276,25 @@
                         </tbody>
                     </table>
                 </div>
+
+                <script>
+                    $('input[name="promotionall"').on('change', function () {
+                        if ($(this).is(':checked')) {
+                            $('input[name="promotion"').prop('checked', true);
+                        } else {
+                            $('input[name="promotion"').prop('checked', false);
+                        };
+                    });
+                    $('input[name="promotion"').on('change', function () {
+                        var len = $('input[name="promotion"]').length,
+                            cnt = $('input[name="promotion"]:checked').length;
+                        if (len === cnt) {
+                            $('input[name="promotionall"').prop('checked', true);
+                        } else {
+                            $('input[name="promotionall"').prop('checked', false);
+                        };
+                    });
+                </script>
 
                 <div class="info_dialog" style="text-align:left;">
                     최근 수정일 : 2021.05.31

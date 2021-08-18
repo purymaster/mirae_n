@@ -52,7 +52,7 @@ $(function () {
 
     //스크롤 헤더 제어
     var isMain = false,
-        onPage = ['main', 'curation', 'mom', 'mom_sub', 'book'];
+        onPage = ['main', 'curation', 'mom', 'mom_sub', 'book', 'korean'];
     if ($.inArray($('#content').data('page'), onPage) !== -1) isMain = true;
     $(window).on('load scroll', function () {
         if (!isMain) {
