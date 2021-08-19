@@ -1,0 +1,650 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="curation">
+
+	<div class="sub_intro_tit">
+		<h2>교재 큐레이션</h2>
+		<span>지금 가장 필요한 미래엔 교재로<br />최고의 학습 효과를 누리세요</span>
+		
+	</div>
+
+	<div class="curation_header">
+		<ul>
+			<li class="on"><button type="button">고등</button></li>
+			<li><button type="button">중등</button></li>
+			<li><button type="button">초등</button></li>
+		</ul>
+	</div>
+
+	<div class="container">
+		<div class="sub_header">
+			<div class="tit_wrap">
+				<div class="menu_select">
+					<select>
+						<option">국어</option>
+							<option>영어</option>
+							<option selected="">수학</option>
+							<option>사회/역사/윤리</option>
+							<option>과학</option>
+					</select>
+				</div>
+			</div>
+			<div class="sub_menu">
+				<ul>
+					<!-- [D] 해당 페이지 li에 on클래스 부여 -->
+					<li><a href="#">국어</a></li>
+					<li><a href="#">영어</a></li>
+					<li class="on"><a href="#">수학</a></li>
+					<li><a href="#">사회/역사/윤리</a></li>
+					<li><a href="#">과학</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 수학 -->
+	<!-- 브랜드 소개 -->
+	<div class="sub_tit_wrap">
+		<div>브랜드 소개</div>
+		<p>미래엔 고등 수학브랜드를 소개합니다.</p>
+	</div>
+	<div class="brand_intro high english">
+		<div class="container">
+			<div class="step">
+				<ol>
+					<li class="on">내신</li>
+					<li>수능</li>
+				</ol>
+			</div>
+
+			<div class="brand_view swiper-container">
+				<div class="swiper-wrapper">
+					<div class="slide swiper-slide" style="background:rgba(91,190,188,.1)">
+						<img src="../../images/img/curation/img_high_english_01.png" alt="">
+					</div>
+					<div class="slide swiper-slide" style="background:rgba(64,160,159,.1)">
+						<img src="../../images/img/curation/img_high_english_02.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="swiper-scrollbar"></div>
+		</div>
+	</div>
+
+	<!-- 교재 안내 -->
+	<div class="sub_tit_wrap">
+		<div>교재 안내</div>
+		<p>브랜드별 모든 교재의 수업 차시를 안내합니다.</p>
+	</div>
+	<ul class="brand_detail_list">
+		<li>
+			<div class="detail_tit">기본완성</div>
+			<div class="detail_cont">
+				<ul class="brand_list">
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_look.png" alt="룩 LOOK">
+							<div class="brand_type">
+								<span class="grade">내신</span>
+							</div>
+						</div>
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">교재별<br />차시안내</th>
+										<td><u>고등학교(상)<br>[25~25차시]</u></td>
+										<td><u>고등학교(하)<br>[15~20차시]</u></td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:0px; right:45%;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_allead.png" alt="올리드">
+							<div class="brand_type">
+								<span class="grade">내신</span>
+							</div>
+						</div>
+
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="3">교재별<br />차시안내</th>
+										<td><u>고등학교(상)<br>[20~40차시]</u></td>
+										<td><u>고등학교(하)<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>수학 I<br>[20~40차시]</u></td>
+										<td><u>수학 II<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>확률과 통계<br>[20~40차시]</u></td>
+										<td><u>미적분<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:0px; right:45%;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_mathCenter.png" alt="수학중심">
+							<div class="brand_type">
+								<span class="grade">내신</span>
+							</div>
+						</div>
+
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="4">교재별<br />차시안내</th>
+										<td><u>고등학교(상)<br>[20~40차시]</u></td>
+										<td><u>고등학교(하)<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>수학 I<br>[20~40차시]</u></td>
+										<td><u>수학 II<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>확률과 통계<br>[20~40차시]</u></td>
+										<td><u>미적분<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<td colspan="2"><u>기하<br>[20~40차시]</u></td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:0px; right:20%;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_typeCenter.png" alt="유형중심">
+							<div class="brand_type">
+								<span class="grade">내신</span>
+								<span class="college">수능</span>
+							</div>
+						</div>
+
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="3">교재별<br />차시안내</th>
+										<td><u>고등학교(상)<br>[50차시]</u></td>
+										<td><u>고등학교(하)<br>[50차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>수학 I<br>[50차시]</u></td>
+										<td><u>수학 II<br>[50차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>확률과 통계<br>[50차시]</u></td>
+										<td><u>미적분<br>[50차시]</u></td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:10%; right:0;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_going.png" alt="고잉">
+						</div>
+
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="3">교재별<br />차시안내</th>
+										<td><u>고등학교(상)<br>[12차시]</u></td>
+										<td><u>고등학교(하)<br>[10차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>수학 I<br>[11차시]</u></td>
+										<td><u>수학 II<br>[11차시]</u></td>
+									</tr>
+									<tr>
+										<td colspan="2"><u>확률과 통계<br>[10차시]</u></td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:0; right:40%;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_pasaju.png" alt="파사쥬">
+						</div>
+
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="3">교재별<br />차시안내</th>
+										<td><u>고등학교(상)<br>[18~22차시]</u></td>
+										<td><u>고등학교(하)<br>[18~22차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>수학 I<br>[18~22차시]</u></td>
+										<td><u>수학 II<br>[18~22차시]</u></td>
+									</tr>
+									<tr>
+										<td><u>확률과 통계<br>[18~22차시]</u></td>
+										<td><u>미적분<br>[18~22차시]</u></td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:10%; right:0;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li>
+			<div class="detail_tit">기출공략</div>
+			<div class="detail_cont">
+				<ul class="brand_list">
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_topClass.png" alt="1등급 만들기">
+							<div class="brand_type">
+								<span class="grade">내신</span>
+							</div>
+						</div>
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="4">교재별<br />차시안내</th>
+										<td>
+											<u>고등수학(상)<br>[30~40차시]</u>
+										</td>
+										<td>
+											<u>고등수학(하)<br>[30~40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<u>수학 I<br>[30~40차시]</u>
+										</td>
+										<td>
+											<u>수학 II<br>[30~40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<u>확률과 통계<br>[30~40차시]</u>
+										</td>
+										<td>
+											<u>미적분<br>[30~40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<u>기하<br>[30~40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:35%; right:0;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_testKey.png" alt="수능주도권">
+							<div class="brand_type">
+								<span class="college">수능</span>
+							</div>
+						</div>
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="2">교재별<br />차시안내</th>
+										<td>
+											<u>수학 I<br>[25차시]</u>
+										</td>
+										<td>
+											<u>수학 II<br>[25차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<u>확률과 통계<br>[25차시]</u>
+										</td>
+										<td>
+											<u>미적분<br>[25차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:35%; right:0;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li>
+						<div class="brand_info">
+							<img src="../../images/img/brand/img_brand_testCollection.png" alt="수능기출문제집">
+							<div class="brand_type">
+								<span class="college">수능</span>
+							</div>
+						</div>
+						<div data-table="curation">
+							<table>
+								<colgroup>
+									<col style="width:80px;">
+									<col>
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row" rowspan="3">교재별<br />차시안내</th>
+										<td>
+											<u>수학 I + 수학 II 3점 집중<br>[40차시]</u>
+										</td>
+										<td>
+											<u>수학 I + 수학 II 4점 집중<br>[40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<u>확률과 통계 3,4점 집중<br>[40차시]</u>
+										</td>
+										<td>
+											<u>미적분 3,4점 집중<br>[40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<td colspan="2">
+											<u>기하 3,4점 집중<br>[40차시]</u>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">문제 수준</th>
+										<td colspan="2'">
+											<div class="level">
+												<div class="step">
+													<span>기본</span>
+													<span>심화</span>
+												</div>
+												<div class="bar">
+													<!-- 인라인 스타일의 left, right값으로 게이지 조절 -->
+													<span class="point" style="left:35%; right:0;"></span>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<p class="note">*차시는 50분 기준의 수업 단위입니다.</p>
+					</li>
+				</ul>
+			</div>
+		</li>
+	</ul>
+
+	<!-- 추천 교재 -->
+	<div class="sub_tit_wrap bg">
+		<div>추천 교재</div>
+		<p>영역별, 난이도별 맞춤 교재로 <br />
+			영어 실력을 높이세요.</p>
+	</div>
+	<div class="book_recommend_list">
+		<div>
+			<p class="book_info_desc">“ 개념과 유형의 균형을 딱 맞게! 개념 기본서 ”</p>
+			<div class="img_wrap">
+				<img src="../../images/img/book/img_bookcover_high_math_01.png" alt="수학중심">
+			</div>
+			<p class="book_info_tit">수학중심</p>
+			<ul>
+				<li>- ‘중심 개념’으로 첫 선행에도 빠짐없는 개념 마스터</li>
+				<li>- ‘유형 분석’으로 문제 해결 원리를 개념과 함께 이해</li>
+			</ul>
+			<div data-btn="" class="fit">
+				<a href="#" class="next">
+					<span>전체 도서 보기</span>
+				</a>
+			</div>
+		</div>
+		<div>
+			<p class="book_info_desc">“ 기본/대표/빈출 유형을 한 번에! 문제기본서 ”</p>
+			<div class="img_wrap">
+				<img src="../../images/img/book/img_bookcover_high_math_02.png" alt="유형중심">
+			</div>
+			<p class="book_info_tit">유형중심</p>
+			<ul>
+				<li>- 주제별 기본 4쪽 구성으로 부담 없는 완전 학습</li>
+				<li>- 기출문제를 철저히 분석하여 다양한 유형으로 구분</li>
+			</ul>
+
+			<div data-btn="" class="fit">
+				<a href="#" class="next">
+					<span>전체 도서 보기</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div data-top-btn="">
+		<button>페이지 최상단으로 이동</button>
+	</div>
+
+	<script>
+		$(function(){
+			//브랜드 소개
+			var swiper = new Swiper(".brand_view", {
+				resistance: true,
+				resistanceRatio: 0,
+				freeModeMomentumBounce: false,
+				freeModeMomentum: false,
+				slidesPerView: "auto",
+				freeMode: true,
+				scrollbar: {
+					el: ".swiper-scrollbar",
+				},
+				on: {
+					slideChange: function () {
+						var idx = this.realIndex;
+						$('.step').find('li').eq(idx).addClass('on').siblings().removeClass('on');
+					},
+				},
+			});
+
+			// 아코디언 리스트
+			var bookDetailList= $('.brand_detail_list > li');
+			var listToggle_Click = bookDetailList.children('.detail_tit');
+
+			listToggle_Click.on('click', function() {
+				var $this = $(this).closest('li');
+				
+				if ($this.hasClass('active')) {
+					$this.removeClass('active').find('.detail_cont').hide();
+				} else {
+					bookDetailList.removeClass('active').find('.detail_cont').hide();
+					$this.addClass('active').find('.detail_cont').show();
+				};
+			});
+		});
+		
+
+		//메뉴
+		$(window).on('load scroll', function() {
+			var scroll = $(this).scrollTop(),
+				headerH = $('header').innerHeight(),
+				introH = $('.sub_intro_tit').innerHeight(),
+				tabH = $('.bookmark.grade').innerHeight(),
+				subHeader = $('.sub_header').height();
+				
+			var newH = introH + tabH + subHeader - headerH;
+
+			if (scroll > newH) {
+				$('.sub_header').addClass('fixed')
+				$('.search_box').css('margin-top', '113px');
+			} else {
+				$('.sub_header').removeClass('fixed')
+				$('.search_box').css('margin-top', '0px');
+			}
+		});
+	</script>
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')

@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<h1>
+				<a href="#">미래엔</a>
+			</h1>
+			<div class="util">
+				<a href="#" class="menu search">검색페이지로 이동</a>
+				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb">
+					<div class="container">
+						<div class="user">
+							<p class="txt login">로그인을 해주세요</p>
+							<!-- <p class="txt">김미래김미래김미래김미래김미래김미래김미래님 안녕하세요</p> -->
+							<div class="user_menu">
+								<a href="#" class="mypage">
+									<span>마이페이지</span>
+								</a>
+								<a href="#" class="logout">
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="main_menu">
+							<li>
+								<!-- <a href="#none" class="book_open">교과서</a> -->
+								<button type="button" class="book_open">교과서</button>
+								<div class="sub_menu">
+									<div class="sub_header">
+										<span class="tit">교과서</span>
+										<a href="#" class="link">
+											<span>교과서 홈</span>
+										</a>
+									</div>
+									<ul>
+										<li><a href="#">미래엔 교과서</a></li>
+										<li><a href="#">초등</a></li>
+										<li><a href="#">중등</a></li>
+										<li><a href="#">고등</a></li>
+									</ul>
+									<button type="button" class="book_close">교과서 메뉴 닫기</button>
+									<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+								</div>
+							</li>
+							<li><a href="#">참고서</a></li>
+							<li><a href="#">출판</a></li>
+						</ul>
+						<ul class="main_menu">
+							<li><a href="#">맘티처</a></li>
+							<li><a href="#">공모전</a></li>
+						</ul>
+						<ul class="main_menu group">
+							<li><a href="#">기업소개</a></li>
+							<li><a href="#">홍보센터</a></li>
+							<li><a href="#">계열사</a></li>
+						</ul>
+					</nav>
+					<div class="footer">
+						<div class="footer_wrap">
+							<div class="container">
+								<ul class="menu">
+									<li><a href="#">인재채용</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">오시는길</a></li>
+									<li><a href="#">관련사이트</a></li>
+								</ul>
+								<ul class="sns">
+									<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+									<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+									<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+								</ul>
+								<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+								<div class="business">
+									㈜미래엔 | 대표 신광수<br>
+									주소 06532 서울특별시 서초구 신반포로 321<br>
+									사업자등록번호 214-81-04977<br>
+									개인정보책임자 한범석<br>
+									이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+									채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+				</div>
+			</div>
+		</header>
+		<div id="content" data-page="curation">
+
+			<div class="sub_intro_tit">
+				<h2>교재 큐레이션</h2>
+				<span>지금 가장 필요한 미래엔 교재로<br />최고의 학습 효과를 누리세요</span>
+
+			</div>
+
+			<div class="curation_header">
+				<ul>
+					<li><button type="button">고등</button></li>
+					<li><button type="button">중등</button></li>
+					<li class="on"><button type="button">초등</button></li>
+				</ul>
+			</div>
+
+			<div class="container">
+				<div class="sub_header">
+					<div class="tit_wrap">
+						<div class="menu_select">
+							<select>
+								<option selected="">하루한장</option>
+								<option>바로알기</option>
+								<option>문제 해결의 길잡이</option>
+							</select>
+						</div>
+					</div>
+					<div class="sub_menu">
+						<ul>
+							<!-- [D] 해당 페이지 li에 on클래스 부여 -->
+							<li class="on"><a href="#">하루한장</a></li>
+							<li><a href="#">바로알기</a></li>
+							<li><a href="#">문제 해결의 길잡이</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- 하루한장 -->
+			<div class="container">
+				<p class="visual_tit">“자기 주도 학습으로 <br />공부 습관 형성”</p>
+				<ul class="border_box chk">
+					<li>하루 10분으로 매일 매일 쌓이는 초등 공부력</li>
+					<li>하루 한 장의 자기주도 학습으로 공부 습관 형성</li>
+				</ul>
+			</div>
+
+			<div class="media_area">
+				<div class="ifr_wrap">
+					<iframe src="https://www.youtube.com/embed/AWjCBeedHtk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+			</div>
+
+			<!-- 하루 한장 예비초등 -->
+			<div class="sub_tit_wrap">
+				<div>하루 한장 예비초등</div>
+				<p>초등학교 입학을 준비하는 기본 학습 능력 향상!</p>
+			</div>
+			<ul class="curation_list">
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_01.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">예비초등</span>
+						<p class="tit">하루 한장 국어</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_02.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">예비초등</span>
+						<p class="tit">하루 한장 수학</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_03.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">예비초등</span>
+						<p class="tit">하루 한장 학교생활</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_04.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">예비초등</span>
+						<p class="tit">하루 한장 통합교과</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_05.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">국어</span>
+						<p class="tit">
+							하루 한장 독해
+							<span>1~6학년, 학기별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_06.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">한자</span>
+						<p class="tit">
+							하루 한장 한자
+							<span>1~6학년, 학기별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_07.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">수학</span>
+						<p class="tit">
+							하루 한장 쏙셈
+							<span>1~6학년, 학기별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_08.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">수학</span>
+						<p class="tit">
+							하루 한장 창의력 쏙셈
+							<span>1~6학년, 학기별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_09.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">영어</span>
+						<p class="tit">
+							English BITE 파닉스
+							<span>1~2학년, 과정별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_10.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">영어</span>
+						<p class="tit">
+							English BITE 영단어
+							<span>3~4학년, 과정별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_11.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">영어</span>
+						<p class="tit">
+							English BITE 영문법
+							<span>전학년, 수준별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_12.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">중국어</span>
+						<p class="tit">
+							하루한장 중국어
+							<span>전학년, 과정별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="img_wrap">
+						<img src="../../images/img/book/img_bookcover_child_01_13.png" alt="">
+					</div>
+					<div class="txt_wrap">
+						<span class="cate">한국사</span>
+						<p class="tit">
+							큰별쌤 최태성의 한국사
+							<span>시대사별</span>
+						</p>
+						<div data-btn="" class="fit">
+							<a href="#" class="list view">
+								<span>교재 보기</span>
+							</a>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<div data-top-btn="">
+				<button>페이지 최상단으로 이동</button>
+			</div>
+
+			<script>
+				$(function() {
+					//브랜드 소개
+					var swiper = new Swiper(".brand_view", {
+						slidesPerView: 1,
+						centeredSlides: false,
+						grabCursor: true,
+						scrollbar: {
+							el: ".swiper-scrollbar",
+						},
+						loopedSlides: 3,
+						slidesPerView: "auto",
+						freeMode: true,
+						mousewheel: {
+							releaseOnEdges: false,
+						},
+					});
+
+					// 아코디언 리스트
+					var bookDetailList = $('.brand_detail_list > li');
+					var listToggle_Click = bookDetailList.children('.detail_tit');
+
+					listToggle_Click.on('click', function() {
+						var $this = $(this).closest('li');
+
+						if ($this.hasClass('active')) {
+							$this.removeClass('active').find('.detail_cont').hide();
+						} else {
+							bookDetailList.removeClass('active').find('.detail_cont').hide();
+							$this.addClass('active').find('.detail_cont').show();
+						};
+					});
+				});
+
+
+				//메뉴
+				$(window).on('load scroll', function() {
+					var scroll = $(this).scrollTop(),
+						headerH = $('header').innerHeight(),
+						introH = $('.sub_intro_tit').innerHeight(),
+						tabH = $('.bookmark.grade').innerHeight(),
+						subHeader = $('.sub_header').height();
+
+					var newH = introH + tabH + subHeader - headerH;
+
+					if (scroll > newH) {
+						$('.sub_header').addClass('fixed')
+						$('.search_box').css('margin-top', '113px');
+					} else {
+						$('.sub_header').removeClass('fixed')
+						$('.search_box').css('margin-top', '0px');
+					}
+				});
+			</script>
+
+		</div>
+		<footer>
+			<div class="container">
+				<div class="info">
+					<div class="cs">
+						<div class="txt">
+							<strong>고객센터 : <a href="tel:+1800-8890">1800-8890</a></strong>(발신자 부담)<br>
+							고객센터 운영시간<br>
+							평일 09:00~18:00 (점심시간: 12:00~13:00)
+						</div>
+						<a href="#" class="link">1:1문의</a>
+					</div>
+					<div class="sns">
+						<p>미래엔을 만나보세요.</p>
+						<ul>
+							<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+							<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+							<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+							<li class="youtube"><a href="#" target="_blank" title="새창열림">미래엔 유튜브 채널</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<ul class="footer_menu">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">무단이메일 수집 거부</a></li>
+				<li><a href="#">오시는길</a></li>
+			</ul>
+			<div class="container">
+				<div class="footer_bottom">
+					<img src="../../images/img/img_footer_logo.png" alt="" class="logo">
+					<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+					<div class="business">
+						㈜미래엔 | 대표 신광수<br>
+						주소 06532 서울특별시 서초구 신반포로 321<br>
+						사업자등록번호 214-81-04977<br>
+						개인정보책임자 한범석<br>
+						이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+						채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+					</div>
+					<div class="copyright">
+						© MIRAE N CO.,LTD. All Rights Reserved
+					</div>
+					<img src="../../images/img/img_footer_award.png" alt="명문장수기업" class="award">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
