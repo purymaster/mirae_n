@@ -550,8 +550,16 @@
 
                                 <div class="cert_opt" id="cert3Opt" style="display:none;">
                                     <div>
-                                        <div data-input-item>
-                                            <input type="text" placeholder="이메일을 입력하세요.">
+                                        <div data-input-item="email">
+                                            <div class="box">
+                                                <input type="text" placeholder="이메일을 입력하세요.">
+                                                <div data-select class="input">
+                                                    <select>
+                                                        <option>도메인 선택</option>
+                                                        <option>@korea.kr</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div data-btn style="margin:15px 0;">
                                             <button type="button" class="disable">인증코드 발송</button>

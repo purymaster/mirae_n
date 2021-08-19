@@ -187,6 +187,9 @@ input[type='password'] {width:100%; height:50px; line-height:52px; border-bottom
 [data-input-item='timer'] .time {position:absolute; top:17px; right:0; color:#ff4040;}
 [data-input-item='birth'] .box {display:flex; justify-content:space-between;}
 [data-input-item='birth'] .box > * {width:30%;}
+[data-input-item='email'] .box {display:flex; justify-content:space-between;}
+[data-input-item='email'] .box input {width:65%;}
+[data-input-item='email'] .box [data-select] {width:30%;}
 [data-input-item='search'] input[type='text'] {padding:0 20px;}
 [data-input-item='search']:before {content:''; position:absolute; top:16px; left:0; width:14px; height:14px; background:url(../images/ico/input/ico_search.png); background-repeat:no-repeat; background-size:contain;}
 [data-input-item='search'] .del {position:absolute; top:18px; right:0; width:14px; height:14px; border-radius:50%; background:#dcdcdc; text-indent:-9999px;}
@@ -597,6 +600,8 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 [data-popup] [data-btn] a,
 [data-popup] [data-btn] button,
 [data-popup] [data-btn] label {font-size:14px;}
+[data-popup] [data-table] th,
+[data-popup] [data-table] td {padding-right:5px; padding-left:5px;}
 [data-popup] .close {position:absolute; top:16px; right:18px; width:14px; height:14px; text-indent:-9999px;;}
 [data-popup] .close:before,
 [data-popup] .close:after {content:''; position:absolute; top:50%; left:50%; width:120%; height:2px; margin-top:-1px; margin-left:-60%; background:#4d4d4d;}
@@ -869,12 +874,17 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 
 /* 키비주얼 */
 [data-page='book'] .main_visual {height:500px;}
-[data-page='book'] .main_visual .e1 {background:red;}
-[data-page='book'] .main_visual .e2 {background:blue;}
-[data-page='book'] .main_visual .m1 {background:green;}
-[data-page='book'] .main_visual .m2 {background:purple;}
-[data-page='book'] .main_visual .h1 {background:darkblue;}
-[data-page='book'] .main_visual .h2 {background:darkgreen;}
+[data-page='book'] .main_visual .e1 {background:url(../images/bg/book/bg_book_e1.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .e2 {background:url(../images/bg/book/bg_book_e2.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .m1 {background:url(../images/bg/book/bg_book_m1.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .m2 {background:url(../images/bg/book/bg_book_m2.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .h1 {background:url(../images/bg/book/bg_book_h1.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .h2 {background:url(../images/bg/book/bg_book_h2.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .tbe {background:url(../images/bg/book/bg_textbook_e.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .tbm {background:url(../images/bg/book/bg_textbook_m.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .tbh {background:url(../images/bg/book/bg_textbook_h.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .tba {background:url(../images/bg/book/bg_textbook_a.png); background-position:center; background-size:cover;}
+[data-page='book'] .main_visual .tbi {background:url(../images/bg/book/bg_textbook_i.png); background-position:center; background-size:cover;}
 [data-page='book'] .main_visual .txt_wrap {margin-top:100px; color:#fff; text-align:center;}
 [data-page='book'] .main_visual .txt_wrap .tit {display:block; font-family:'Maruburi'; font-size:35px;}
 
@@ -1733,7 +1743,7 @@ footer .footer_bottom .award {position:absolute; right:0; bottom:15px; height:70
 =====================*/
 
 [data-page='input'] {display:flex; min-height:100%; padding-top:40px !important; background:#f8f8f8; flex-direction:column; justify-content:space-between;}
-[data-page='input'] .form_box {padding:15px 18px 40px; border:1px solid #dcdcdc; background:#fff;}
+[data-page='input'] .form_box {margin-bottom:50px; padding:15px 18px 40px; border:1px solid #dcdcdc; background:#fff;}
 [data-page='input'] .form_box > img.tit {display:block; height:27px; margin:25px auto 20px;}
 [data-page='input'] .form_box > img.tit.small {height:20px; margin-top:0; margin-bottom:30px;}
 [data-page='input'] .form_box .guide_txt {margin-top:35px; font-size:16px; font-weight:500;}
