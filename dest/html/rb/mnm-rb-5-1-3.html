@@ -20,7 +20,7 @@
 				<a href="#">미래엔</a>
 			</h1>
 			<div class="util">
-				<a href="#" class="menu search">검색페이지로 이동</a>
+				<button type="button" class="menu search" data-open-search>검색페이지 열기</button>
 				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
 			</div>
 			<div class="gnb_wrap">
@@ -104,6 +104,69 @@
 					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
 				</div>
 			</div>
+			<div class="search_wrap">
+				<div class="search">
+					<div class="search_header">
+						<div class="container box">
+							<a href="#">미래엔</a>
+							<button type="button" class="close" data-close-search>닫기</button>
+						</div>
+					</div>
+					<div class="search_box">
+						<div class="container box">
+							<div data-input-item="search">
+								<input type="text" placeholder="검색어를 입력하세요.">
+								<button type="button" class="del">삭제</button>
+							</div>
+							<div class="save">
+								<span class="text">검색어 자동저장</span>
+								<label><input type="checkbox" class="hidden"><span></span></label>
+							</div>
+							<div class="keyword_wrap">
+								<div class="keyword history">
+									<div class="tit_wrap">
+										<span class="tit">최근 검색어</span>
+										<button type="button">전체 삭제</button>
+									</div>
+									<div class="list">
+										<ul>
+											<li><a href="#">수학수학수학수학수학수학수학수학수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+										</ul>
+									</div>
+								</div>
+								<div class="keyword recommend">
+									<div class="tit_wrap">
+										<span class="tit">추천 검색어</span>
+									</div>
+									<div class="list">
+										<ul>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 		<div id="content" data-page="curation">
 
@@ -153,23 +216,32 @@
 				<div>브랜드 소개</div>
 				<p>미래엔 고등 수학브랜드를 소개합니다.</p>
 			</div>
-			<div class="brand_intro high english">
+			<div class="brand_intro high math">
 				<div class="container">
 					<div class="step">
 						<ol>
-							<li class="on">내신</li>
-							<li>수능</li>
+							<li class="on" data-text="개념과 유형 동시 학습으로">기본 완성</li>
+							<li data-text="유형별 공략으로">문제해결력 완성</li>
+							<li data-text="전문가의 기출 분석과 예상문제로">실전 대비</li>
 						</ol>
+						<span class="text">개념과 유형 동시 학습으로</span>
 					</div>
 
 					<div class="brand_view swiper-container">
 						<div class="swiper-wrapper">
-							<div class="slide swiper-slide" style="background:rgba(91,190,188,.1)">
-								<img src="../../images/img/curation/img_high_english_01.png" alt="">
+							<div class="slide swiper-slide">
+								<img src="../../images/img/curation/img_high_math_01.png" alt="">
 							</div>
-							<div class="slide swiper-slide" style="background:rgba(64,160,159,.1)">
-								<img src="../../images/img/curation/img_high_english_02.png" alt="">
+							<div class="slide swiper-slide">
+								<img src="../../images/img/curation/img_high_math_02.png" alt="">
 							</div>
+							<div class="slide swiper-slide">
+								<img src="../../images/img/curation/img_high_math_03.png" alt="">
+							</div>
+						</div>
+						<div class="column">
+							<div><span>내신</span></div>
+							<div><span>수능</span></div>
 						</div>
 					</div>
 					<div class="swiper-scrollbar"></div>
@@ -707,8 +779,10 @@
 						},
 						on: {
 							slideChange: function() {
-								var idx = this.realIndex;
+								var idx = this.realIndex,
+									txt = $('.step').find('li').eq(idx).data('text');
 								$('.step').find('li').eq(idx).addClass('on').siblings().removeClass('on');
+								$('.step').find('.text').text(txt);
 							},
 						},
 					});

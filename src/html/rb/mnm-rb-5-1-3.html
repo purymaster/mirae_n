@@ -48,23 +48,32 @@
 		<div>브랜드 소개</div>
 		<p>미래엔 고등 수학브랜드를 소개합니다.</p>
 	</div>
-	<div class="brand_intro high english">
+	<div class="brand_intro high math">
 		<div class="container">
 			<div class="step">
 				<ol>
-					<li class="on">내신</li>
-					<li>수능</li>
+					<li class="on" data-text="개념과 유형 동시 학습으로">기본 완성</li>
+					<li data-text="유형별 공략으로">문제해결력 완성</li>
+					<li data-text="전문가의 기출 분석과 예상문제로">실전 대비</li>
 				</ol>
+				<span class="text">개념과 유형 동시 학습으로</span>
 			</div>
 
 			<div class="brand_view swiper-container">
 				<div class="swiper-wrapper">
-					<div class="slide swiper-slide" style="background:rgba(91,190,188,.1)">
-						<img src="../../images/img/curation/img_high_english_01.png" alt="">
+					<div class="slide swiper-slide">
+						<img src="../../images/img/curation/img_high_math_01.png" alt="">
 					</div>
-					<div class="slide swiper-slide" style="background:rgba(64,160,159,.1)">
-						<img src="../../images/img/curation/img_high_english_02.png" alt="">
+					<div class="slide swiper-slide">
+						<img src="../../images/img/curation/img_high_math_02.png" alt="">
 					</div>
+					<div class="slide swiper-slide">
+						<img src="../../images/img/curation/img_high_math_03.png" alt="">
+					</div>
+				</div>
+				<div class="column">
+					<div><span>내신</span></div>
+					<div><span>수능</span></div>
 				</div>
 			</div>
 			<div class="swiper-scrollbar"></div>
@@ -602,8 +611,10 @@
 				},
 				on: {
 					slideChange: function () {
-						var idx = this.realIndex;
+						var idx = this.realIndex,
+							txt = $('.step').find('li').eq(idx).data('text');
 						$('.step').find('li').eq(idx).addClass('on').siblings().removeClass('on');
+						$('.step').find('.text').text(txt);
 					},
 				},
 			});

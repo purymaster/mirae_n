@@ -29,7 +29,9 @@ $(function() {
     var gnb = $('.gnb_wrap'),
         gnb_sub = $('.gnb .sub_menu'),
         filter = $('.filter_wrap'),
-        bookmenu = $('.bookmenu_wrap');
+        bookmenu = $('.bookmenu_wrap'),
+        search = $('header .search_wrap');
+
     $(document).on('click', '.nav_open', function() {
         navControl("show", gnb);
     }).on('click', '.nav_close', function() {
@@ -48,6 +50,11 @@ $(function() {
     }).on('click', '[data-close-bookmenu]', function() {
         navControl("", bookmenu);
         $('[data-bookmenu]').find('li').removeClass('on');
+    }).on('click', '[data-open-search]', function() {
+        navControl("show", search);
+    }).on('click', '[data-close-search]', function() {
+        navControl("", search);
+        $('header [data-input-item]').find('input').val('');
     });
 
     //스크롤 헤더 제어

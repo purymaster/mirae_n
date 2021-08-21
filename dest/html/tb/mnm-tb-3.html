@@ -20,7 +20,7 @@
 				<a href="#">미래엔</a>
 			</h1>
 			<div class="util">
-				<a href="#" class="menu search">검색페이지로 이동</a>
+				<button type="button" class="menu search" data-open-search>검색페이지 열기</button>
 				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
 			</div>
 			<div class="gnb_wrap">
@@ -104,6 +104,69 @@
 					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
 				</div>
 			</div>
+			<div class="search_wrap">
+				<div class="search">
+					<div class="search_header">
+						<div class="container box">
+							<a href="#">미래엔</a>
+							<button type="button" class="close" data-close-search>닫기</button>
+						</div>
+					</div>
+					<div class="search_box">
+						<div class="container box">
+							<div data-input-item="search">
+								<input type="text" placeholder="검색어를 입력하세요.">
+								<button type="button" class="del">삭제</button>
+							</div>
+							<div class="save">
+								<span class="text">검색어 자동저장</span>
+								<label><input type="checkbox" class="hidden"><span></span></label>
+							</div>
+							<div class="keyword_wrap">
+								<div class="keyword history">
+									<div class="tit_wrap">
+										<span class="tit">최근 검색어</span>
+										<button type="button">전체 삭제</button>
+									</div>
+									<div class="list">
+										<ul>
+											<li><a href="#">수학수학수학수학수학수학수학수학수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+											<li><a href="#">수학</a><button type="button">삭제</button></li>
+										</ul>
+									</div>
+								</div>
+								<div class="keyword recommend">
+									<div class="tit_wrap">
+										<span class="tit">추천 검색어</span>
+									</div>
+									<div class="list">
+										<ul>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+											<li><a href="#">하루한장</a></li>
+											<li><a href="#">올리드</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</header>
 		<div id="content" data-page="story">
 
@@ -152,19 +215,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_1_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_1_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_1_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_1_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_1_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -203,19 +266,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_2_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_2_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_2_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_2_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_2_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -253,19 +316,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_3_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_3_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_3_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_3_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_3_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -302,19 +365,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_4_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_4_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_4_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_4_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_4_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -352,19 +415,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_5_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_5_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_5_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_5_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_5_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -402,19 +465,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_6_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_6_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_6_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_6_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_6_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -452,19 +515,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_7_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_7_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_7_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_7_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_7_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -504,19 +567,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_8_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_8_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_8_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_8_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_8_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -554,19 +617,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_9_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_9_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_9_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_9_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_9_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -605,19 +668,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_10_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_10_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_10_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_10_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_10_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
@@ -654,19 +717,19 @@
 						<div class="book_slide swiper-container">
 							<div class="slide swiper-wrapper">
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_11_1.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_11_2.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_11_3.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_11_4.png" alt="">
 								</div>
 								<div class="slide swiper-slide">
-									<img src="../../images/img/book/korean/img_korean_1_1.png" alt="">
+									<img src="../../images/img/book/story/img_story_11_5.png" alt="">
 								</div>
 							</div>
 							<div class="scrollbar"></div>
