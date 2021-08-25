@@ -91,14 +91,14 @@ function fontBuild(done) {
 // Image
 function imageBuild(done) {
 	return src(srcPath.img, { since: lastRun(imageBuild) })
-		.pipe(imagemin({
-			progressive: true,
-			interlaced: true,
-			optimizationLevel: 7,
-			svgoPlugins: [{ removeViewBox: false }],
-			verbose: true,
-			use: []
-		}))
+		// .pipe(imagemin({
+		// 	progressive: true,
+		// 	interlaced: true,
+		// 	optimizationLevel: 7,
+		// 	svgoPlugins: [{ removeViewBox: false }],
+		// 	verbose: true,
+		// 	use: []
+		// }))
 		.pipe(dest(destPath.img))
 	done();
 };
