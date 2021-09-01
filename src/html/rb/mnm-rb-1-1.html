@@ -184,6 +184,11 @@
                             </div>
                             <div class="scrollbar"></div>
                         </div>
+                        <div data-btn class="fit angle">
+                            <button class="next">
+                                <span>초등 참고서 전체보기</span>
+                            </button>
+                        </div>
                     </div>
                     <div class="tab_cont" style="display:none;">
                         중학교
@@ -199,7 +204,7 @@
     <script>
         if ($(".rebook_slide").find('.slide').length > 1) {
             slideInit('.rebook_slide', {
-                loop: true,
+                // loop: true,
                 centeredSlides: true,
                 scrollbar: {
                     el: ".rebook_slide .scrollbar",

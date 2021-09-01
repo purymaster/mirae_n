@@ -1,0 +1,86 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="contest">
+
+    <!-- 키비주얼 -->
+    <div class="main_visual small info info1">
+        <div class="container">
+            <div class="txt_wrap">
+                <span class="tit">초등학생 손글씨</span>
+                <p>
+                    미래엔에서는 손글씨의 따뜻함과 아름다움을<br>
+                    나누기 위해 초등학생을 대상으로<br>
+                    손글씨 공모전을 실시합니다.<br>
+                    개성이 듬뿍 담긴 손글씨의 매력을 마음껏 발휘하세요
+                </p>
+            </div>
+        </div>
+        <div data-tab="tab" class="bookmark">
+            <ul>
+                <li><button type="button">공모전 소개</button></li>
+                <li class="on"><button type="button">접수신청</button></li>
+                <li><button type="button">접수 확인 및 수정</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //키비주얼 -->
+
+    <div data-tab-cont="tab">
+        <div class="tab_cont" style="display:none;">
+            공모전 소개
+        </div>
+        <div class="tab_cont">
+            <div class="container">
+                <div class="app_done">
+                    <div class="info">
+                        <p class="tit">
+                            응모해주셔서 감사합니다.<br>
+                            김미래님의 공모전 접수가 완료되었습니다.
+                        </p>
+                        <span class="number">
+                            접수 번호 : A123456789
+                        </span>
+                        <button class="copy" type="button">
+                            <span>복사하기</span>
+                        </button>
+                    </div>
+                    <table>
+                        <colgroup>
+                            <col style="width:90px;">
+                            <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">접수일</th>
+                                <td>2021.05.24 (월)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">응모자 정보</th>
+                                <td>김미래 (논현미래초등학교/3학년)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">응모 분야</th>
+                                <td>동시</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">접수 파일</th>
+                                <td>초등학생글솜씨_누가내치즈를옮겼을까.hwp</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="sub_txt">
+                        입력하신 연락처로 접수 번호를 전송하였습니다.<br>
+                        추후 접수번호 또는 응모자(접수자) 입력정보로 확인 및 심사발표
+                        확인이 가능합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="tab_cont" style="display:none;">
+            접수 확인 및 수정
+        </div>
+    </div>
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')

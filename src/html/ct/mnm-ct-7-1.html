@@ -1,0 +1,64 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="contest">
+
+    <!-- 키비주얼 -->
+    <div class="main_visual small result result1">
+        <div class="container">
+            <div class="txt_wrap">
+                <span class="tit">심사발표</span>
+
+            </div>
+        </div>
+    </div>
+    <!-- //키비주얼 -->
+
+    <div class="no_contest">
+        <div class="container">
+            <p class="tit">
+                심사 발표된 공모전이 없습니다.<br>
+                응모하신 공모전의 심사발표일을 확인해주세요.
+            </p>
+            <p class="sub_tit">
+                시상식은 개별 안내 될 예정입니다.
+            </p>
+            <div class="contest_slide swiper-container">
+                <span class="tit">현재 진행중인 공모전</span>
+                <ul class="swiper-wrapper">
+                    <li class="slide swiper-slide">
+                        <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                        <span class="contest_tit">초등학생 글솜씨</span>
+                        <div data-btn class="fit angle">
+                            <a href="#" class="next">
+                                <span>자세히 보기</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="slide swiper-slide">
+                        <img src="../../images/img/book/img_pick_book_01.png" alt="">
+                        <span class="contest_tit">초등학생 글솜씨</span>
+                        <div data-btn class="fit angle">
+                            <a href="#" class="next">
+                                <span>자세히 보기</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="scrollbar"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if ($(".contest_slide").find('.slide').length > 1) {
+            slideInit('.contest_slide', {
+                scrollbar: {
+                    el: ".contest_slide .scrollbar",
+                },
+            });
+        }
+    </script>
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')

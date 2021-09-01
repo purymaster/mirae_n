@@ -2,12 +2,12 @@ $(function() {
 
     //스크롤 방지
     function disableScroll() {
-        var scrollTop = window.pageYOffset || document.documentElement.scrollTop,
-            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-        window.onscroll = function() {
-            window.scrollTo(scrollLeft, scrollTop);
-        };
-        $('html').addClass('disable');
+        // var scrollTop = window.pageYOffset || document.documentElement.scrollTop,
+        //     scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+        // window.onscroll = function () {
+        //     window.scrollTo(scrollLeft, scrollTop);
+        // };
+        // $('html').addClass('disable');
     }
 
     //스크롤 방지 해제
@@ -59,7 +59,7 @@ $(function() {
 
     //스크롤 헤더 제어
     var isMain = false,
-        onPage = ['main', 'curation', 'mom', 'mom_sub', 'book', 'story'];
+        onPage = ['main', 'curation', 'mom', 'mom_sub', 'book', 'story', 'contest'];
     if ($.inArray($('#content').data('page'), onPage) !== -1) isMain = true;
     $(window).on('load scroll', function() {
         if (!isMain) {
@@ -84,7 +84,6 @@ $(function() {
     $('[data-tab]').find('button').on('click', function() {
         var idx = $(this).parent().index(),
             tabName = $(this).parents('[data-tab]').data('tab');
-
         $(this).parent().addClass('on').siblings().removeClass('on');
         $(`[data-tab-cont=${tabName}] > .tab_cont`).eq(idx).show().siblings().hide();
         $(`[data-tab-cont=${tabName}]`).find('input').val("");

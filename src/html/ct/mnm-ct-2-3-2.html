@@ -1,0 +1,255 @@
+@@include('head.html')
+@@include('header.html')
+<div id="content" data-page="contest">
+
+    <!-- 키비주얼 -->
+    <div class="main_visual small info info1">
+        <div class="container">
+            <div class="txt_wrap">
+                <span class="tit">초등학생 손글씨</span>
+                <p>
+                    미래엔에서는 손글씨의 따뜻함과 아름다움을<br>
+                    나누기 위해 초등학생을 대상으로<br>
+                    손글씨 공모전을 실시합니다.<br>
+                    개성이 듬뿍 담긴 손글씨의 매력을 마음껏 발휘하세요
+                </p>
+            </div>
+        </div>
+        <div data-tab="tab" class="bookmark">
+            <ul>
+                <li><button type="button">공모전 소개</button></li>
+                <li><button type="button">접수신청</button></li>
+                <li class="on"><button type="button">접수 확인 및 수정</button></li>
+            </ul>
+        </div>
+    </div>
+    <!-- //키비주얼 -->
+
+    <div data-tab-cont="tab">
+        <div class="tab_cont" style="display:none;">
+            공모전 소개
+        </div>
+        <div class="tab_cont" style="display:none;">
+            접수신청
+        </div>
+        <div class="tab_cont">
+            <div class="container">
+                <div class="input_header">
+                    <p class="tit">
+                        김미래님,<br>
+                        공모전 접수가 완료되었습니다.
+                    </p>
+                    <p class="sub_txt">아래 정보는 2021년 9월 17일까지 수정하실 수 있습니다.</p>
+                </div>
+                <div class="input_form">
+
+                    <!-- [D] 입력불가시 fieldset disabled 추가 -->
+                    <fieldset disabled>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                접수번호
+                            </span>
+                            A123456789
+
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                응모 분야
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+                            <ul data-radio class="inline">
+                                <li>
+                                    <input type="radio" name="part" id="part1" checked>
+                                    <label for="part1">동시</label>
+                                </li>
+                            </ul>
+    
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                응모자 기본 정보
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">이름</span>
+                                <input type="text" placeholder="이름을 입력하세요." value="김미래">
+                            </div>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">학교</span>
+                                <div class="search">
+                                    <input type="text" value="미래초등학교">
+                                </div>
+                            </div>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">주소</span>
+                                <input type="text" value="서울특별시 서초구 신반포로 321">
+                                <input type="text" value="미래엔" style="margin-top:10px;">
+                            </div>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">학년</span>
+                                <div data-select>
+                                    <select>
+                                        <option>6학년</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                접수자(학부모) 기본정보
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">이름</span>
+                                <input type="text" placeholder="이름을 입력하세요." value="김미래">
+                            </div>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">핸드폰</span>
+                                <input type="text" placeholder="핸드폰 번호를 입력하세요." value="010-1234-5678">
+                            </div>
+
+                            <div class="sub_column">
+                                <span class="sub_column_tit">이메일</span>
+                                <input type="text" placeholder="이메일 주소를 입력하세요." value="miraekim@naver.com">
+                            </div>
+
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                다른 공모전 응모 여부
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+                            <div data-select>
+                                <select>
+                                    <option>다른 공모전 응모 여부를 선택해주세요.</option>
+                                </select>
+                            </div>
+    
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                응모방법
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+
+                            <ul data-radio class="inline">
+                                <li>
+                                    <input type="radio" name="receipt" id="receiptPost" checked>
+                                    <label for="receiptPost">우편 접수</label>
+                                </li>
+                            </ul>
+                            <p class="sub_txt">
+                                응모 주소 : (우) 06532 서울시 서초구 신반포로 321 (주)미래엔 5층
+                                아동콘텐츠개발팀 ‘응모 분야명’ 담당자 앞
+                            </p>
+
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                작품 정보
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+                            미래 손글씨1.jpeg
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                참여 경로
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                            </span>
+
+                            <div data-select>
+                                <select>
+                                    <option>학교 공문 및 포스터</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+                        <div class="column">
+
+                            <span class="column_tit">
+                                개인정보 수집 및 이용 동의
+                                <span class="must">*<span class="hidden">필수입력사항</span></span>
+                                <button type="button" class="show_term" style="color:#dcdcdc;">전문보기</button>
+                            </span>
+
+                            <ul data-checkbox class="inline">
+                                <li>
+                                    <input type="checkbox" name="school" id="termCheck">
+                                    <label for="termCheck">개인정보 수집 및 이용에 동의합니다.<strong>(필수)</strong></label>
+                                </li>
+                            </ul>
+
+                            <div class="term" style="display:none;">
+                                <div>
+                                    <span class="term_tit">[수집항목]</span>
+                                    <p>
+                                        이름 (학부모 이름, 자녀 이름, 초등학교명, 학년/반),
+                                        핸드폰,이메일 주소
+                                    </p>
+                                </div>
+                                <div>
+                                    <span class="term_tit">[수집목적]</span>
+                                    <p>
+                                        신청 접수자 확인, 수상자 안내 및 공모전 관련 상담 문의
+                                    </p>
+                                </div>
+                                <div>
+                                    <span class="term_tit">[보유 기간] 1년</span>
+                                    <p>
+                                        개인정보처리방침에 관련된 궁금사항은 공모 담당자에
+                                        문의(이메일)하시면 친절하게 안내해 드리겠습니다.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <p class="sub_txt">
+                                입력하신 기본 정보는 공모전 행사를 위한 수집이며, 공모전 이외의
+                                목적으로 이용되지 않습니다.
+                            </p>
+                            <ul data-checkbox class="inline">
+                                <li>
+                                    <input type="checkbox" name="school" id="subscribe">
+                                    <label for="subscribe">공모전 소식 구독 신청(선택)<span
+                                            style="color:#7d7d7d;">(SMS/이메일)</span></label>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div data-btn class="fit">
+                            <a href="#" class="confirm" style="padding-left:24px; padding-right:24px;">공모전 메인으로 가기</a>
+                        </div>
+
+                    </fieldset>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+@@include('footer.html')
+@@include('bottom.html')

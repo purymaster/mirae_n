@@ -210,6 +210,7 @@
 					<div class="tit_wrap">
 						<h2 class="tit">참고서 자료실</h2>
 						<div class="menu_select">
+							<span class="menu_tit">교과학습자료</span>
 							<select>
 								<option selected>교과학습자료</option>
 								<option>정답과 해설</option>
@@ -316,10 +317,10 @@
 					$(window).on('load scroll', function() {
 						var scroll = $(this).scrollTop();
 						if (scroll > 0) {
-							$('.sub_header').addClass('fixed')
+							$('.sub_header').addClass('fixed').find('.tit').hide();
 							$('.search_box').css('margin-top', '113px');
 						} else {
-							$('.sub_header').removeClass('fixed')
+							$('.sub_header').removeClass('fixed').find('.tit').show();
 							$('.search_box').css('margin-top', '0px');
 						}
 					});

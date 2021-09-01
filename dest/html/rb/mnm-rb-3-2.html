@@ -219,10 +219,10 @@
 					$(window).on('load scroll', function() {
 						var scroll = $(this).scrollTop();
 						if (scroll > 0) {
-							$('.sub_header').addClass('fixed')
+							$('.sub_header').addClass('fixed').find('.tit').hide();
 							$('.textbook_search').css('margin-top', '76px');
 						} else {
-							$('.sub_header').removeClass('fixed')
+							$('.sub_header').removeClass('fixed').find('.tit').show();
 							$('.textbook_search').css('margin-top', '20px');
 						}
 					});

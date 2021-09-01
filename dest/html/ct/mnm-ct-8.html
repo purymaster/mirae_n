@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<h1>
+				<a href="#">미래엔</a>
+			</h1>
+			<div class="util">
+				<button type="button" class="menu search" data-open-search>검색페이지 열기</button>
+				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb">
+					<div class="container">
+						<div class="user">
+							<p class="txt login">로그인을 해주세요</p>
+							<!-- <p class="txt">김미래김미래김미래김미래김미래김미래김미래님 안녕하세요</p> -->
+							<div class="user_menu">
+								<a href="#" class="mypage">
+									<span>마이페이지</span>
+								</a>
+								<a href="#" class="logout">
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="main_menu">
+							<li>
+								<!-- <a href="#none" class="book_open">교과서</a> -->
+								<button type="button" class="book_open">교과서</button>
+								<div class="sub_menu">
+									<div class="sub_header">
+										<span class="tit">교과서</span>
+										<a href="#" class="link">
+											<span>교과서 홈</span>
+										</a>
+									</div>
+									<ul>
+										<li><a href="#">미래엔 교과서</a></li>
+										<li><a href="#">초등</a></li>
+										<li><a href="#">중등</a></li>
+										<li><a href="#">고등</a></li>
+									</ul>
+									<button type="button" class="book_close">교과서 메뉴 닫기</button>
+									<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+								</div>
+							</li>
+							<li><a href="#">참고서</a></li>
+							<li><a href="#">출판</a></li>
+						</ul>
+						<ul class="main_menu">
+							<li><a href="#">맘티처</a></li>
+							<li><a href="#">공모전</a></li>
+						</ul>
+						<ul class="main_menu group">
+							<li><a href="#">기업소개</a></li>
+							<li><a href="#">홍보센터</a></li>
+							<li><a href="#">계열사</a></li>
+						</ul>
+					</nav>
+					<div class="footer">
+						<div class="footer_wrap">
+							<div class="container">
+								<ul class="menu">
+									<li><a href="#">인재채용</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">오시는길</a></li>
+									<li><a href="#">관련사이트</a></li>
+								</ul>
+								<ul class="sns">
+									<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+									<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+									<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+								</ul>
+								<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+								<div class="business">
+									㈜미래엔 | 대표 신광수<br>
+									주소 06532 서울특별시 서초구 신반포로 321<br>
+									사업자등록번호 214-81-04977<br>
+									개인정보책임자 한범석<br>
+									이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+									채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+				</div>
+			</div>
+			<div class="search_wrap">
+				<div class="search">
+					<div class="search_header">
+						<div class="container box">
+							<a href="#">미래엔</a>
+							<button type="button" class="close" data-close-search>닫기</button>
+						</div>
+					</div>
+					<div class="search_box">
+						<div class="container box">
+							<div class="search_form">
+								<div data-input-item="search">
+									<input type="text" placeholder="검색어를 입력하세요.">
+									<button type="button" class="del">삭제</button>
+								</div>
+								<div class="autocomplete" style="display:none;">
+									<ul>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="search_tool">
+								<div class="save">
+									<span class="text">검색어 자동저장</span>
+									<label><input type="checkbox" class="hidden"><span></span></label>
+								</div>
+								<div class="keyword_wrap">
+									<div class="keyword history">
+										<div class="tit_wrap">
+											<span class="tit">최근 검색어</span>
+											<button type="button">전체 삭제</button>
+										</div>
+										<div class="list">
+											<ul>
+												<li><a href="#">수학수학수학수학수학수학수학수학수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+											</ul>
+										</div>
+									</div>
+									<div class="keyword recommend">
+										<div class="tit_wrap">
+											<span class="tit">추천 검색어</span>
+										</div>
+										<div class="list">
+											<ul>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<script>
+			// [D] UI 확인용 스크립트
+			var searchBox = $('header .search_form'),
+				searchTool = $('header .search_tool');
+
+			searchBox.on('keyup', '[data-input-item] input', function() {
+				if ($(this).val() !== "") {
+					searchBox.find('.autocomplete').show();
+					searchTool.hide();
+				} else {
+					searchBox.find('.autocomplete').hide();
+					searchTool.show();
+				};
+			});
+		</script>
+		<div id="content" data-page="contest">
+
+			<!-- 키비주얼 -->
+			<div class="main_visual small result result2">
+				<div class="container">
+					<div class="txt_wrap">
+						<span class="tit">역대 수상작</span>
+						<p>
+							미래엔 공모전을 빛낸 역대 수상작을<br>
+							확인하실 수 있습니다.
+						</p>
+					</div>
+				</div>
+				<div data-tab="tab" class="bookmark result_tab swiper-container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide on"><button type="button">초등학생 손글씨</button></li>
+						<li class="swiper-slide"><button type="button">초등학생 글솜씨</button></li>
+						<li class="swiper-slide"><button type="button">교과서 창작 글감</button></li>
+						<li class="swiper-slide"><button type="button">어린이책 공모전</button></li>
+						<!-- <li class="swiper-slide"><button type="button">성인 실용 에세이</button></li> -->
+					</ul>
+					<div class="ctr prev"></div>
+					<div class="ctr next"></div>
+				</div>
+
+				<script>
+					slideInit('.result_tab', {
+						// loop: true,
+						navigation: {
+							nextEl: ".result_tab .next",
+							prevEl: ".result_tab .prev",
+						},
+						slidesPerView: "auto",
+						// centeredSlides: true,
+						resistance: true,
+						resistanceRatio: 0,
+						// on: {
+						//     slideChange: function () {
+						//         $('[data-tab]').find('li').eq(this.realIndex).find('button').trigger('click');
+						//     }
+						// }
+					})
+				</script>
+
+			</div>
+			<!-- //키비주얼 -->
+
+			<div data-tab-cont="tab">
+				<div class="tab_cont">
+					<div class="container">
+						<div style="text-align:right; margin-top:50px; margin-bottom:-30px;">
+							<div data-select>
+								<select style="width:100px;">
+									<option>2019</option>
+								</select>
+							</div>
+						</div>
+						<div class="result_info">
+							<div class="txt_wrap">
+								<p class="tit">
+									<제5회 초등학생 ‘톡톡’ 손글씨 공모전>에
+										응모해주신 모든 분께 감사를 드립니다.
+								</p>
+								<p class="sub_txt">
+									초등학교 국어 교과서 전문 출판사 ㈜미래엔은 국어 교과서에
+									활용할 수 있는 다양한 글감 발굴이라는 목적을 가지고 이번
+									공모전을 진행하였습니다. 초등학생들의 학습과 인성에
+									도움이 되는가와 참신성을 중점으로 심사하였습니다.
+									이러한 글감들이 우리 교과서를 풍성하게 만들 것이라 믿으며,
+									더 나아가 우리나라 국어 교육 발전에 보탬이되기를 바랍니다.
+									수상자 여러분들의 수상을 축하드립니다.
+									그리고 모든 지원자 여러분들의 노력에도 격려의 박수를
+									보내드립니다.
+									내년에도 더욱 좋은 작품으로 만나 뵙기를 기대하겠습니다.
+								</p>
+							</div>
+							<div class="font">
+								<div class="font_slide swiper-container">
+									<ul class="swiper-wrapper">
+										<li class="swiper-slide slide">
+											<div class="info_wrap">
+												<span class="tit">미래엔 세라체</span>
+												<img src="../../images/img/contest/img_contest_font1.png" alt="">
+											</div>
+											<a href="#" class="download"><span>서체 다운로드</span></a>
+										</li>
+										<li class="swiper-slide slide">
+											<div class="info_wrap">
+												<span class="tit">미래엔 예서체</span>
+												<img src="../../images/img/contest/img_contest_font2.png" alt="">
+											</div>
+											<a href="#" class="download"><span>서체 다운로드</span></a>
+										</li>
+									</ul>
+								</div>
+								<div class="scrollbar"></div>
+							</div>
+
+							<script>
+								slideInit('.font_slide', {
+									spaceBetween: 15,
+									// autoHeight: true,
+									scrollbar: {
+										el: ".font .scrollbar",
+									},
+								})
+							</script>
+
+							<div class="result_menu">
+								<dl>
+									<div>
+										<dt class="on">
+											<span class="tit">최우수상(각 1명)</span>
+										</dt>
+										<dd>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col style="width:80px;">
+														<col style="width:80px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">부문</th>
+															<th scope="col">이름</th>
+															<th scope="col">학교명</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>저학년부</td>
+															<td>정세라</td>
+															<td>경북양서초등학교 1학년</td>
+														</tr>
+														<tr>
+															<td>고학년부</td>
+															<td>정예서</td>
+															<td>서울염동초등학교 6학년</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">우수상(부문별 2명)</span>
+										</dt>
+										<dd>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col style="width:80px;">
+														<col style="width:80px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">부문</th>
+															<th scope="col">이름</th>
+															<th scope="col">학교명</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="2">저학년부</td>
+															<td>김여진</td>
+															<td>광주송원초등학교 3학년</td>
+														</tr>
+														<tr>
+															<td>심지민</td>
+															<td>경기보평초등학교 3학년</td>
+														</tr>
+														<tr>
+															<td rowspan="2">고학년부</td>
+															<td>박송이</td>
+															<td>인천청일초등학교 4학년</td>
+														</tr>
+														<tr>
+															<td>정유나</td>
+															<td>경북도봉초등학교 6학년</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">장려상(부문별 10명)</span>
+										</dt>
+										<dd>
+											<div class="result_table">
+												<table style="width:180%;">
+													<colgroup>
+														<col style="width:80px;">
+														<col style="width:80px;">
+														<col>
+														<col style="width:80px;">
+														<col style="width:80px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">부문</th>
+															<th scope="col">이름</th>
+															<th scope="col">학교명</th>
+															<th scope="col">부문</th>
+															<th scope="col">이름</th>
+															<th scope="col">학교명</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="10">저학년부</td>
+															<td>임라희</td>
+															<td>광주송원초등학교 1학년</td>
+															<td rowspan="10">고학년부</td>
+															<td>이하윤</td>
+															<td>서울서정초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>김혜진</td>
+															<td>울산월봉초등학교 3학년</td>
+															<td>유다현</td>
+															<td>충남마곡초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>정준수</td>
+															<td>인천마전초등학교 3학년</td>
+															<td>이하진</td>
+															<td>중국상해한국학교 6학년</td>
+														</tr>
+														<tr>
+															<td>정세림</td>
+															<td>부산배산초등학교 3학년</td>
+															<td>최서연</td>
+															<td>서울위례별초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>김하윤</td>
+															<td>경기곡정초등학교 1학년</td>
+															<td>김예나</td>
+															<td>비전학교 5학년</td>
+														</tr>
+														<tr>
+															<td>윤서준</td>
+															<td>광주송원초등학교 3학년</td>
+															<td>박서은</td>
+															<td>대구영선초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>이도연</td>
+															<td>광주송원초등학교 3학년</td>
+															<td>손재은</td>
+															<td>경기송원초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>최여준</td>
+															<td>충북낭성초등학교 3학년</td>
+															<td>윤석천</td>
+															<td>충북봉명초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>양수아</td>
+															<td>충북사천초등학교 2학년</td>
+															<td>박연수</td>
+															<td>온양풍기초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>황정연</td>
+															<td>경북대교초등학교 2학년</td>
+															<td>유지인</td>
+															<td>대전샘머리초등학교 6학년</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">입선(부문별 20명)</span>
+										</dt>
+										<dd>
+											<div class="result_table">
+												<table style="width:180%;">
+													<colgroup>
+														<col style="width:80px;">
+														<col style="width:80px;">
+														<col>
+														<col style="width:80px;">
+														<col style="width:80px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">부문</th>
+															<th scope="col">이름</th>
+															<th scope="col">학교명</th>
+															<th scope="col">부문</th>
+															<th scope="col">이름</th>
+															<th scope="col">학교명</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="20">저학년부</td>
+															<td>김연우</td>
+															<td>광주송원초등학교 3학년</td>
+															<td rowspan="20">고학년부</td>
+															<td>문하연</td>
+															<td>서울숭인초등학교 4학년</td>
+														</tr>
+														<tr>
+															<td>심서빈</td>
+															<td>강원간성초등학교 3학년</td>
+															<td>이서영</td>
+															<td>인천박문초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>김가율</td>
+															<td>광주송원초등학교 2학년</td>
+															<td>정지우</td>
+															<td>경남초전초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>한시형</td>
+															<td>광주송원초등학교 2학년</td>
+															<td>임소윤</td>
+															<td>울산청솔초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>변준희</td>
+															<td>제주삼화초등학교 3학년</td>
+															<td>박초미</td>
+															<td>세종양지초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>문채원</td>
+															<td>부산옥천초등학교 3학년</td>
+															<td>이유빈</td>
+															<td>서울삼각산초등학교 4학년</td>
+														</tr>
+														<tr>
+															<td>김하은</td>
+															<td>광주송원초등학교 3학년</td>
+															<td>한연재</td>
+															<td>경기중동초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>정한별</td>
+															<td>광주송원초등학교 2학년</td>
+															<td>이채민</td>
+															<td>중국상해한국학교 6학년</td>
+														</tr>
+														<tr>
+															<td>김태호</td>
+															<td>광주송원초등학교 3학년</td>
+															<td>최수린</td>
+															<td>전남홍농초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>홍서연</td>
+															<td>광주송원초등학교 2학년</td>
+															<td>안진우</td>
+															<td>서울숭의초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>박정은</td>
+															<td>대전상지초등학교 3학년</td>
+															<td>장서재인</td>
+															<td>경기풍덕초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>남은서</td>
+															<td>이대부속초등학교 2학년</td>
+															<td>강윤지</td>
+															<td>옥계동부초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>유수정</td>
+															<td>경북학천초등학교 2학년</td>
+															<td>전혜리</td>
+															<td>성남여수초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>이세은</td>
+															<td>경기백송초등학교 3학년</td>
+															<td>박수연</td>
+															<td>서울우면초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>양예준</td>
+															<td>서울강서초등학교 3학년</td>
+															<td>김미소</td>
+															<td>세종고운초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>곽채은</td>
+															<td>서울응봉초등학교 3학년</td>
+															<td>조하은</td>
+															<td>경기청계초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>최지우</td>
+															<td>경기보라초등학교 2학년</td>
+															<td>손민강</td>
+															<td>부산용문초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>이하은</td>
+															<td>다니엘열방학교 3학년</td>
+															<td>정현아</td>
+															<td>경북농소초등학교 5학년</td>
+														</tr>
+														<tr>
+															<td>허채은</td>
+															<td>경기명학초등학교 3학년</td>
+															<td>김신비</td>
+															<td>경기중동초등학교 6학년</td>
+														</tr>
+														<tr>
+															<td>배가윤</td>
+															<td>울산월봉초등학교 3학년</td>
+															<td>공서린</td>
+															<td>경기산내초등학교 6학년</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">최다 학생 참가 학교상(1개교)</span>
+										</dt>
+										<dd>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col>
+														<col style="width:80px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">학교명</th>
+															<th scope="col">작품수</th>
+															<th scope="col">비고</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>광주송원초등학교</td>
+															<td>216</td>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">시상 내역</span>
+										</dt>
+										<dd>
+											<div class="result_table">
+												<table style="width:180%;">
+													<colgroup>
+														<col style="width:150px;">
+														<col style="width:120px;">
+														<col>
+														<col style="width:120px;">
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">구분</th>
+															<th scope="col">작품 수</th>
+															<th scope="col">시상 내역</th>
+															<th scope="col">비고</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="2">최우수상</td>
+															<td>저학년부 1명</td>
+															<td rowspan="2">상금 각 100만원</td>
+															<td rowspan="2">-</td>
+														</tr>
+														<tr>
+															<td>고학년부 1명</td>
+														</tr>
+														<tr>
+															<td rowspan="2">우수상</td>
+															<td>저학년부 2명</td>
+															<td rowspan="2">상금 각 50만원</td>
+															<td rowspan="2">-</td>
+														</tr>
+														<tr>
+															<td>고학년부 2명</td>
+														</tr>
+														<tr>
+															<td rowspan="2">장려상</td>
+															<td>저학년부 10명</td>
+															<td rowspan="2">도서상품권 각 20만원</td>
+															<td rowspan="2">-</td>
+														</tr>
+														<tr>
+															<td>고학년부 10명</td>
+														</tr>
+														<tr>
+															<td rowspan="2">입선</td>
+															<td>저학년부 20명</td>
+															<td rowspan="2">도서상품권 각 10만원</td>
+															<td rowspan="2">-</td>
+														</tr>
+														<tr>
+															<td>고학년부 20명</td>
+														</tr>
+														<tr>
+															<td>최다 학생 참가 학교상</td>
+															<td>1개교</td>
+															<td>미래엔 아이세움 발행 도서 1질(100만원 상당)</td>
+															<td>-</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="tab_cont" style="display:none;">
+					<div class="container">
+						<div style="text-align:right; margin-top:50px; margin-bottom:-30px;">
+							<div data-select>
+								<select style="width:100px;">
+									<option>2019</option>
+								</select>
+							</div>
+						</div>
+						<div class="result_info">
+							<div class="txt_wrap">
+								<p class="tit">
+									<제4회 미래엔 창작 글감 공모전>에
+										응모해주신 모든 분께 감사를 드립니다.
+								</p>
+								<p class="sub_txt">
+									제4회 미래엔 창작 글감 공모전 ‘초등학생 글솜씨’ 분야에 응모해
+									주신 초등학생 여러분 감사합니다. 한 작품, 한 작품 만날 때마다
+									작품 속에 숨겨진 어린이들의 순수한 동심을 엿볼 수 있어서
+									즐거웠습니다. 어린이만이 표현할 수 있는 기발한 표현력에
+									놀랐고, 때로는 감동을 주는 표현에 울컥하여 쉽게 작품을
+									넘기지 못했습니다. 모든 작품 속에 어린이들의 소중한 마음이
+									담겼다고 생각하며 신중하게 심사했습니다. 어떤 작품이
+									더 뛰어난 것인지를 겨루기보다 어린이들의 생각과 마음을 잘
+									전달한 작품을 선정하였습니다. 수상하신 분들게는 축하 인사를,
+									지원해 주신 모든 분들께는 감사 인사를 드립니다.
+									내년에도 더욱 좋은 작품으로 만나 뵙기를 기대하겠습니다.
+								</p>
+							</div>
+
+							<div class="result_menu">
+								<dl class="text">
+									<div>
+										<dt class="on">
+											<span class="tit">최우수상</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역 : 상금 100만원</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col>
+														<col>
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">분야</th>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>통합</td>
+															<td>박하령</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">우수상</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역 : 상금 70만원 (분야별)</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col>
+														<col>
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">분야</th>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>동시</td>
+															<td>박채영</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>기행문 또는 일기</td>
+															<td>김미리</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>독후감</td>
+															<td>손예은</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">장려상</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역 : 상금 30만원 (분야별)</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col>
+														<col>
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">분야</th>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="3">동시</td>
+															<td>정준수</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>오다경</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김가윤</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td rowspan="3">기행문 또는 일기</td>
+															<td>정채윤</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>부송연</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>유리아</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td rowspan="3">독후감</td>
+															<td>신효민</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>전시영</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>이예승</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">입선</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역:도서상품권 10만원(분야별)</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col>
+														<col>
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">분야</th>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td rowspan="10">동시</td>
+															<td>김서준</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>정윤우</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>백민재</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김나라</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김시연</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>전효린</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>장연서</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>한예지</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>노현지</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>이연우</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td rowspan="10">기행문 또는 일기</td>
+															<td>이서윤</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>송지유</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김주아</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>박송이</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>서하윤</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>이나현</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>장한결</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>한연재</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>조준우</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김지우</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td rowspan="10">독후감</td>
+															<td>김민채</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>유지원</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>서현준</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>강은서</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>장서영</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>최주하</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>이해나</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>강예원</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>남효린</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>이은서</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="tab_cont" style="display:none;">
+					<div class="container">
+						<div style="text-align:right; margin-top:50px; margin-bottom:-30px;">
+							<div data-select>
+								<select style="width:100px;">
+									<option>2019</option>
+								</select>
+							</div>
+						</div>
+						<div class="result_info">
+							<div class="txt_wrap">
+								<p class="tit">
+									<제4회 미래엔 창작 글감 공모전>에
+										응모해주신 모든 분께 감사를 드립니다.
+								</p>
+								<p class="sub_txt">
+									제4회 미래엔 창작 글감 공모전 ‘초등학생 글솜씨’ 분야에 응모해
+									주신 초등학생 여러분 감사합니다. 한 작품, 한 작품 만날 때마다
+									작품 속에 숨겨진 어린이들의 순수한 동심을 엿볼 수 있어서
+									즐거웠습니다. 어린이만이 표현할 수 있는 기발한 표현력에
+									놀랐고, 때로는 감동을 주는 표현에 울컥하여 쉽게 작품을
+									넘기지 못했습니다. 모든 작품 속에 어린이들의 소중한 마음이
+									담겼다고 생각하며 신중하게 심사했습니다. 어떤 작품이
+									더 뛰어난 것인지를 겨루기보다 어린이들의 생각과 마음을 잘
+									전달한 작품을 선정하였습니다. 수상하신 분들게는 축하 인사를,
+									지원해 주신 모든 분들께는 감사 인사를 드립니다.
+									내년에도 더욱 좋은 작품으로 만나 뵙기를 기대하겠습니다.
+								</p>
+							</div>
+
+							<div class="result_menu">
+								<dl class="text">
+									<div>
+										<dt class="on">
+											<span class="tit">최우수상</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역 : 상금 500만원</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col style="width:120px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>최민경</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">우수상</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역 : 상금 250만원</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col style="width:120px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>이청현</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">장려상</span>
+										</dt>
+										<dd>
+											<span class="sub_txt">시상내역 : 상금 100만원</span>
+											<div class="result_table">
+												<table>
+													<colgroup>
+														<col style="width:120px;">
+														<col>
+													</colgroup>
+													<thead>
+														<tr>
+															<th scope="col">이름</th>
+															<th scope="col">수상작품</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>이초아</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>윤선아</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>홍은경</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김경대</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+														<tr>
+															<td>김윤아</td>
+															<td><a href="#" class="download">작품보기</a></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<div class="tab_cont" style="display:none;">
+					<div class="container">
+						<div style="text-align:right; margin-top:50px; margin-bottom:-30px;">
+							<div data-select>
+								<select style="width:100px;">
+									<option>2019</option>
+								</select>
+							</div>
+						</div>
+						<div class="result_info">
+							<div class="txt_wrap">
+								<p class="tit">
+									<제4회 미래엔 창작 글감 공모전>에
+										응모해주신 모든 분께 감사를 드립니다.
+								</p>
+								<p class="sub_txt">
+									제4회 미래엔 창작 글감 공모전 ‘초등학생 글솜씨’ 분야에 응모해
+									주신 초등학생 여러분 감사합니다. 한 작품, 한 작품 만날 때마다
+									작품 속에 숨겨진 어린이들의 순수한 동심을 엿볼 수 있어서
+									즐거웠습니다. 어린이만이 표현할 수 있는 기발한 표현력에
+									놀랐고, 때로는 감동을 주는 표현에 울컥하여 쉽게 작품을
+									넘기지 못했습니다. 모든 작품 속에 어린이들의 소중한 마음이
+									담겼다고 생각하며 신중하게 심사했습니다. 어떤 작품이
+									더 뛰어난 것인지를 겨루기보다 어린이들의 생각과 마음을 잘
+									전달한 작품을 선정하였습니다. 수상하신 분들게는 축하 인사를,
+									지원해 주신 모든 분들께는 감사 인사를 드립니다.
+									내년에도 더욱 좋은 작품으로 만나 뵙기를 기대하겠습니다.
+								</p>
+							</div>
+
+							<div class="result_menu">
+								<dl class="text">
+									<div>
+										<dt class="on">
+											<span class="tit">대상</span>
+										</dt>
+										<dd>
+											수상작 없음
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">우수상</span>
+										</dt>
+										<dd>
+											<div class="book_wrap">
+												<div class="book">
+													<div class="img_wrap">
+														<img src="../../images/img/book/contest/img_award_book1.png" alt="">
+														<div class="type">창작 그림책</div>
+													</div>
+													<div class="txt_wrap">
+														<div>
+															<span class="cont_tit">작가</span>
+															<span class="txt">하동형</span>
+														</div>
+														<div>
+															<span class="cont_tit">작품</span>
+															<span class="txt">고양이의 마지막 여행가방</span>
+														</div>
+														<div>
+															<span class="cont_tit">상금</span>
+															<span class="txt">500만원</span>
+														</div>
+													</div>
+												</div>
+												<div class="book">
+													<div class="img_wrap">
+														<img src="../../images/img/book/contest/img_award_book2.png" alt="">
+														<div class="type">인문 교양</div>
+													</div>
+													<div class="txt_wrap">
+														<div>
+															<span class="cont_tit">작가</span>
+															<span class="txt">이현희</span>
+														</div>
+														<div>
+															<span class="cont_tit">작품</span>
+															<span class="txt">세균을 이겨낸 처음</span>
+														</div>
+														<div>
+															<span class="cont_tit">상금</span>
+															<span class="txt">500만원</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">본선 진출작(가나다순)</span>
+										</dt>
+										<dd>
+											<div class="part">
+												<span class="tit">창작 그림책 분야</span>
+												<div class="cont">
+													김나현(하나의 세계) / 김명석(빅) / 김민주(예쁘지 않아도 돼) / 김수진
+													(코끼리) / 김윤미(구름과 물고기) / 김지연(튤립) / 김희진(형아는
+													마법W사) / 문소령(공주님의 꿈) / 손지혜(버거 경감 1. 쿠키 저택의
+													보물) / 안주미(옥수수 대탈출) / 윤가람(내 말이야) / 이백록(나무사과)
+													/ 이상주(아이 향기 팔아요) / 이차윤(루돌프 호박이) / 하동형(고양이
+													의 마지막 여행가방) / 한송희(맛있는 칭찬을 꼭꼭 씹어 먹을 테야!) /
+													황지영(네 탓이야)
+												</div>
+											</div>
+											<div class="part" style="padding-bottom:0;">
+												<span class="tit">교양&지식 그림책 분야</span>
+												<div class="cont">
+													김건구(고상하고 품격 있는 질문들) / 박열음(과학이 뭐야?) /
+													이현희(세균을 이겨낸 처음)
+												</div>
+											</div>
+										</dd>
+									</div>
+									<div>
+										<dt class="on">
+											<span class="tit">심사 위원 및 심사평</span>
+										</dt>
+										<dd>
+											<div data-tab="review" class="bookmark other">
+												<ul>
+													<li class="on"><button type="button">창작 그림책 분야</button></li>
+													<li><button type="button">인문교양 원고 분야</button></li>
+												</ul>
+											</div>
+											<div data-tab-cont="review">
+												<div class="tab_cont">
+													<div class="review_box">
+														<div class="review_txt">
+															<span class="tit">
+																엄혜숙 심사 위원
+																<span>(동화 작가, 번역가)</span>
+															</span>
+															<p>
+																제4회 미래엔 어린이책 공모전 그림책 분야에서는 참신한
+																소재의 작품들을 많이 만날 수 있어 반가웠다.
+															</p>
+															<p>
+																《공주님의 꿈》은 자기답게 살아가려는 여자아이들에게
+																용기를 주는 책이다. ‘게으름 병’, ‘열씸 열매’등 통통 튀는 단어
+																선택이 돋보였지만, 그림의 완성도면에서 아쉬움이 남았다.
+															</p>
+															<p>
+																《빅》은 삶의 현실을 받아들이는 과정을 담담하게 그린
+																작품이다. 어른이 되어 보니 자신도 평범한 존재임을 깨닫는다
+																는 주제를 ‘시골 쥐와 서울 쥐’이야기에 착안하여 현대판 버전
+																으로 그려냈다. 진정한 성장에 관한 메시지로 큰 울림을 줬지
+																만,아직 어린 아이들이 이해하기에는 다소 어려운 주제라는
+																점이 옥에 티였다.
+															</p>
+															<p>
+																《고양이의 마지막 여행가방》은 아홉 번의 삶을 산다는 고양
+																이를 주인공으로, 고양이의 삶을 따라 시대별로 다른 사건과
+																풍경을 볼 수 있어 흥미로웠다. 완성도 있는 이야기로, 삶과
+																죽음에 대해 성찰할 수 있는 책이기도 하다. 고양이의 마지막
+																여행은 결국 무지개다리를 건너는 여행이고, 그럼에도 불구하
+																고 추억은 영원히 남아 있을 테니 말이다.
+															</p>
+															<p>
+																새로운 주제, 당장 책으로 내기에도 손색이 없는 완성도, 어린
+																독자들에게의 접근성을 모두 고려한 결과, 《고양이의 마지막
+																여행가방》이 우수상으로 선정되었다.
+																멋진 그림책을 만들어 낸 수상자에게 축하와 응원을 보낸다.
+															</p>
+														</div>
+														<div class="review_txt">
+															<span class="tit">
+																한태희 심사 위원
+																<span>(일러스트레이터, 《구름 놀이》의 작가)</span>
+															</span>
+															<p>
+																《공주님의 꿈》은 익숙한 옛이야기의 형식을 뒤집은
+																줄거리가 재미있고, 적극적인 성격의 공주도 아이들의 공감을
+																얻기에 충분했다. 다만 공주와 대치되는, 괴물이나 왕자가
+																공주를 찾아오지 않는 이유가 게으름 때문이라는 장치가 다소
+																개연성이 부족했다.
+															</p>
+															<p>
+																《빅》은 완성도 있는 그림 수준을 보여 주었으나, 어린이
+																독자에게 다가가기 다소 어려운 주제를 다루고 있다는 점이
+																아쉬웠다.
+															</p>
+															<p>
+																《고양이의 마지막 여행가방》은 “고양이는 아홉 번 산다.”
+																라는 전설을 이용해 지식그림책과 판타지그림책, 두 측면을
+																아우르는 구성이다. 고양이가 마지막 여행을 떠나기 전 소녀
+																에게 선물을 하나씩 꺼내 보이면서, 인류사 전반의 단면을
+																보여 준다는 설정이 꽤 흥미롭다. 그림이 굉장히 정교하여 이미
+																책으로 나왔어도 무리가 없을 만큼 완성도가 높았다.
+															</p>
+															<p>
+																결론적으로 《빅》과 《고양이의 마지막 여행가방》이 최종
+																결선작으로 좁혀졌는데, 구성과 그림 두 가지 면을 고려하고,
+																어린이 독자에게 접근성이 더 높다고 생각되는 《고양이의
+																마지막 여행가방》을 최종 우수작으로 선정했다.
+															</p>
+														</div>
+													</div>
+												</div>
+												<div class="tab_cont" style="display:none;">
+													<div class="review_box">
+														<div class="review_txt">
+															<span class="tit">
+																엄혜숙 심사 위원
+																<span>(동화 작가, 번역가)</span>
+															</span>
+															<p>
+																최종 심사에 오른 세 작품 모두 참신한 기획과 구성력이 돋보였다.
+															</p>
+															<p>
+																먼저 《과학이 뭐야》는 과학을 처음 접하는 아이들에게 과학 개념과 과학의 다양한 분야를 알려 주는 과학 입문서이다.
+																하지만 대상 독자에 대한 이해가 부족했다. 과학적 사고 방법과 중요한 과학적 발견의 사례, 혹은 과학의 패러다임을
+																바꾼 과학자들의 이야기를 들려주는 편이 과학을 이해하고 접근하는 데 더 효과적이라 생각한다.
+															</p>
+															<p>
+																《세균을 이겨낸 처음》은 감염병이라는 위기가 생길 때마다 이를 극복했던 인류의 역사를 보여 주며, 이와 함께 의학
+																기술의 발달과 공중 보건 위생의 진보도 다루었다. 백신, 역학 조사, 손 씻기, 마스크, 사회적 거리두기, 항생제
+																등 핵심 키워드를 보면, 코로나19로 인한 팬데믹 시대를 살아가는 어른과 아이 모두가 흥미롭게 읽을 만한 책이라
+																하겠다. 구성력과 기본기를 탄탄하게 갖춘 작가의 글이라는 확신이 든다.
+															</p>
+															<p>
+																《고상하고 품격 있는 질문들》은 초등학생이 궁금할 만한 50가지 질문을 뽑아 답을 찾아 주는 내용이다. 초등학교
+																교사인 작가가 독자의 눈높이에 맞게, 이해하기 쉽고 유머러스하게 원고를 구성하였다. 교과서와의 연계성을 직접 언급한
+																것은 시장성을 고려한 전략으로 보이지만, 인문교양 책의 품격에는 어울리지 않아 본문 밖에 따로 정리하면 어땠을까
+																생각해 본다.
+															</p>
+															<p>
+																세 작품 중 《세균을 이겨낸 처음》이 기본기, 구성력, 트렌드의 삼박자를 두루 갖춘 작품이라는 점에 이견이 없었다.
+																신선한 소재와 수준 높은 기획력을 보여 준 수상자에게 축하와 응원을 보낸다.
+															</p>
+														</div>
+														<div class="review_txt">
+															<span class="tit">
+																한태희 심사 위원
+																<span>(일러스트레이터, 《구름 놀이》의 작가)</span>
+															</span>
+															<p>
+																최종 심사에 오른 《과학이 뭐야》, 《세균을 이겨낸 처음》, 《고상하고 품격 있는 질문들》 세 원고 모두 정확한
+																콘셉트로 원고를 기획하고, 자료를 조사했다는 점이 느껴졌다.
+															</p>
+															<p>
+																《과학이 뭐야》에서는 “과학이 무엇일까?”하는 기본적인 질문에 대해 어린이들에게 알려 주고 싶다는 진정성이
+																느껴졌다. 하지만 원고에서 다루는 에피소드들로는 이 본질적인 질문에 답하는 동시에, 세분화된 과학의 여러 분야를
+																충분히 설명하기 어려웠다.
+															</p>
+															<p>
+																두 번째 작품, 《세균을 이겨낸 처음》은 지금 우리가 겪고 있는 코로나19 시대, 그리고 도래할 ‘바이러스와
+																공존’할 수밖에 없는 새로운 세계를 준비하는 원고였다. 전염병의 역사, 인간이 전염병에 대처한 방법들을 소개하며,
+																지금 우리에게 필요한 의학 지식과 위기에 대처할 수 있는 상식을 알려 주는 좋은 기획이었다. 구체적이고 현실적인
+																기획안으로서, 결심에 오른 작품 중 가장 완성도가 높았다.
+															</p>
+															<p>
+																세 번째, 《고상하고 품격 있는 질문들》은 현직 초등학교 교사인 작가가 아이들이 호기심을 가질 만한 문제들, 생활
+																속 실질적인 문제들을 흥미롭게 다룬 작품이었다. 제시한 질문들의 소재가 신선했으며, 질문들을 교과서와 연계시킨 점도
+																매우 눈길을 끌었다.
+															</p>
+															<p>
+																치열한 논의 끝에, 책으로 만들어지기 위한 세부 항목이 잘 잡혀 있는 《세균을 이겨낸 처음》을 우수상으로 선정했다.
+															</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</dd>
+									</div>
+								</dl>
+							</div>
+
+							<div class="award">
+								<span class="tit">시상식 안내</span>
+								<div>
+									<span class="sub_tit">시상식</span>
+									<p>
+										2019년 12월 27일(금요일) 오후 2시 미래엔 대회의실(서울 서초
+										구 신반포로 321(잠원동 41-10) 미래엔 본사)
+									</p>
+								</div>
+								<div>
+									<span class="sub_tit">시상범위</span>
+									<p>
+										시상식에 참여하는 수상자의 범위는 별도로 안내함
+									</p>
+								</div>
+								<div>
+									<span class="sub_tit">문의</span>
+									<p>
+										02-3475-4056~9
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="tab_cont" style="display:none;">
+            성인 실용 에세이
+        </div> -->
+			</div>
+
+			<script>
+				$('.result_menu').find('dt').on('click', function() {
+					$(this).toggleClass('on');
+				});
+			</script>
+
+
+		</div>
+		<footer>
+			<div class="container">
+				<div class="info">
+					<div class="cs">
+						<div class="txt">
+							<strong>고객센터 : <a href="tel:+1800-8890">1800-8890</a></strong>(발신자 부담)<br>
+							고객센터 운영시간<br>
+							평일 09:00~18:00 (점심시간: 12:00~13:00)
+						</div>
+						<a href="#" class="link">1:1문의</a>
+					</div>
+					<div class="sns">
+						<p>미래엔을 만나보세요.</p>
+						<ul>
+							<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+							<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+							<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+							<li class="youtube"><a href="#" target="_blank" title="새창열림">미래엔 유튜브 채널</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<ul class="footer_menu">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">무단이메일 수집 거부</a></li>
+				<li><a href="#">오시는길</a></li>
+			</ul>
+			<div class="container">
+				<div class="footer_bottom">
+					<img src="../../images/img/img_footer_logo.png" alt="" class="logo">
+					<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+					<div class="business">
+						㈜미래엔 | 대표 신광수<br>
+						주소 06532 서울특별시 서초구 신반포로 321<br>
+						사업자등록번호 214-81-04977<br>
+						개인정보책임자 한범석<br>
+						이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+						채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+					</div>
+					<div class="copyright">
+						© MIRAE N CO.,LTD. All Rights Reserved
+					</div>
+					<img src="../../images/img/img_footer_award.png" alt="명문장수기업" class="award">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>

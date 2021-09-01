@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../css/common.css">
+	<script src="../../js/jquery.min.js"></script>
+	<script src="../../js/swiper.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<title>미래엔</title>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<h1>
+				<a href="#">미래엔</a>
+			</h1>
+			<div class="util">
+				<button type="button" class="menu search" data-open-search>검색페이지 열기</button>
+				<button type="button" class="menu nav_open">미래엔 메뉴 열기</button>
+			</div>
+			<div class="gnb_wrap">
+				<div class="gnb">
+					<div class="container">
+						<div class="user">
+							<p class="txt login">로그인을 해주세요</p>
+							<!-- <p class="txt">김미래김미래김미래김미래김미래김미래김미래님 안녕하세요</p> -->
+							<div class="user_menu">
+								<a href="#" class="mypage">
+									<span>마이페이지</span>
+								</a>
+								<a href="#" class="logout">
+									<span>로그아웃</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<nav>
+						<ul class="main_menu">
+							<li>
+								<!-- <a href="#none" class="book_open">교과서</a> -->
+								<button type="button" class="book_open">교과서</button>
+								<div class="sub_menu">
+									<div class="sub_header">
+										<span class="tit">교과서</span>
+										<a href="#" class="link">
+											<span>교과서 홈</span>
+										</a>
+									</div>
+									<ul>
+										<li><a href="#">미래엔 교과서</a></li>
+										<li><a href="#">초등</a></li>
+										<li><a href="#">중등</a></li>
+										<li><a href="#">고등</a></li>
+									</ul>
+									<button type="button" class="book_close">교과서 메뉴 닫기</button>
+									<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+								</div>
+							</li>
+							<li><a href="#">참고서</a></li>
+							<li><a href="#">출판</a></li>
+						</ul>
+						<ul class="main_menu">
+							<li><a href="#">맘티처</a></li>
+							<li><a href="#">공모전</a></li>
+						</ul>
+						<ul class="main_menu group">
+							<li><a href="#">기업소개</a></li>
+							<li><a href="#">홍보센터</a></li>
+							<li><a href="#">계열사</a></li>
+						</ul>
+					</nav>
+					<div class="footer">
+						<div class="footer_wrap">
+							<div class="container">
+								<ul class="menu">
+									<li><a href="#">인재채용</a></li>
+									<li><a href="#">고객센터</a></li>
+									<li><a href="#">오시는길</a></li>
+									<li><a href="#">관련사이트</a></li>
+								</ul>
+								<ul class="sns">
+									<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+									<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+									<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+								</ul>
+								<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+								<div class="business">
+									㈜미래엔 | 대표 신광수<br>
+									주소 06532 서울특별시 서초구 신반포로 321<br>
+									사업자등록번호 214-81-04977<br>
+									개인정보책임자 한범석<br>
+									이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+									채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<button type="button" class="nav_close">미래엔 메뉴 닫기</button>
+				</div>
+			</div>
+			<div class="search_wrap">
+				<div class="search">
+					<div class="search_header">
+						<div class="container box">
+							<a href="#">미래엔</a>
+							<button type="button" class="close" data-close-search>닫기</button>
+						</div>
+					</div>
+					<div class="search_box">
+						<div class="container box">
+							<div class="search_form">
+								<div data-input-item="search">
+									<input type="text" placeholder="검색어를 입력하세요.">
+									<button type="button" class="del">삭제</button>
+								</div>
+								<div class="autocomplete" style="display:none;">
+									<ul>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+										<li><a href="#">[참고서&gt;초등&gt;수학] <span class="keyword">하루 한장</span> 쏙셈 1권 (초등 1-1)</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="search_tool">
+								<div class="save">
+									<span class="text">검색어 자동저장</span>
+									<label><input type="checkbox" class="hidden"><span></span></label>
+								</div>
+								<div class="keyword_wrap">
+									<div class="keyword history">
+										<div class="tit_wrap">
+											<span class="tit">최근 검색어</span>
+											<button type="button">전체 삭제</button>
+										</div>
+										<div class="list">
+											<ul>
+												<li><a href="#">수학수학수학수학수학수학수학수학수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+												<li><a href="#">수학</a><button type="button">삭제</button></li>
+											</ul>
+										</div>
+									</div>
+									<div class="keyword recommend">
+										<div class="tit_wrap">
+											<span class="tit">추천 검색어</span>
+										</div>
+										<div class="list">
+											<ul>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+												<li><a href="#">하루한장</a></li>
+												<li><a href="#">올리드</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<script>
+			// [D] UI 확인용 스크립트
+			var searchBox = $('header .search_form'),
+				searchTool = $('header .search_tool');
+
+			searchBox.on('keyup', '[data-input-item] input', function() {
+				if ($(this).val() !== "") {
+					searchBox.find('.autocomplete').show();
+					searchTool.hide();
+				} else {
+					searchBox.find('.autocomplete').hide();
+					searchTool.show();
+				};
+			});
+		</script>
+		<div id="content" data-page="contest">
+
+			<!-- 키비주얼 -->
+			<div class="main_visual small info info1">
+				<div class="container">
+					<div class="txt_wrap">
+						<span class="tit">초등학생 손글씨</span>
+						<p>
+							미래엔에서는 손글씨의 따뜻함과 아름다움을<br>
+							나누기 위해 초등학생을 대상으로<br>
+							손글씨 공모전을 실시합니다.<br>
+							개성이 듬뿍 담긴 손글씨의 매력을 마음껏 발휘하세요
+						</p>
+					</div>
+				</div>
+				<div data-tab="tab" class="bookmark">
+					<ul>
+						<li><button type="button">공모전 소개</button></li>
+						<li class="on"><button type="button">접수신청</button></li>
+						<li><button type="button">접수 확인 및 수정</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //키비주얼 -->
+
+			<div data-tab-cont="tab">
+				<div class="tab_cont" style="display:none;">
+					공모전 소개
+				</div>
+				<div class="tab_cont">
+					<div class="container">
+						<div class="app_done">
+							<div class="info">
+								<p class="tit">
+									응모해주셔서 감사합니다.<br>
+									김미래님의 공모전 접수가 완료되었습니다.
+								</p>
+								<span class="number">
+									접수 번호 : A123456789
+								</span>
+								<button class="copy" type="button">
+									<span>복사하기</span>
+								</button>
+							</div>
+							<table>
+								<colgroup>
+									<col style="width:90px;">
+									<col>
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">접수일</th>
+										<td>2021.05.24 (월)</td>
+									</tr>
+									<tr>
+										<th scope="row">응모자 정보</th>
+										<td>김미래 (논현미래초등학교/3학년)</td>
+									</tr>
+									<tr>
+										<th scope="row">응모 분야</th>
+										<td>동시</td>
+									</tr>
+									<tr>
+										<th scope="row">접수 파일</th>
+										<td>초등학생글솜씨_누가내치즈를옮겼을까.hwp</td>
+									</tr>
+								</tbody>
+							</table>
+							<p class="sub_txt">
+								입력하신 연락처로 접수 번호를 전송하였습니다.<br>
+								추후 접수번호 또는 응모자(접수자) 입력정보로 확인 및 심사발표
+								확인이 가능합니다.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="tab_cont" style="display:none;">
+					접수 확인 및 수정
+				</div>
+			</div>
+
+		</div>
+		<footer>
+			<div class="container">
+				<div class="info">
+					<div class="cs">
+						<div class="txt">
+							<strong>고객센터 : <a href="tel:+1800-8890">1800-8890</a></strong>(발신자 부담)<br>
+							고객센터 운영시간<br>
+							평일 09:00~18:00 (점심시간: 12:00~13:00)
+						</div>
+						<a href="#" class="link">1:1문의</a>
+					</div>
+					<div class="sns">
+						<p>미래엔을 만나보세요.</p>
+						<ul>
+							<li class="insta"><a href="#" target="_blank" title="새창열림">미래엔 인스타그램</a></li>
+							<li class="facebook"><a href="#" target="_blank" title="새창열림">미래엔 페이스북</a></li>
+							<li class="blog"><a href="#" target="_blank" title="새창열림">미래엔 네이버 블로그</a></li>
+							<li class="youtube"><a href="#" target="_blank" title="새창열림">미래엔 유튜브 채널</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<ul class="footer_menu">
+				<li><a href="#">이용약관</a></li>
+				<li><a href="#">개인정보처리방침</a></li>
+				<li><a href="#">무단이메일 수집 거부</a></li>
+				<li><a href="#">오시는길</a></li>
+			</ul>
+			<div class="container">
+				<div class="footer_bottom">
+					<img src="../../images/img/img_footer_logo.png" alt="" class="logo">
+					<button type="button" class="show_info">㈜미래엔 사업자 정보</button>
+					<div class="business">
+						㈜미래엔 | 대표 신광수<br>
+						주소 06532 서울특별시 서초구 신반포로 321<br>
+						사업자등록번호 214-81-04977<br>
+						개인정보책임자 한범석<br>
+						이메일 <a href="mailto:webadmin@mirae-n.com">webadmin@mirae-n.com</a><br>
+						채용이메일 <a href="mailto:recruit@mirae-n.com">recruit@mirae-n.com</a>
+					</div>
+					<div class="copyright">
+						© MIRAE N CO.,LTD. All Rights Reserved
+					</div>
+					<img src="../../images/img/img_footer_award.png" alt="명문장수기업" class="award">
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>
+
+</html>
