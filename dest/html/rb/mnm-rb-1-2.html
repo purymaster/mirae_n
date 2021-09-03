@@ -62,7 +62,7 @@
 								</div>
 							</li>
 							<li><a href="#">참고서</a></li>
-							<li><a href="#">출판</a></li>
+							<li><a href="#">일반도서</a></li>
 						</ul>
 						<ul class="main_menu">
 							<li><a href="#">맘티처</a></li>
@@ -236,7 +236,7 @@
 			<!-- 브랜드 -->
 			<section class="brand pub">
 				<div class="container">
-					<h2>미래엔 출판 브랜드</h2>
+					<h2>미래엔 일반도서 브랜드</h2>
 					<div class="brand_slide swiper-container">
 						<div class="slide_wrap swiper-wrapper">
 							<div class="slide swiper-slide">
@@ -294,6 +294,7 @@
 			<script>
 				slideInit('.brand_slide', {
 					loop: true,
+					speed: 0,
 					effect: "fade",
 					navigation: {
 						nextEl: ".swiper-button-next",
@@ -445,7 +446,7 @@
 
 			<!-- 인기 시리즈 -->
 			<section class="recommend series">
-				<div class="container">
+				<div class="">
 					<h2>인기 시리즈물 찾아보기</h2>
 					<div class="rebook_slide swiper-container">
 						<div class="slide_wrap swiper-wrapper">
@@ -505,7 +506,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="scrollbar"></div>
+						<div class="scrollbar" style="width:calc(100% - 36px); margin-left:18px;"></div>
 					</div>
 				</div>
 			</section>
@@ -514,6 +515,7 @@
 				if ($(".rebook_slide").find('.slide').length > 1) {
 					slideInit('.rebook_slide', {
 						// loop: true,
+						spaceBetween: 20,
 						centeredSlides: true,
 						scrollbar: {
 							el: ".rebook_slide .scrollbar",

@@ -34,9 +34,11 @@
                 var scroll = $(this).scrollTop();
                 if (scroll > 0) {
                     $('.sub_header').addClass('fixed').find('.tit').hide();
+                    $('.sub_header').find('.search').hide();
                     $('.search_box').css('margin-top', '113px');
                 } else {
                     $('.sub_header').removeClass('fixed').find('.tit').show();
+                    $('.sub_header').find('.search').show();
                     $('.search_box').css('margin-top', '0px');
                 }
             });
